@@ -1,0 +1,1806 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Lena Fuhrimann - Cloud engineer, founder of bespinian, and public speaker on cloud-native, DevOps, and Kubernetes topics."
+    />
+    <link rel="canonical" href="https://cloudlena.ch" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <title>Lena Fuhrimann - Cloud Engineer &amp; Speaker</title>
+    <meta property="og:type" content="profile" />
+    <meta
+      property="og:title"
+      content="Lena Fuhrimann - Cloud Engineer &amp; Speaker"
+    />
+    <meta
+      property="og:description"
+      content="Lena Fuhrimann - Cloud engineer, founder of bespinian, and public speaker on cloud-native, DevOps, and Kubernetes topics."
+    />
+    <meta property="og:url" content="https://cloudlena.ch" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="profile:first_name" content="Lena" />
+    <meta property="profile:last_name" content="Fuhrimann" />
+    <meta
+      property="og:image"
+      content="https://cloudlena.ch/images/scsd-2025.webp"
+    />
+    <meta property="og:image:width" content="525" />
+    <meta property="og:image:height" content="700" />
+    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:alt" content="Lena Fuhrimann speaking on stage" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Lena Fuhrimann - Cloud Engineer &amp; Speaker"
+    />
+    <meta
+      name="twitter:description"
+      content="Lena Fuhrimann - Cloud engineer, founder of bespinian, and public speaker on cloud-native, DevOps, and Kubernetes topics."
+    />
+    <meta
+      name="twitter:image"
+      content="https://cloudlena.ch/images/scsd-2025.webp"
+    />
+    <meta name="twitter:image:alt" content="Lena Fuhrimann speaking on stage" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Lena Fuhrimann",
+        "url": "https://cloudlena.ch",
+        "jobTitle": "Cloud Engineer & Public Speaker",
+        "worksFor": { "@type": "Organization", "name": "bespinian" },
+        "knowsAbout": [
+          "Cloud Native",
+          "DevOps",
+          "Kubernetes",
+          "Platform Engineering",
+          "AI"
+        ],
+        "sameAs": [
+          "https://github.com/cloudlena",
+          "https://www.linkedin.com/in/lena-fuhrimann"
+        ]
+      }
+    </script>
+    <meta name="theme-color" content="#1a1b26" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=optional"
+      as="style"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=optional"
+    /></noscript>
+    <style>
+      :root {
+        --bg: #1a1b26;
+        --bg2: #16161e;
+        --panel: #1f2335;
+        --panel-2: #24283b;
+        --border: #292e42;
+        --border-2: #3b4261;
+        --text: #c0caf5;
+        --dim: #a9b1d6;
+        --faint: #565f89;
+        --accent: #bb9af7;
+        --accent-2: #9d7cd8;
+        --accent-soft: rgba(187, 154, 247, 0.14);
+        --green: #9ece6a;
+        --mono: "Fira Code", ui-monospace, "SF Mono", Menlo, monospace;
+        --maxw: 940px;
+        --topbar-h: 42px;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        background-attachment: fixed;
+        color: var(--text);
+        font-family: var(--mono);
+        font-size: 15px;
+        line-height: 1.55;
+        -webkit-font-smoothing: antialiased;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      ::selection {
+        background: var(--accent-soft);
+        color: #fff;
+      }
+      :focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 3px;
+        border-radius: 4px;
+      }
+      .item:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 0;
+        border-color: var(--accent);
+      }
+
+      body::after {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 9;
+        background: repeating-linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0.013) 0 1px,
+          transparent 1px 3px
+        );
+        opacity: 0.5;
+      }
+
+      .wrap {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        padding: 0 28px;
+      }
+
+      .pr {
+        color: var(--green);
+      }
+      .pr::after {
+        content: " ";
+      }
+      .dim {
+        color: var(--dim);
+      }
+      .faint {
+        color: var(--faint);
+      }
+      .acc {
+        color: var(--accent);
+      }
+
+      /* ---------- top bar ---------- */
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        background: rgba(22, 22, 30, 0.85);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--border);
+      }
+      .topbar .inner {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        padding: 11px 28px;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+      .dots {
+        display: flex;
+        gap: 7px;
+      }
+      .dots i {
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+        display: block;
+      }
+      .winttl {
+        color: var(--faint);
+        font-size: 13px;
+        white-space: nowrap;
+      }
+      .winttl b {
+        color: var(--dim);
+        font-weight: 500;
+      }
+      .spacer {
+        flex: 1;
+      }
+      .avail {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        font-size: 12.5px;
+        color: var(--dim);
+        white-space: nowrap;
+      }
+      .avail .led {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--green);
+        box-shadow: 0 0 0 0 rgba(158, 206, 106, 0.5);
+        animation: pulse 2.6s infinite;
+      }
+      @keyframes pulse {
+        0% {
+          box-shadow: 0 0 0 0 rgba(158, 206, 106, 0.45);
+        }
+        70% {
+          box-shadow: 0 0 0 7px rgba(158, 206, 106, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(158, 206, 106, 0);
+        }
+      }
+
+      .btn {
+        font-family: var(--mono);
+        font-weight: 700;
+        font-size: 13.5px;
+        cursor: pointer;
+        border: 1px solid var(--accent-2);
+        color: #fff;
+        background: var(--accent-2);
+        padding: 9px 16px;
+        border-radius: 7px;
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        white-space: nowrap;
+        box-shadow: 0 6px 18px -8px rgba(122, 162, 247, 0.7);
+        transition:
+          transform 0.12s ease,
+          box-shadow 0.12s ease,
+          filter 0.12s ease;
+      }
+      .btn:hover {
+        transform: translateY(-1px);
+        filter: brightness(1.07);
+        box-shadow: 0 10px 24px -8px rgba(122, 162, 247, 0.9);
+      }
+      .btn:active {
+        transform: translateY(0);
+      }
+      .btn.sm {
+        padding: 7px 13px;
+        font-size: 12.5px;
+      }
+      .btn .bicon {
+        font-weight: 800;
+        opacity: 0.9;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 18px;
+        height: 18px;
+        border: 1.5px solid currentColor;
+        border-radius: 4px;
+        font-size: 11px;
+        line-height: 1;
+      }
+
+      /* ---------- hero ---------- */
+      .hero {
+        padding-top: 72px;
+        padding-bottom: 36px;
+      }
+      .hero .cmd {
+        color: var(--dim);
+        font-size: 14px;
+        margin-bottom: 18px;
+      }
+      .hero h1 {
+        font-size: clamp(40px, 7vw, 74px);
+        line-height: 0.98;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        margin: 0;
+        color: var(--text);
+      }
+      .hero h1 .caret {
+        color: var(--accent);
+        font-weight: 400;
+        animation: blink 1.15s steps(1) infinite;
+      }
+      @keyframes blink {
+        50% {
+          opacity: 0;
+        }
+      }
+      .hero .role {
+        margin-top: 14px;
+        font-size: clamp(16px, 2.4vw, 21px);
+        color: var(--accent);
+        font-weight: 500;
+      }
+      .hero .loc {
+        color: var(--dim);
+        font-size: 15px;
+        margin-top: 4px;
+      }
+      .hero .bio {
+        color: var(--dim);
+        font-size: 16px;
+        max-width: 580px;
+        margin: 22px 0 0;
+        line-height: 1.6;
+      }
+      .booking {
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      .links {
+        display: flex;
+        gap: 9px;
+        margin-top: 26px;
+        flex-wrap: wrap;
+      }
+      .links a {
+        font-size: 12.5px;
+        color: var(--dim);
+        border: 1px solid var(--border);
+        padding: 5px 12px;
+        border-radius: 999px;
+        transition: all 0.12s ease;
+        background: rgba(255, 255, 255, 0.012);
+      }
+      .links a:hover {
+        color: var(--accent);
+        border-color: var(--accent);
+        transform: translateY(-1px);
+      }
+      .links a .g {
+        color: var(--faint);
+        margin-right: 7px;
+      }
+
+      /* ---------- controls ---------- */
+      .controls {
+        position: sticky;
+        top: var(--topbar-h);
+        z-index: 15;
+        background: rgba(22, 22, 30, 0.85);
+        backdrop-filter: blur(10px);
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+        margin-top: 22px;
+      }
+      .controls .inner {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        padding: 13px 28px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .controls .lead {
+        color: var(--faint);
+        font-size: 13px;
+        white-space: nowrap;
+      }
+      .tabs {
+        display: flex;
+        gap: 6px;
+        flex-wrap: wrap;
+      }
+      .tab {
+        font-family: var(--mono);
+        font-size: 12.5px;
+        cursor: pointer;
+        color: var(--dim);
+        border: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.015);
+        padding: 6px 12px;
+        border-radius: 7px;
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        transition: all 0.12s ease;
+      }
+      .tab:hover {
+        border-color: var(--border-2);
+        color: var(--text);
+      }
+      .tab.on {
+        color: #fff;
+        border-color: var(--accent);
+        background: var(--accent-soft);
+        font-weight: 700;
+      }
+      .tab .ct {
+        color: var(--faint);
+        font-size: 11px;
+      }
+      .tab.on .ct {
+        color: var(--accent);
+      }
+      .grow {
+        flex: 1;
+      }
+      .grep {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        min-width: 220px;
+        border: 1px solid var(--border);
+        border-radius: 7px;
+        background: var(--bg2);
+        padding: 7px 12px;
+        transition: border-color 0.12s ease;
+      }
+      .grep:focus-within {
+        border-color: var(--accent);
+      }
+      .grep .pr {
+        font-size: 13px;
+      }
+      .grep input {
+        background: transparent;
+        border: 0;
+        outline: 0;
+        color: var(--text);
+        font-family: var(--mono);
+        font-size: 13px;
+        width: 100%;
+      }
+      .grep input::placeholder {
+        color: var(--faint);
+      }
+      .grep .kbd {
+        font-size: 10.5px;
+        color: var(--faint);
+        border: 1px solid var(--border-2);
+        border-radius: 4px;
+        padding: 1px 6px;
+        white-space: nowrap;
+      }
+      .grep .clr {
+        color: var(--faint);
+        cursor: pointer;
+        font-size: 14px;
+        display: none;
+      }
+      .grep .clr:hover {
+        color: var(--accent);
+      }
+      .grep.has-q .clr {
+        display: inline;
+      }
+      .grep.has-q .kbd {
+        display: none;
+      }
+
+      /* ---------- feed ---------- */
+      .feed {
+        padding-top: 30px;
+        padding-bottom: 10px;
+      }
+      .resline {
+        color: var(--faint);
+        font-size: 12.5px;
+        margin-bottom: 18px;
+      }
+      .resline b {
+        color: var(--dim);
+        font-weight: 500;
+      }
+      .list {
+        display: flex;
+        flex-direction: column;
+        gap: 13px;
+      }
+      .item {
+        position: relative;
+        display: grid;
+        grid-template-columns: 22px 168px 1fr;
+        gap: 18px;
+        align-items: start;
+        padding: 16px 18px 16px 14px;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        background: var(--panel);
+        cursor: pointer;
+        transition:
+          border-color 0.16s ease,
+          transform 0.16s ease,
+          box-shadow 0.16s ease,
+          background 0.16s ease;
+        opacity: 0;
+        transform: translateY(14px);
+      }
+      .item.in {
+        opacity: 1;
+        transform: none;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .item {
+          opacity: 1 !important;
+          transform: none !important;
+        }
+      }
+      .item:hover {
+        border-color: var(--accent);
+        transform: translateY(-2px);
+        box-shadow: 0 16px 38px -20px rgba(122, 162, 247, 0.6);
+        background: var(--panel-2);
+      }
+      .item .marker {
+        color: var(--faint);
+        font-size: 13px;
+        padding-top: 2px;
+        transition: color 0.16s ease;
+      }
+      .item:hover .marker {
+        color: var(--accent);
+      }
+      .poster {
+        position: relative;
+        width: 168px;
+        border-radius: 8px;
+        overflow: hidden;
+        border: 1px solid var(--border-2);
+        background: #16161e;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: none;
+      }
+      .poster img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .poster.r169 {
+        aspect-ratio: 16/9;
+      }
+      .poster .glyph {
+        font-size: 30px;
+        color: var(--accent);
+        opacity: 0.9;
+      }
+      .poster .ven {
+        position: absolute;
+        left: 9px;
+        bottom: 8px;
+        right: 9px;
+        font-size: 10px;
+        color: var(--dim);
+        line-height: 1.25;
+        text-shadow: 0 1px 4px #000;
+      }
+      .poster .grad {
+        position: absolute;
+        inset: 0;
+        background: rgba(13, 13, 20, 0.36);
+      }
+      .poster .shade {
+        position: absolute;
+        inset: 0;
+        background: rgba(13, 13, 20, 0.36);
+        opacity: 0;
+        transition: opacity 0.16s ease;
+      }
+      .item:hover .poster .shade {
+        opacity: 1;
+      }
+      .poster .play {
+        position: absolute;
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background: rgba(22, 22, 30, 0.78);
+        border: 1px solid var(--accent);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 14px;
+        transition:
+          transform 0.16s ease,
+          background 0.16s ease;
+        z-index: 2;
+      }
+      .item:hover .poster .play {
+        transform: scale(1.12);
+        background: var(--accent);
+      }
+      .body {
+        min-width: 0;
+      }
+      .metarow {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 7px;
+        flex-wrap: wrap;
+      }
+      .badge {
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--accent);
+        border: 1px solid var(--accent);
+        border-radius: 4px;
+        padding: 2px 7px;
+      }
+      .metarow .date {
+        color: var(--dim);
+        font-size: 12.5px;
+      }
+      .metarow .sep {
+        color: var(--faint);
+      }
+      .metarow .meta {
+        color: var(--faint);
+        font-size: 12.5px;
+      }
+      .item h2 {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.3;
+        color: var(--text);
+        transition: color 0.16s ease;
+      }
+      .item:hover h2 {
+        color: #fff;
+      }
+      .item h2 .arr {
+        color: var(--accent);
+        opacity: 0;
+        margin-left: 6px;
+        transition: opacity 0.16s ease;
+      }
+      .item:hover h2 .arr {
+        opacity: 1;
+      }
+      .where {
+        color: var(--dim);
+        font-size: 13px;
+        margin-top: 5px;
+      }
+      .reveal {
+        display: grid;
+        grid-template-rows: 0fr;
+        transition:
+          grid-template-rows 0.22s ease,
+          opacity 0.2s ease,
+          margin 0.22s ease;
+        opacity: 0;
+        margin-top: 0;
+      }
+      .reveal > div {
+        overflow: hidden;
+      }
+      .item:hover .reveal,
+      .item.open .reveal {
+        grid-template-rows: 1fr;
+        opacity: 1;
+        margin-top: 11px;
+      }
+      .reveal .desc {
+        color: var(--dim);
+        font-size: 13.5px;
+        line-height: 1.6;
+        max-width: 600px;
+      }
+      .reveal .actions {
+        margin-top: 12px;
+        display: flex;
+        gap: 9px;
+        align-items: center;
+      }
+
+      /* ---------- footer ---------- */
+      .footer {
+        border-top: 1px solid var(--border);
+        margin-top: 40px;
+        padding-top: 30px;
+        padding-bottom: 60px;
+      }
+      .footer .row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--faint);
+        font-size: 13px;
+        flex-wrap: wrap;
+      }
+      .footer .meta {
+        margin-top: 10px;
+        color: var(--faint);
+        font-size: 12px;
+      }
+      .empty {
+        color: var(--faint);
+        font-size: 14px;
+        padding: 40px 4px;
+      }
+
+      @media (max-width: 720px) {
+        .wrap {
+          padding: 0 18px;
+        }
+        .topbar .inner {
+          padding: 10px 18px;
+          gap: 10px;
+          flex-wrap: nowrap;
+        }
+        .dots {
+          display: none;
+        }
+        .avail {
+          display: none;
+        }
+        .winttl {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          min-width: 0;
+        }
+        .controls {
+          top: var(--topbar-h);
+        }
+        .controls .inner {
+          padding: 11px 18px;
+          gap: 10px;
+        }
+        .controls .lead {
+          display: none;
+        }
+        .grow {
+          display: none;
+        }
+        .grep {
+          min-width: 0;
+          width: 100%;
+        }
+        .item {
+          grid-template-columns: 1fr;
+          gap: 12px;
+          padding: 14px;
+        }
+        .item .marker {
+          display: none;
+        }
+        .poster {
+          width: 100%;
+        }
+        .reveal .desc {
+          max-width: none;
+        }
+        .hero {
+          padding-top: 52px;
+          padding-bottom: 32px;
+        }
+        .hero .bio {
+          font-size: 15px;
+        }
+      }
+
+      @media (hover: none) {
+        .item:hover .reveal {
+          grid-template-rows: 0fr;
+          opacity: 0;
+          margin-top: 0;
+        }
+        .item.open .reveal {
+          grid-template-rows: 1fr;
+          opacity: 1;
+          margin-top: 11px;
+        }
+        .item:hover {
+          transform: none;
+          box-shadow: none;
+          border-color: var(--border);
+          background: var(--panel);
+        }
+        .item.open {
+          border-color: var(--accent);
+        }
+        .item h2 .arr {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topbar">
+      <div class="inner">
+        <div class="dots" aria-hidden="true">
+          <i style="background: #ff5f57"></i>
+          <i style="background: #febc2e"></i>
+          <i style="background: #28c840"></i>
+        </div>
+        <span class="winttl"><b>lena@cloud</b>: ~/feed</span>
+        <span class="spacer"></span>
+        <span class="avail"><span class="led"></span> available to speak</span>
+      </div>
+    </div>
+
+    <header class="hero wrap">
+      <div class="cmd"><span class="pr">$</span> whoami</div>
+      <h1>Lena Fuhrimann<span class="caret">_</span></h1>
+      <div class="role">Cloud Engineer &amp; Speaker</div>
+      <div class="loc">Bern, Switzerland · engineering since 2012</div>
+      <p class="bio">
+        Founder of bespinian. I help platform teams ship faster on Kubernetes
+        &amp; AWS - and I love sharing what I learn.
+      </p>
+      <div class="booking">
+        <a
+          class="btn"
+          href="mailto:cloudlena.ma2jp@simplelogin.com?subject=Speaking%20invitation"
+        >
+          <span class="bicon" aria-hidden="true">@</span> Contact me
+        </a>
+      </div>
+      <nav class="links">
+        <a
+          href="https://github.com/cloudlena"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><span class="g">gh</span>github</a
+        >
+        <a
+          href="https://www.linkedin.com/in/lena-fuhrimann/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><span class="g">in</span>linkedin</a
+        >
+        <a
+          href="https://bespinian.io?utm_source=cloudlena.ch&utm_medium=referral&utm_campaign=profile_lena"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><span class="g">↗</span>bespinian</a
+        >
+        <a href="mailto:cloudlena.ma2jp@simplelogin.com"
+          ><span class="g">@</span>email</a
+        >
+      </nav>
+    </header>
+
+    <div class="controls">
+      <div class="inner">
+        <span class="lead"><span class="pr">$</span> feed --type</span>
+        <div class="tabs">
+          <button class="tab on" data-filter="all" aria-pressed="true">
+            all <span class="ct" id="ct-all"></span>
+          </button>
+          <button class="tab" data-filter="talk" aria-pressed="false">
+            talks <span class="ct" id="ct-talk"></span>
+          </button>
+          <button class="tab" data-filter="pod" aria-pressed="false">
+            pods <span class="ct" id="ct-pod"></span>
+          </button>
+          <button class="tab" data-filter="post" aria-pressed="false">
+            posts <span class="ct" id="ct-post"></span>
+          </button>
+          <button class="tab" data-filter="oss" aria-pressed="false">
+            oss <span class="ct" id="ct-oss"></span>
+          </button>
+        </div>
+        <span class="grow"></span>
+        <div class="grep" id="grep-wrap">
+          <span class="pr">$</span>
+          <input
+            id="search"
+            placeholder="grep - title, venue, type…"
+            aria-label="Search feed"
+          />
+          <span class="clr" id="clr-btn" title="clear">✕</span>
+          <span class="kbd">/</span>
+        </div>
+      </div>
+    </div>
+
+    <main class="feed wrap">
+      <div class="resline" id="resline"></div>
+      <div class="list" id="list"></div>
+    </main>
+
+    <footer class="footer wrap">
+      <div class="row">
+        <span class="pr">$</span> <span>exit</span>
+        <span class="faint">·</span>
+        <span>© <span id="year"></span> Lena Fuhrimann</span>
+      </div>
+      <div class="meta">
+        built in the terminal · all entries link out to the original source
+      </div>
+    </footer>
+
+    <script>
+      const yt = (id) => "https://i.ytimg.com/vi/" + id + "/hqdefault.webp";
+      const watch = (id) => "https://www.youtube.com/watch?v=" + id;
+
+      const TYPES = {
+        talk: {
+          label: "talk",
+          full: "Conference talk",
+          glyph: "▶",
+          action: "Watch on YouTube",
+          link: "View talk",
+        },
+        pod: {
+          label: "pod",
+          full: "Podcast guest",
+          glyph: "🎙",
+          action: "Listen / watch",
+          link: "View episode",
+        },
+        post: {
+          label: "post",
+          full: "Article",
+          glyph: "✎",
+          action: "Read the article",
+          link: "Read article",
+        },
+        oss: {
+          label: "oss",
+          full: "Open source",
+          glyph: "❮❯",
+          action: "View on GitHub",
+          link: "View on GitHub",
+        },
+      };
+
+      const FEED = [
+        {
+          t: "talk",
+          title: "Run Your Own LLM for Profit and Sovereignty",
+          where: "Swiss Software Festival 2026",
+          city: "Basel",
+          date: "2026-06",
+          meta: "conference talk",
+          url: "https://www.swiss-software-festival.ch/",
+          thumb: "images/ssf-2026.webp",
+          desc: "Why running your own LLM makes sense - both as a business decision and as a matter of data sovereignty. A practical look at self-hosted models, the tradeoffs versus managed APIs, and how to get started without a data center.",
+        },
+        {
+          t: "talk",
+          title:
+            "Panel Discussion: Digital Sovereignty Perspectives from the Ecosystem",
+          where: "Cloud Native Zürich 2026",
+          city: "Zürich",
+          date: "2026-06",
+          meta: "panel",
+          url: watch("MQDw05sokZk"),
+          thumb: "images/yt-MQDw05sokZk.webp",
+          desc: "A panel on digital sovereignty at Cloud Native Zürich 2026 - exploring what it means for organizations to own their infrastructure, data, and AI stack in an era of hyperscaler dependency.",
+        },
+        {
+          t: "talk",
+          title: "A Practical Guide to Fast and Private LLMs",
+          where: "Open Source AI Conference 2026",
+          city: "Bern",
+          date: "2026-05",
+          meta: "conference talk",
+          url: "https://www.ch-open.ch/open-source-ai-conference-2026/",
+          thumb: "images/osaic-2026.webp",
+          desc: "A practical walkthrough of running LLMs locally and on-prem - covering model selection, inference performance, and keeping sensitive data out of third-party hands.",
+        },
+
+        {
+          t: "post",
+          title: "So kommt fast jeder zu einer eigenen KI",
+          where: "Netzwoche",
+          city: "Bern",
+          date: "2026-05",
+          meta: "article",
+          url: "https://www.netzwoche.ch/news/2026-05-22/so-kommt-fast-jeder-zu-einer-eigenen-ki",
+          thumb: "images/netzwoche-2026.webp",
+          desc: "Netzwoche covers the second Open Source AI Conference in Bern - featuring speakers on open Swiss language models, AI ethics, and practical tools for running your own LLM without depending on big tech.",
+        },
+
+        {
+          t: "talk",
+          title: "Pragmatic AI Adoption Is Hard!",
+          where: "DevOpsDays Zürich 2026 · Ignite",
+          city: "Zürich",
+          date: "2026-05",
+          meta: "ignite talk",
+          url: watch("a4Rj04nmuO4"),
+          thumb: "images/yt-a4Rj04nmuO4.webp",
+          desc: "A 5-minute, 20-slide Ignite take on adopting AI where it actually adds value - without creating chaos or risk.",
+        },
+
+        {
+          t: "pod",
+          title: "Who Needs a Server?",
+          where: "Adventures in DevOps",
+          city: "",
+          date: "2026-05",
+          meta: "podcast",
+          url: watch("FD-8QWGV7Fs"),
+          thumb: "images/yt-FD-8QWGV7Fs.webp",
+          desc: "Clearing up the confusion around serverless - why it's a spectrum, not just FaaS, and why the real saving is engineering time, not the cloud bill.",
+        },
+
+        {
+          t: "pod",
+          title: "She Built a 100-Client Cloud Company in Switzerland",
+          where: "Let's Talk Podcast",
+          city: "",
+          date: "2026-03",
+          meta: "podcast",
+          url: watch("hldUjs4FPQQ"),
+          thumb: "images/yt-hldUjs4FPQQ.webp",
+          desc: "How bespinian grew to serve 100+ clients - the founding story, building a team, and lessons from running a cloud-native consultancy in Switzerland.",
+        },
+
+        {
+          t: "talk",
+          title: "Hosting LLMs on Kubernetes for Digital Sovereignty",
+          where: "KCD Suisse Romande · Genève, CERN",
+          city: "Genève",
+          date: "2025-12",
+          meta: "conference talk",
+          url: watch("LUtaXaMs1zA"),
+          thumb: "images/yt-LUtaXaMs1zA.webp",
+          desc: "From the December 2025 Kubernetes Community Days Suisse Romande at CERN - how to host LLMs on Kubernetes to keep data under your control.",
+        },
+
+        {
+          t: "talk",
+          title: "Panel: Kubernetes for AI or AI for Kubernetes",
+          where: "KCD Suisse Romande · Genève, CERN",
+          city: "Genève",
+          date: "2025-12",
+          meta: "panel",
+          url: watch("IidP7UgWPc8"),
+          thumb: "images/yt-IidP7UgWPc8.webp",
+          desc: "Panel discussion at Kubernetes Community Days Suisse Romande - exploring whether Kubernetes is the right platform for AI workloads, and how AI might change the way we operate Kubernetes.",
+        },
+
+        {
+          t: "talk",
+          title: "Level Up Your Serverless Game",
+          where: "OST – Ostschweizer Fachhochschule",
+          city: "St. Gallen",
+          date: "2025-12",
+          meta: "guest lecture",
+          url: "https://www.linkedin.com/posts/marc-fritsche_nicht-jedes-level-in-der-cloud-ist-einfach-activity-7401518295410995200-JAQ9",
+          thumb: "images/ost-2025.webp",
+          desc: "Guest lecture on cloud-native migration challenges and serverless best practices for the Cloud Development module at OST.",
+        },
+
+        {
+          t: "post",
+          title: "Building Tough Applications",
+          where: "bespinian.io/blog",
+          city: "",
+          date: "2025-12",
+          meta: "article",
+          url: "https://bespinian.io/en/blog/tough-applications",
+          thumb: "images/blog-tough-applications.webp",
+          desc: "Building strong cloud applications around four ideas - Tolerance, Fortitude, Resilience and Adaptability.",
+        },
+
+        {
+          t: "talk",
+          title: "Pragmatic AI Adoption",
+          where: "DevOps Meetup Bern",
+          city: "Bern",
+          date: "2025-11",
+          meta: "meetup talk",
+          url: "https://www.meetup.com/devops-bern/events/310420966",
+          thumb: "images/dmb-2025.webp",
+          desc: "Full house at bespinian HQ for DevOps Meetup Bern - a talk on where AI adoption actually adds value in engineering teams, without the hype.",
+        },
+
+        {
+          t: "post",
+          title: "Running LLMs on Kubernetes",
+          where: "bespinian.io/blog",
+          city: "",
+          date: "2025-11",
+          meta: "article",
+          url: "https://bespinian.io/en/blog/llms-on-kubernetes",
+          thumb: "images/blog-llms-on-kubernetes.webp",
+          desc: "Deploying and managing large language models on Kubernetes - Ollama for simple setups, the vLLM Production Stack for high-traffic production.",
+        },
+
+        {
+          t: "post",
+          title: "Level Up Your Serverless Game",
+          where: "bespinian.io/blog",
+          city: "",
+          date: "2025-09",
+          meta: "article",
+          url: "https://bespinian.io/en/blog/level-up-your-serverless-game",
+          thumb: "images/blog-serverless-game.webp",
+          desc: "Avoiding common serverless pitfalls - logging, tracing, cold starts, security and deployment strategies.",
+        },
+
+        {
+          t: "talk",
+          title: "NixOS: How My Laptop Became Declarative",
+          where: "Nine Internet Solutions · TechTalkThursday #25",
+          city: "Zürich",
+          date: "2025-09",
+          meta: "meetup talk",
+          url: watch("6qLR_8a4tkw"),
+          thumb: "images/yt-6qLR_8a4tkw.webp",
+          desc: "What NixOS is, how it works, and the genuinely nice things you can do once your whole machine is declarative and reproducible.",
+        },
+
+        {
+          t: "talk",
+          title: "My Learnings from Ten Years of Cloud-Native and Serverless",
+          where: "Swiss Software Festival 2025",
+          city: "Basel",
+          date: "2025-06",
+          meta: "conference talk",
+          url: "https://www.swiss-software-festival.ch/",
+          thumb: "images/ssf-2025.webp",
+          desc: "A decade of building and running cloud-native and serverless systems - the patterns that held up, the mistakes worth avoiding, and what the industry got right and wrong along the way.",
+        },
+
+        {
+          t: "talk",
+          title: "Level Up Your Serverless Game",
+          where: "DevOpsDays Zürich 2025",
+          city: "Zürich",
+          date: "2025-04",
+          meta: "conference talk",
+          url: watch("kSzeBRlY7_I"),
+          thumb: "images/yt-kSzeBRlY7_I.webp",
+          desc: "Playing through the ten levels of writing and deploying serverless apps - the challenges teams hit, and the best practices that get you past them.",
+        },
+
+        {
+          t: "talk",
+          title: "Cloud Native Security & DevSecOps",
+          where: "Swiss Cyber Security Days",
+          city: "Bern",
+          date: "2025-02",
+          meta: "conference talk",
+          url: "https://www.linkedin.com/posts/lena-fuhrimann_cloudnativecitizen-cloudnativesecurity-devsecops-activity-7298246282878312449-f48x",
+          thumb: "images/scsd-2025.webp",
+          desc: "Live drawing instead of slides - juggling a microphone and drawing pen at the same time at my first Swiss Cyber Security Days.",
+        },
+
+        {
+          t: "talk",
+          title: "Is Serverless a Blatant Cost Trap?",
+          where: "Haunted DevOps Meetup · Ergon Informatik",
+          city: "Zürich",
+          date: "2024-11",
+          meta: "meetup talk",
+          url: "https://www.youtube.com/watch?v=Hf0eBEEL0Lk&t=2057",
+          thumb: "images/yt-Hf0eBEEL0Lk.webp",
+          desc: "Busting serverless cost myths with real-world examples - how proactive cost monitoring, ARM architectures, and tools like AWS Lambda Power Tuning keep serverless from becoming a cost trap.",
+        },
+
+        {
+          t: "talk",
+          title: "How AWS Lambda & Fargate Work Under the Hood",
+          where: "Serverless Architecture Conference",
+          city: "Berlin",
+          date: "2024-10",
+          meta: "conference talk",
+          url: "https://www.linkedin.com/posts/lena-fuhrimann_cloudnativecitizen-berlin-aws-activity-7254398428917448705-s54n",
+          thumb: "images/cloud-native-berlin-2024.webp",
+          desc: "A deep dive into how AWS Lambda and Fargate work under the hood, including a live demo of Firecracker - the microVM technology powering them.",
+        },
+
+        {
+          t: "talk",
+          title: "Serverless on Rust: What the Hack is Firecracker?",
+          where: "Rust Meetup · bespinian",
+          city: "Zürich",
+          date: "2024-10",
+          meta: "meetup talk",
+          url: "https://www.linkedin.com/posts/bespinian_cloudnativecitizen-rustlang-serverless-ugcPost-7253075642190057472-hHMy",
+          thumb: "images/rust-meetup-2024.webp",
+          desc: "How Firecracker launches microVMs in under 100ms - and what that means for serverless Rust on AWS Lambda.",
+        },
+
+        {
+          t: "talk",
+          title: "Serverless Powertools",
+          where: "DevOps Basel Meetup",
+          city: "Basel",
+          date: "2024-10",
+          meta: "meetup talk",
+          url: "https://www.meetup.com/devops-basel/events/303214101/",
+          thumb: "images/devops-basel-2024.webp",
+          desc: "Efficient large-scale serverless deployment strategies using AWS Lambda Powertools at the relaunched DevOps Basel community meetup.",
+        },
+
+        {
+          t: "talk",
+          title:
+            "Best Practices for Operating Serverless Applications in TypeScript",
+          where: "BärnerJS",
+          city: "Bern",
+          date: "2024-09",
+          meta: "meetup talk",
+          url: "https://www.linkedin.com/posts/barnerjs-talks_eslint-meetup-javascript-ugcPost-7237385346924105728-jjdE",
+          thumb: "images/barnerjs-2024.webp",
+          desc: "Best practices for building and operating serverless applications in TypeScript, with open-source workshop resources.",
+        },
+
+        {
+          t: "talk",
+          title: "Serverless Optimization on AWS",
+          where: "Cloud Natives Zurich · AWS",
+          city: "Zürich",
+          date: "2023-11",
+          meta: "meetup talk",
+          url: "https://www.linkedin.com/posts/bespinian_cloudnativecitizen-activity-7327624309642780672-zfdf",
+          thumb: "images/cloudnatives-zurich-2023.webp",
+          desc: "Building resilient and reliable serverless applications on AWS - covering optimization strategies for performance and cost at the Cloud Natives Zurich meetup.",
+        },
+
+        {
+          t: "talk",
+          title: "Is Serverless a Blatant Cost Trap?",
+          where: "SLACon",
+          city: "Berlin",
+          date: "2023-10",
+          meta: "talk + workshop",
+          url: "https://www.linkedin.com/posts/bespinian_slacon-cloudnativecitizen-activity-7119975681777618945-ToaV",
+          thumb: "images/slacon-2023.webp",
+          desc: "Two contributions at SLACon Berlin: a talk busting serverless cost myths and an advanced serverless workshop.",
+        },
+
+        {
+          t: "talk",
+          title: "Streamlined Troubleshooting in Kubernetes",
+          where: "Cloud Native Zürich",
+          city: "Zürich",
+          date: "2023-06",
+          meta: "conference talk",
+          url: watch("sk6j7_VFhSc"),
+          thumb: "images/yt-sk6j7_VFhSc.webp",
+          desc: "A practical workflow for debugging workloads in Kubernetes without losing your mind - or your weekend.",
+        },
+
+        {
+          t: "oss",
+          title: "nixfiles - Personal Nix Configuration",
+          where: "github.com/cloudlena/nixfiles",
+          city: "",
+          date: "2023-05",
+          meta: "Nix",
+          url: "https://github.com/cloudlena/nixfiles",
+          thumb: "images/oss-nixfiles.webp",
+          desc: "My declarative, reproducible machine setup in Nix - the config behind the 'how my laptop became declarative' talk.",
+        },
+
+        {
+          t: "oss",
+          title: "clong - A Fun Multiplayer Game",
+          where: "github.com/cloudlena/clong",
+          city: "",
+          date: "2017-04",
+          meta: "Go · WebSocket",
+          url: "https://github.com/cloudlena/clong",
+          thumb: "images/oss-clong.webp",
+          desc: "A fun multiplayer game: players swipe on their phones to launch balls at targets on a shared big screen, with a live scoreboard.",
+        },
+
+        {
+          t: "talk",
+          title: "Glorious Terminal UIs with charm.sh",
+          where: "Golang Bern · Puzzle ITC",
+          city: "Bern",
+          date: "2022-11",
+          meta: "meetup talk",
+          url: "https://www.linkedin.com/feed/update/urn:li:activity:7003057535792390144",
+          thumb: "images/golang-bern-2022.webp",
+          desc: "Building beautiful terminal UIs in Go using the charm.sh library suite.",
+        },
+
+        {
+          t: "talk",
+          title: "Level Up Your Serverless Game",
+          where: "Serverless Architecture Conference",
+          city: "Berlin",
+          date: "2022-10",
+          meta: "conference talk",
+          url: "https://www.linkedin.com/posts/lena-fuhrimann_serverless-activity-6987723173920133120-1A6_",
+          thumb: "images/slacon-2022.webp",
+          desc: "Playing through the ten levels of writing and deploying serverless apps - the challenges teams hit, and the best practices that get you past them.",
+        },
+
+        {
+          t: "post",
+          title: "API Contract Definitions",
+          where: "bespinian.io/blog",
+          city: "",
+          date: "2022-10",
+          meta: "article",
+          url: "https://bespinian.io/en/blog/api-contract-definitions",
+          thumb: "images/blog-api-contracts.webp",
+          desc: "Technologies for defining service contracts - OpenAPI, GraphQL and gRPC - and keeping specification and implementation in sync.",
+        },
+
+        {
+          t: "post",
+          title: "GitOps",
+          where: "bespinian.io/blog",
+          city: "",
+          date: "2022-05",
+          meta: "article · with Mathis Kretz",
+          url: "https://bespinian.io/en/blog/gitops",
+          thumb: "images/blog-gitops.webp",
+          desc: "Combining Git and Infrastructure as Code to implement GitOps for both apps and infra - Argo CD for Kubernetes, Terraform for infrastructure.",
+        },
+
+        {
+          t: "post",
+          title: "Be Like… Lena",
+          where: "belikegrace.ch",
+          city: "",
+          date: "2021-12",
+          meta: "interview",
+          url: "https://belikegrace.ch/be-like-lena/",
+          thumb: "images/be-like-grace-2021.webp",
+          desc: "A profile and interview about my path into cloud software architecture, co-founding bespinian, and the intersection of technical expertise and creativity.",
+        },
+
+        {
+          t: "post",
+          title: "Infrastructure as Code",
+          where: "bespinian.io/blog",
+          city: "",
+          date: "2021-12",
+          meta: "article · with Mathis Kretz",
+          url: "https://bespinian.io/en/blog/infrastructure-as-code",
+          thumb: "images/blog-infrastructure-as-code.webp",
+          desc: "IaC principles and declarative infrastructure with Terraform, Packer and CloudFormation - versioning, testing and automation.",
+        },
+
+        {
+          t: "post",
+          title: "Git - The Important Parts",
+          where: "bespinian.io/blog",
+          city: "",
+          date: "2021-10",
+          meta: "article · with Mathis Kretz",
+          url: "https://bespinian.io/en/blog/git-the-important-parts",
+          thumb: "images/blog-git.webp",
+          desc: "Git best practices for teams - commit messages, Gitflow vs GitHub Flow, pull requests and hooks to enforce conventions.",
+        },
+
+        {
+          t: "talk",
+          title: "Serverless Workshop",
+          where: "Swiss Cloud Native Day",
+          city: "Bern",
+          date: "2021-09",
+          meta: "workshop · with Gabriel Koch & Mathis Kretz",
+          url: "https://www.linkedin.com/posts/lena-fuhrimann_our-serverless-workshop-with-lena-fuhrimann-activity-6846787142279036928-vjxG",
+          thumb: "images/serverless-workshop-2021.webp",
+          desc: "Hands-on serverless workshop at Swiss Cloud Native Day, co-facilitated with Gabriel Koch and Mathis Kretz.",
+        },
+
+        {
+          t: "post",
+          title: "Installing Arch Linux on UEFI With Full Disk Encryption",
+          where: "bespinian.io/blog",
+          city: "",
+          date: "2021-03",
+          meta: "article",
+          url: "https://bespinian.io/en/blog/installing-arch-linux-on-uefi-with-full-disk-encryption",
+          thumb: "images/blog-arch-linux.webp",
+          desc: "A concise step-by-step guide to installing Arch Linux on UEFI systems with LUKS full-disk encryption.",
+        },
+
+        {
+          t: "post",
+          title: "Efficient Navigation in Vim",
+          where: "bespinian.io/blog",
+          city: "",
+          date: "2020-07",
+          meta: "article",
+          url: "https://bespinian.io/en/blog/efficient-navigation-in-vim",
+          thumb: "images/blog-vim.webp",
+          desc: "Moving around Vim efficiently - movement keys, search techniques and a few plugins that boost your editing speed.",
+        },
+
+        {
+          t: "post",
+          title: "Run a Crypto Trading Bot on Cloud Foundry",
+          where: "bespinian.io/blog",
+          city: "",
+          date: "2017-12",
+          meta: "article",
+          url: "https://bespinian.io/en/blog/run-a-crypto-trading-bot-on-cloud-foundry",
+          thumb: "images/blog-crypto-bot.webp",
+          desc: "Deploying Zenbot, an open-source cryptocurrency trading bot, to Cloud Foundry to automate trading strategies on platforms like GDAX.",
+        },
+
+        {
+          t: "post",
+          title: "Run WordPress on Cloud Foundry",
+          where: "bespinian.io/blog",
+          city: "",
+          date: "2017-08",
+          meta: "article",
+          url: "https://bespinian.io/en/blog/run-wordpress-on-cloud-foundry",
+          thumb: "images/blog-wordpress.webp",
+          desc: "Deploying WordPress on Cloud Foundry with externalized S3 file storage to handle media uploads in a cloud-native way.",
+        },
+
+        {
+          t: "post",
+          title: "Run Docker Registry on Cloud Foundry",
+          where: "bespinian.io/blog",
+          city: "",
+          date: "2017-08",
+          meta: "article",
+          url: "https://bespinian.io/en/blog/run-docker-registry-on-cloud-foundry",
+          thumb: "images/blog-docker-registry.webp",
+          desc: "A private Docker Registry on Cloud Foundry using S3 for storage and Redis for caching to securely manage your container images.",
+        },
+
+        {
+          t: "post",
+          title: "Run Ghost on Cloud Foundry",
+          where: "bespinian.io/blog",
+          city: "",
+          date: "2017-07",
+          meta: "article",
+          url: "https://bespinian.io/en/blog/run-ghost-on-cloud-foundry",
+          thumb: "images/blog-ghost.webp",
+          desc: "Deploying Ghost, a modern Node.js blogging platform, on Cloud Foundry with MariaDB and optional S3 storage for media files.",
+        },
+
+        {
+          t: "post",
+          title: "Docker for Local Development",
+          where: "bespinian.io/blog",
+          city: "",
+          date: "2017-06",
+          meta: "article",
+          url: "https://bespinian.io/en/blog/docker-for-local-development",
+          thumb: "images/blog-docker-dev.webp",
+          desc: "Using Docker to spin up and tear down backend services for local development - keeping your machine clean and your workflows efficient.",
+        },
+
+        {
+          t: "post",
+          title: "Manage Buckets on Cloud Foundry S3 Services",
+          where: "bespinian.io/blog",
+          city: "",
+          date: "2017-03",
+          meta: "article",
+          url: "https://bespinian.io/en/blog/manage-buckets-on-cloud-foundry-s3-services",
+          thumb: "images/blog-s3-buckets.webp",
+          desc: "Creating and managing S3 buckets on Cloud Foundry using s3cmd or the open-source S3 Manager application.",
+        },
+
+        {
+          t: "post",
+          title: "Blue Green Deployment on Cloud Foundry",
+          where: "bespinian.io/blog",
+          city: "",
+          date: "2016-12",
+          meta: "article",
+          url: "https://bespinian.io/en/blog/blue-green-deployment-on-cloud-foundry",
+          thumb: "images/blog-blue-green.webp",
+          desc: "Zero-downtime updates and safe rollbacks on Cloud Foundry using a simple shell script.",
+        },
+
+        {
+          t: "oss",
+          title: "s3manager - A Web GUI for Your S3 Buckets",
+          where: "github.com/cloudlena/s3manager",
+          city: "",
+          date: "2016-12",
+          meta: "1k ★ · Go",
+          url: "https://github.com/cloudlena/s3manager",
+          thumb: "images/oss-s3manager.webp",
+          desc: "A web GUI written in Go to manage S3 buckets from any provider - list, upload, download and delete objects. Runs as a tiny container, deploys anywhere.",
+        },
+
+        {
+          t: "post",
+          title: "Run Piwik on Cloud Foundry",
+          where: "bespinian.io/blog",
+          city: "",
+          date: "2016-11",
+          meta: "article",
+          url: "https://bespinian.io/en/blog/run-piwik-on-cloud-foundry",
+          thumb: "images/blog-piwik.webp",
+          desc: "Deploying Piwik, an open-source analytics platform, on Cloud Foundry as a self-hosted alternative to Google Analytics.",
+        },
+
+        {
+          t: "post",
+          title:
+            "Configure Front End Apps With Environment Variables on Cloud Foundry",
+          where: "bespinian.io/blog",
+          city: "",
+          date: "2016-11",
+          meta: "article",
+          url: "https://bespinian.io/en/blog/configure-front-end-apps-with-environment-variables-on-cloud-foundry",
+          thumb: "images/blog-frontend-env.webp",
+          desc: "Configuring static front-end apps on Cloud Foundry via environment variables exposed through an nginx HTTP endpoint.",
+        },
+
+        {
+          t: "post",
+          title: "Cloud Foundry Route Services",
+          where: "bespinian.io/blog",
+          city: "",
+          date: "2016-10",
+          meta: "article",
+          url: "https://bespinian.io/en/blog/cloud-foundry-route-services",
+          thumb: "images/blog-route-services.webp",
+          desc: "Using Route Services to add authentication, rate limiting or logging at the route level before requests reach your app.",
+        },
+
+        {
+          t: "post",
+          title: "Observables With Angular and Feathers",
+          where: "bespinian.io/blog",
+          city: "",
+          date: "2016-03",
+          meta: "article",
+          url: "https://bespinian.io/en/blog/observables-with-angular-and-feathers",
+          thumb: "images/blog-observables.webp",
+          desc: "Angular services that consume Feathers WebSocket APIs using RxJS Observables for real-time, reactive data streams.",
+        },
+
+        {
+          t: "post",
+          title: "Run a CI/CD Server on Cloud Foundry",
+          where: "bespinian.io/blog",
+          city: "",
+          date: "2016-02",
+          meta: "article",
+          url: "https://bespinian.io/en/blog/run-a-cicd-server-on-cloud-foundry",
+          thumb: "images/blog-cicd.webp",
+          desc: "Deploying Strider, an open-source CI/CD server, on Cloud Foundry to test, build and deploy your apps on every git push.",
+        },
+      ];
+
+      // ---- counts ----
+      const COUNTS = { all: FEED.length, talk: 0, pod: 0, post: 0, oss: 0 };
+      FEED.forEach((x) => COUNTS[x.t]++);
+      ["all", "talk", "pod", "post", "oss"].forEach((k) => {
+        const el = document.getElementById("ct-" + k);
+        if (el) el.textContent = COUNTS[k];
+      });
+
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // ---- state ----
+      let filter = "all",
+        query = "";
+
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("in");
+              io.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.12 },
+      );
+
+      function esc(s) {
+        return String(s)
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;");
+      }
+
+      function fmtDate(d) {
+        const [y, m] = d.split("-");
+        return (
+          [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec",
+          ][+m - 1] +
+          " " +
+          y
+        );
+      }
+
+      function posterHTML(it) {
+        const T = TYPES[it.t];
+        const playable =
+          (it.t === "talk" || it.t === "pod") && it.url.includes("youtube.com");
+        const play = playable
+          ? `<span class="play">${it.t === "pod" ? "♪" : "▶"}</span>`
+          : "";
+        if (it.thumb) {
+          return `<div class="poster r169" aria-hidden="true"><img src="${esc(it.thumb)}" alt="" loading="lazy"><div class="shade"></div>${play}</div>`;
+        }
+        const ven = it.where
+          ? `<span class="ven">${esc(it.where)}${it.city ? " · " + esc(it.city) : ""}</span>`
+          : "";
+        return `<div class="poster r169" aria-hidden="true"><div class="grad"></div><span class="glyph">${T.glyph}</span>${ven}${play}</div>`;
+      }
+
+      function itemHTML(it, idx) {
+        const T = TYPES[it.t];
+        const delay = Math.min(idx, 6) * 28;
+        return `<article class="item" tabindex="0" aria-expanded="false" style="transition-delay:${delay}ms">
+        <div class="marker" aria-hidden="true">${String(idx + 1).padStart(2, "0")}</div>
+        ${posterHTML(it)}
+        <div class="body">
+          <div class="metarow">
+            <span class="badge">${T.label}</span>
+            <span class="date">${fmtDate(it.date)}</span>
+            <span class="sep">·</span>
+            <span class="meta">${esc(it.meta)}</span>
+          </div>
+          <h2><a href="${esc(it.url)}" target="_blank" rel="noopener noreferrer">${esc(it.title)}</a><span class="arr" aria-hidden="true">↗</span></h2>
+          <div class="where">@ ${esc(it.where)}${it.city ? " · " + esc(it.city) : ""}</div>
+          <div class="reveal" aria-hidden="true"><div>
+            <p class="desc">${esc(it.desc)}</p>
+            <div class="actions"><a class="btn sm" href="${esc(it.url)}" target="_blank" rel="noopener noreferrer" tabindex="-1">${it.url.includes("youtube.com") ? (it.t === "talk" ? T.glyph + "&nbsp; " : "") + esc(T.action) : esc(T.link)} ↗</a></div>
+          </div></div>
+        </div>
+      </article>`;
+      }
+
+      function render() {
+        const q = query.trim().toLowerCase();
+        const results = FEED.filter((it) => {
+          if (filter !== "all" && it.t !== filter) return false;
+          if (!q) return true;
+          return (
+            it.title +
+            " " +
+            it.where +
+            " " +
+            it.city +
+            " " +
+            it.date +
+            " " +
+            TYPES[it.t].label +
+            " " +
+            TYPES[it.t].full +
+            " " +
+            it.desc
+          )
+            .toLowerCase()
+            .includes(q);
+        });
+
+        // resline
+        let r = `<span class="pr">›</span> <b>${results.length}</b> ${results.length === 1 ? "entry" : "entries"}`;
+        if (filter !== "all") r += ` · type=<b>${filter}</b>`;
+        if (query) r += ` · grep=<b>"${esc(query)}"</b>`;
+        r += " · sorted by date desc";
+        document.getElementById("resline").innerHTML = r;
+
+        // list
+        const list = document.getElementById("list");
+        if (results.length === 0) {
+          list.innerHTML = `<div class="empty"><span class="pr">$</span> no matches for "<span class="acc">${esc(query)}</span>". <a href="#" class="acc" id="reset-lnk">reset →</a></div>`;
+          document
+            .getElementById("reset-lnk")
+            .addEventListener("click", (e) => {
+              e.preventDefault();
+              reset();
+            });
+          return;
+        }
+
+        list.innerHTML = results.map(itemHTML).join("");
+        list.querySelectorAll(".item").forEach((el) => io.observe(el));
+      }
+
+      function setFilter(f) {
+        filter = f;
+        document.querySelectorAll(".tab").forEach((b) => {
+          const active = b.dataset.filter === f;
+          b.classList.toggle("on", active);
+          b.setAttribute("aria-pressed", active ? "true" : "false");
+        });
+        render();
+      }
+
+      function reset() {
+        query = "";
+        filter = "all";
+        document.getElementById("search").value = "";
+        document.getElementById("grep-wrap").classList.remove("has-q");
+        setFilter("all");
+      }
+
+      // ---- wire up ----
+      document
+        .querySelectorAll(".tab")
+        .forEach((b) =>
+          b.addEventListener("click", () => setFilter(b.dataset.filter)),
+        );
+
+      const searchEl = document.getElementById("search");
+      searchEl.addEventListener("input", (e) => {
+        query = e.target.value;
+        document.getElementById("grep-wrap").classList.toggle("has-q", !!query);
+        render();
+      });
+
+      document.getElementById("clr-btn").addEventListener("click", () => {
+        query = "";
+        searchEl.value = "";
+        document.getElementById("grep-wrap").classList.remove("has-q");
+        render();
+      });
+
+      window.addEventListener("keydown", (e) => {
+        if (e.key === "/" && document.activeElement !== searchEl) {
+          e.preventDefault();
+          searchEl.focus();
+        } else if (e.key === "Escape" && document.activeElement === searchEl) {
+          query = "";
+          searchEl.value = "";
+          document.getElementById("grep-wrap").classList.remove("has-q");
+          searchEl.blur();
+          render();
+        }
+      });
+
+      function toggleItem(item) {
+        item.classList.toggle("open");
+        const open = item.classList.contains("open");
+        item.setAttribute("aria-expanded", open ? "true" : "false");
+        const reveal = item.querySelector(".reveal");
+        if (reveal) {
+          reveal.setAttribute("aria-hidden", open ? "false" : "true");
+          reveal
+            .querySelectorAll("a, button, input, select, textarea, [tabindex]")
+            .forEach((el) => {
+              if (open) el.removeAttribute("tabindex");
+              else el.setAttribute("tabindex", "-1");
+            });
+        }
+      }
+
+      document.getElementById("list").addEventListener("click", (e) => {
+        const item = e.target.closest(".item");
+        if (!item || e.target.closest("a")) return;
+        toggleItem(item);
+      });
+
+      document.getElementById("list").addEventListener("keydown", (e) => {
+        if (e.key !== "Enter" && e.key !== " ") return;
+        const item = e.target.closest(".item");
+        if (!item || e.target.closest("a")) return;
+        e.preventDefault();
+        toggleItem(item);
+      });
+
+      render();
+    </script>
+  </body>
+</html>
