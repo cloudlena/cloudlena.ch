@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lena Fuhrimann - Talks, Podcasts &amp; Writing</title>
+    <link>https://cloudlena.ch</link>
+    <atom:link href="https://cloudlena.ch/feed.xml" rel="self" type="application/rss+xml" />
+    <description>Conference talks, podcast appearances, articles and open source from Lena Fuhrimann - cloud engineer, founder of bespinian, and public speaker on cloud-native, DevOps and Kubernetes topics.</description>
+    <language>en</language>
+    <lastBuildDate>Mon, 01 Jun 2026 00:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Run Your Own LLM for Profit and Sovereignty</title>
+      <link>https://www.swiss-software-festival.ch/archive/swiss-software-festival-2026/program/tech-track-3-artificial-intelligence.html</link>
+      <guid isPermaLink="true">https://www.swiss-software-festival.ch/archive/swiss-software-festival-2026/program/tech-track-3-artificial-intelligence.html</guid>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
+      <category>Conference talk</category>
+      <description>Why running your own LLM makes sense - both as a business decision and as a matter of data sovereignty. A practical look at self-hosted models, the tradeoffs versus managed APIs, and how to get started without a data center. (Swiss Software Festival 2026 · Basel)</description>
+    </item>
+    <item>
+      <title>Panel Discussion: Digital Sovereignty Perspectives from the Ecosystem</title>
+      <link>https://www.youtube.com/watch?v=MQDw05sokZk</link>
+      <guid isPermaLink="true">https://www.youtube.com/watch?v=MQDw05sokZk</guid>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
+      <category>Conference talk</category>
+      <description>A panel on digital sovereignty at Cloud Native Zürich 2026 - exploring what it means for organizations to own their infrastructure, data, and AI stack in an era of hyperscaler dependency. (Cloud Native Zürich 2026 · Zürich)</description>
+    </item>
+    <item>
+      <title>A Practical Guide to Fast and Private LLMs</title>
+      <link>https://www.ch-open.ch/open-source-ai-conference-2026/</link>
+      <guid isPermaLink="true">https://www.ch-open.ch/open-source-ai-conference-2026/</guid>
+      <pubDate>Fri, 01 May 2026 00:00:00 GMT</pubDate>
+      <category>Conference talk</category>
+      <description>A practical walkthrough of running LLMs locally and on-prem - covering model selection, inference performance, and keeping sensitive data out of third-party hands. (Open Source AI Conference 2026 · Bern)</description>
+    </item>
+    <item>
+      <title>How Almost Anyone Can Get Their Own AI</title>
+      <link>https://www.netzwoche.ch/news/2026-05-22/so-kommt-fast-jeder-zu-einer-eigenen-ki</link>
+      <guid isPermaLink="true">https://www.netzwoche.ch/news/2026-05-22/so-kommt-fast-jeder-zu-einer-eigenen-ki</guid>
+      <pubDate>Fri, 01 May 2026 00:00:00 GMT</pubDate>
+      <category>Article</category>
+      <description>Netzwoche covers the second Open Source AI Conference in Bern - featuring speakers on open Swiss language models, AI ethics, and practical tools for running your own LLM without depending on big tech. (Netzwoche · Bern)</description>
+    </item>
+    <item>
+      <title>Pragmatic AI Adoption Is Hard!</title>
+      <link>https://www.youtube.com/watch?v=a4Rj04nmuO4</link>
+      <guid isPermaLink="true">https://www.youtube.com/watch?v=a4Rj04nmuO4</guid>
+      <pubDate>Fri, 01 May 2026 00:00:00 GMT</pubDate>
+      <category>Conference talk</category>
+      <description>A 5-minute, 20-slide Ignite take on adopting AI where it actually adds value - without creating chaos or risk. (DevOpsDays Zürich 2026 · Ignite · Zürich)</description>
+    </item>
+    <item>
+      <title>Who Needs a Server?</title>
+      <link>https://www.youtube.com/watch?v=FD-8QWGV7Fs</link>
+      <guid isPermaLink="true">https://www.youtube.com/watch?v=FD-8QWGV7Fs</guid>
+      <pubDate>Fri, 01 May 2026 00:00:00 GMT</pubDate>
+      <category>Podcast guest</category>
+      <description>Clearing up the confusion around serverless - why it&apos;s a spectrum, not just FaaS, and why the real saving is engineering time, not the cloud bill. (Adventures in DevOps)</description>
+    </item>
+    <item>
+      <title>She Built a 100-Client Cloud Company in Switzerland</title>
+      <link>https://www.youtube.com/watch?v=hldUjs4FPQQ</link>
+      <guid isPermaLink="true">https://www.youtube.com/watch?v=hldUjs4FPQQ</guid>
+      <pubDate>Sun, 01 Mar 2026 00:00:00 GMT</pubDate>
+      <category>Podcast guest</category>
+      <description>How bespinian grew to serve 100+ clients - the founding story, building a team, and lessons from running a cloud-native consultancy in Switzerland. (Let&apos;s Talk Podcast)</description>
+    </item>
+    <item>
+      <title>Hosting LLMs on Kubernetes for Digital Sovereignty</title>
+      <link>https://www.youtube.com/watch?v=LUtaXaMs1zA</link>
+      <guid isPermaLink="true">https://www.youtube.com/watch?v=LUtaXaMs1zA</guid>
+      <pubDate>Mon, 01 Dec 2025 00:00:00 GMT</pubDate>
+      <category>Conference talk</category>
+      <description>From the December 2025 Kubernetes Community Days Suisse Romande at CERN - how to host LLMs on Kubernetes to keep data under your control. (KCD Suisse Romande · Genève, CERN · Genève)</description>
+    </item>
+    <item>
+      <title>Panel: Kubernetes for AI or AI for Kubernetes</title>
+      <link>https://www.youtube.com/watch?v=IidP7UgWPc8</link>
+      <guid isPermaLink="true">https://www.youtube.com/watch?v=IidP7UgWPc8</guid>
+      <pubDate>Mon, 01 Dec 2025 00:00:00 GMT</pubDate>
+      <category>Conference talk</category>
+      <description>Panel discussion at Kubernetes Community Days Suisse Romande - exploring whether Kubernetes is the right platform for AI workloads, and how AI might change the way we operate Kubernetes. (KCD Suisse Romande · Genève, CERN · Genève)</description>
+    </item>
+    <item>
+      <title>Level Up Your Serverless Game</title>
+      <link>https://www.linkedin.com/posts/marc-fritsche_nicht-jedes-level-in-der-cloud-ist-einfach-activity-7401518295410995200-JAQ9</link>
+      <guid isPermaLink="true">https://www.linkedin.com/posts/marc-fritsche_nicht-jedes-level-in-der-cloud-ist-einfach-activity-7401518295410995200-JAQ9</guid>
+      <pubDate>Mon, 01 Dec 2025 00:00:00 GMT</pubDate>
+      <category>Conference talk</category>
+      <description>Guest lecture on cloud-native migration challenges and serverless best practices for the Cloud Development module at OST. (OST – Ostschweizer Fachhochschule · St. Gallen)</description>
+    </item>
+    <item>
+      <title>Building Tough Applications</title>
+      <link>https://bespinian.io/en/blog/tough-applications</link>
+      <guid isPermaLink="true">https://bespinian.io/en/blog/tough-applications</guid>
+      <pubDate>Mon, 01 Dec 2025 00:00:00 GMT</pubDate>
+      <category>Article</category>
+      <description>Building strong cloud applications around four ideas - Tolerance, Fortitude, Resilience and Adaptability. (bespinian.io/blog)</description>
+    </item>
+    <item>
+      <title>Pragmatic AI Adoption</title>
+      <link>https://www.meetup.com/devops-bern/events/310420966</link>
+      <guid isPermaLink="true">https://www.meetup.com/devops-bern/events/310420966</guid>
+      <pubDate>Sat, 01 Nov 2025 00:00:00 GMT</pubDate>
+      <category>Conference talk</category>
+      <description>Full house at bespinian HQ for DevOps Meetup Bern - a talk on where AI adoption actually adds value in engineering teams, without the hype. (DevOps Meetup Bern · Bern)</description>
+    </item>
+    <item>
+      <title>Running LLMs on Kubernetes</title>
+      <link>https://bespinian.io/en/blog/llms-on-kubernetes</link>
+      <guid isPermaLink="true">https://bespinian.io/en/blog/llms-on-kubernetes</guid>
+      <pubDate>Sat, 01 Nov 2025 00:00:00 GMT</pubDate>
+      <category>Article</category>
+      <description>Deploying and managing large language models on Kubernetes - Ollama for simple setups, the vLLM Production Stack for high-traffic production. (bespinian.io/blog)</description>
+    </item>
+    <item>
+      <title>Level Up Your Serverless Game</title>
+      <link>https://bespinian.io/en/blog/level-up-your-serverless-game</link>
+      <guid isPermaLink="true">https://bespinian.io/en/blog/level-up-your-serverless-game</guid>
+      <pubDate>Mon, 01 Sep 2025 00:00:00 GMT</pubDate>
+      <category>Article</category>
+      <description>Avoiding common serverless pitfalls - logging, tracing, cold starts, security and deployment strategies. (bespinian.io/blog)</description>
+    </item>
+    <item>
+      <title>NixOS: How My Laptop Became Declarative</title>
+      <link>https://www.youtube.com/watch?v=6qLR_8a4tkw</link>
+      <guid isPermaLink="true">https://www.youtube.com/watch?v=6qLR_8a4tkw</guid>
+      <pubDate>Mon, 01 Sep 2025 00:00:00 GMT</pubDate>
+      <category>Conference talk</category>
+      <description>What NixOS is, how it works, and the genuinely nice things you can do once your whole machine is declarative and reproducible. (Nine Internet Solutions · TechTalkThursday #25 · Zürich)</description>
+    </item>
+    <item>
+      <title>My Learnings from Ten Years of Cloud-Native and Serverless</title>
+      <link>https://www.swiss-software-festival.ch/archive/swiss-software-festival-2025/program/tech-track2-cloud-native.html</link>
+      <guid isPermaLink="true">https://www.swiss-software-festival.ch/archive/swiss-software-festival-2025/program/tech-track2-cloud-native.html</guid>
+      <pubDate>Sun, 01 Jun 2025 00:00:00 GMT</pubDate>
+      <category>Conference talk</category>
+      <description>A decade of building and running cloud-native and serverless systems - the patterns that held up, the mistakes worth avoiding, and what the industry got right and wrong along the way. (Swiss Software Festival 2025 · Basel)</description>
+    </item>
+    <item>
+      <title>Level Up Your Serverless Game</title>
+      <link>https://www.youtube.com/watch?v=kSzeBRlY7_I</link>
+      <guid isPermaLink="true">https://www.youtube.com/watch?v=kSzeBRlY7_I</guid>
+      <pubDate>Tue, 01 Apr 2025 00:00:00 GMT</pubDate>
+      <category>Conference talk</category>
+      <description>Playing through the ten levels of writing and deploying serverless apps - the challenges teams hit, and the best practices that get you past them. (DevOpsDays Zürich 2025 · Zürich)</description>
+    </item>
+    <item>
+      <title>Cloud Native Security &amp; DevSecOps</title>
+      <link>https://www.linkedin.com/posts/lena-fuhrimann_cloudnativecitizen-cloudnativesecurity-devsecops-activity-7298246282878312449-f48x</link>
+      <guid isPermaLink="true">https://www.linkedin.com/posts/lena-fuhrimann_cloudnativecitizen-cloudnativesecurity-devsecops-activity-7298246282878312449-f48x</guid>
+      <pubDate>Sat, 01 Feb 2025 00:00:00 GMT</pubDate>
+      <category>Conference talk</category>
+      <description>Live drawing instead of slides - juggling a microphone and drawing pen at the same time at my first Swiss Cyber Security Days. (Swiss Cyber Security Days · Bern)</description>
+    </item>
+    <item>
+      <title>Is Serverless a Blatant Cost Trap?</title>
+      <link>https://www.youtube.com/watch?v=Hf0eBEEL0Lk&amp;t=2057</link>
+      <guid isPermaLink="true">https://www.youtube.com/watch?v=Hf0eBEEL0Lk&amp;t=2057</guid>
+      <pubDate>Fri, 01 Nov 2024 00:00:00 GMT</pubDate>
+      <category>Conference talk</category>
+      <description>Busting serverless cost myths with real-world examples - how proactive cost monitoring, ARM architectures, and tools like AWS Lambda Power Tuning keep serverless from becoming a cost trap. (Haunted DevOps Meetup · Ergon Informatik · Zürich)</description>
+    </item>
+    <item>
+      <title>How AWS Lambda &amp; Fargate Work Under the Hood</title>
+      <link>https://www.linkedin.com/posts/lena-fuhrimann_cloudnativecitizen-berlin-aws-activity-7254398428917448705-s54n</link>
+      <guid isPermaLink="true">https://www.linkedin.com/posts/lena-fuhrimann_cloudnativecitizen-berlin-aws-activity-7254398428917448705-s54n</guid>
+      <pubDate>Tue, 01 Oct 2024 00:00:00 GMT</pubDate>
+      <category>Conference talk</category>
+      <description>A deep dive into how AWS Lambda and Fargate work under the hood, including a live demo of Firecracker - the microVM technology powering them. (Serverless Architecture Conference · Berlin)</description>
+    </item>
+    <item>
+      <title>Serverless on Rust: What the Hack is Firecracker?</title>
+      <link>https://www.linkedin.com/posts/bespinian_cloudnativecitizen-rustlang-serverless-ugcPost-7253075642190057472-hHMy</link>
+      <guid isPermaLink="true">https://www.linkedin.com/posts/bespinian_cloudnativecitizen-rustlang-serverless-ugcPost-7253075642190057472-hHMy</guid>
+      <pubDate>Tue, 01 Oct 2024 00:00:00 GMT</pubDate>
+      <category>Conference talk</category>
+      <description>How Firecracker launches microVMs in under 100ms - and what that means for serverless Rust on AWS Lambda. (Rust Meetup · bespinian · Zürich)</description>
+    </item>
+    <item>
+      <title>Serverless Powertools</title>
+      <link>https://www.meetup.com/devops-basel/events/303214101/</link>
+      <guid isPermaLink="true">https://www.meetup.com/devops-basel/events/303214101/</guid>
+      <pubDate>Tue, 01 Oct 2024 00:00:00 GMT</pubDate>
+      <category>Conference talk</category>
+      <description>Efficient large-scale serverless deployment strategies using AWS Lambda Powertools at the relaunched DevOps Basel community meetup. (DevOps Basel Meetup · Basel)</description>
+    </item>
+    <item>
+      <title>Best Practices for Operating Serverless Applications in TypeScript</title>
+      <link>https://www.linkedin.com/posts/barnerjs-talks_eslint-meetup-javascript-ugcPost-7237385346924105728-jjdE</link>
+      <guid isPermaLink="true">https://www.linkedin.com/posts/barnerjs-talks_eslint-meetup-javascript-ugcPost-7237385346924105728-jjdE</guid>
+      <pubDate>Sun, 01 Sep 2024 00:00:00 GMT</pubDate>
+      <category>Conference talk</category>
+      <description>Best practices for building and operating serverless applications in TypeScript, with open-source workshop resources. (BärnerJS · Bern)</description>
+    </item>
+    <item>
+      <title>Serverless Optimization on AWS</title>
+      <link>https://www.linkedin.com/posts/bespinian_cloudnativecitizen-activity-7327624309642780672-zfdf</link>
+      <guid isPermaLink="true">https://www.linkedin.com/posts/bespinian_cloudnativecitizen-activity-7327624309642780672-zfdf</guid>
+      <pubDate>Wed, 01 Nov 2023 00:00:00 GMT</pubDate>
+      <category>Conference talk</category>
+      <description>Building resilient and reliable serverless applications on AWS - covering optimization strategies for performance and cost at the Cloud Natives Zurich meetup. (Cloud Natives Zurich · AWS · Zürich)</description>
+    </item>
+    <item>
+      <title>Is Serverless a Blatant Cost Trap?</title>
+      <link>https://www.linkedin.com/posts/bespinian_slacon-cloudnativecitizen-activity-7119975681777618945-ToaV</link>
+      <guid isPermaLink="true">https://www.linkedin.com/posts/bespinian_slacon-cloudnativecitizen-activity-7119975681777618945-ToaV</guid>
+      <pubDate>Sun, 01 Oct 2023 00:00:00 GMT</pubDate>
+      <category>Conference talk</category>
+      <description>Two contributions at SLACon Berlin: a talk busting serverless cost myths and an advanced serverless workshop. (SLACon · Berlin)</description>
+    </item>
+    <item>
+      <title>Streamlined Troubleshooting in Kubernetes</title>
+      <link>https://www.youtube.com/watch?v=sk6j7_VFhSc</link>
+      <guid isPermaLink="true">https://www.youtube.com/watch?v=sk6j7_VFhSc</guid>
+      <pubDate>Thu, 01 Jun 2023 00:00:00 GMT</pubDate>
+      <category>Conference talk</category>
+      <description>A practical workflow for debugging workloads in Kubernetes without losing your mind - or your weekend. (Cloud Native Zürich · Zürich)</description>
+    </item>
+    <item>
+      <title>nixfiles - Personal Nix Configuration</title>
+      <link>https://github.com/cloudlena/nixfiles</link>
+      <guid isPermaLink="true">https://github.com/cloudlena/nixfiles</guid>
+      <pubDate>Mon, 01 May 2023 00:00:00 GMT</pubDate>
+      <category>Open source</category>
+      <description>My declarative, reproducible machine setup in Nix - the config behind the &apos;how my laptop became declarative&apos; talk. (github.com/cloudlena/nixfiles)</description>
+    </item>
+    <item>
+      <title>Glorious Terminal UIs with charm.sh</title>
+      <link>https://www.linkedin.com/feed/update/urn:li:activity:7003057535792390144</link>
+      <guid isPermaLink="true">https://www.linkedin.com/feed/update/urn:li:activity:7003057535792390144</guid>
+      <pubDate>Tue, 01 Nov 2022 00:00:00 GMT</pubDate>
+      <category>Conference talk</category>
+      <description>Building beautiful terminal UIs in Go using the charm.sh library suite. (Golang Bern · Puzzle ITC · Bern)</description>
+    </item>
+    <item>
+      <title>Level Up Your Serverless Game</title>
+      <link>https://www.linkedin.com/posts/lena-fuhrimann_serverless-activity-6987723173920133120-1A6_</link>
+      <guid isPermaLink="true">https://www.linkedin.com/posts/lena-fuhrimann_serverless-activity-6987723173920133120-1A6_</guid>
+      <pubDate>Sat, 01 Oct 2022 00:00:00 GMT</pubDate>
+      <category>Conference talk</category>
+      <description>Playing through the ten levels of writing and deploying serverless apps - the challenges teams hit, and the best practices that get you past them. (Serverless Architecture Conference · Berlin)</description>
+    </item>
+    <item>
+      <title>API Contract Definitions</title>
+      <link>https://bespinian.io/en/blog/api-contract-definitions</link>
+      <guid isPermaLink="true">https://bespinian.io/en/blog/api-contract-definitions</guid>
+      <pubDate>Sat, 01 Oct 2022 00:00:00 GMT</pubDate>
+      <category>Article</category>
+      <description>Technologies for defining service contracts - OpenAPI, GraphQL and gRPC - and keeping specification and implementation in sync. (bespinian.io/blog)</description>
+    </item>
+    <item>
+      <title>GitOps</title>
+      <link>https://bespinian.io/en/blog/gitops</link>
+      <guid isPermaLink="true">https://bespinian.io/en/blog/gitops</guid>
+      <pubDate>Sun, 01 May 2022 00:00:00 GMT</pubDate>
+      <category>Article</category>
+      <description>Combining Git and Infrastructure as Code to implement GitOps for both apps and infra - Argo CD for Kubernetes, Terraform for infrastructure. (bespinian.io/blog)</description>
+    </item>
+    <item>
+      <title>Be Like… Lena</title>
+      <link>https://belikegrace.ch/be-like-lena/</link>
+      <guid isPermaLink="true">https://belikegrace.ch/be-like-lena/</guid>
+      <pubDate>Wed, 01 Dec 2021 00:00:00 GMT</pubDate>
+      <category>Article</category>
+      <description>A profile and interview about my path into cloud software architecture, co-founding bespinian, and the intersection of technical expertise and creativity. (belikegrace.ch)</description>
+    </item>
+    <item>
+      <title>Infrastructure as Code</title>
+      <link>https://bespinian.io/en/blog/infrastructure-as-code</link>
+      <guid isPermaLink="true">https://bespinian.io/en/blog/infrastructure-as-code</guid>
+      <pubDate>Wed, 01 Dec 2021 00:00:00 GMT</pubDate>
+      <category>Article</category>
+      <description>IaC principles and declarative infrastructure with Terraform, Packer and CloudFormation - versioning, testing and automation. (bespinian.io/blog)</description>
+    </item>
+    <item>
+      <title>Git - The Important Parts</title>
+      <link>https://bespinian.io/en/blog/git-the-important-parts</link>
+      <guid isPermaLink="true">https://bespinian.io/en/blog/git-the-important-parts</guid>
+      <pubDate>Fri, 01 Oct 2021 00:00:00 GMT</pubDate>
+      <category>Article</category>
+      <description>Git best practices for teams - commit messages, Gitflow vs GitHub Flow, pull requests and hooks to enforce conventions. (bespinian.io/blog)</description>
+    </item>
+    <item>
+      <title>Serverless Workshop</title>
+      <link>https://www.linkedin.com/posts/lena-fuhrimann_our-serverless-workshop-with-lena-fuhrimann-activity-6846787142279036928-vjxG</link>
+      <guid isPermaLink="true">https://www.linkedin.com/posts/lena-fuhrimann_our-serverless-workshop-with-lena-fuhrimann-activity-6846787142279036928-vjxG</guid>
+      <pubDate>Wed, 01 Sep 2021 00:00:00 GMT</pubDate>
+      <category>Conference talk</category>
+      <description>Hands-on serverless workshop at Swiss Cloud Native Day, co-facilitated with Gabriel Koch and Mathis Kretz. (Swiss Cloud Native Day · Bern)</description>
+    </item>
+    <item>
+      <title>Installing Arch Linux on UEFI With Full Disk Encryption</title>
+      <link>https://bespinian.io/en/blog/installing-arch-linux-on-uefi-with-full-disk-encryption</link>
+      <guid isPermaLink="true">https://bespinian.io/en/blog/installing-arch-linux-on-uefi-with-full-disk-encryption</guid>
+      <pubDate>Mon, 01 Mar 2021 00:00:00 GMT</pubDate>
+      <category>Article</category>
+      <description>A concise step-by-step guide to installing Arch Linux on UEFI systems with LUKS full-disk encryption. (bespinian.io/blog)</description>
+    </item>
+    <item>
+      <title>Efficient Navigation in Vim</title>
+      <link>https://bespinian.io/en/blog/efficient-navigation-in-vim</link>
+      <guid isPermaLink="true">https://bespinian.io/en/blog/efficient-navigation-in-vim</guid>
+      <pubDate>Wed, 01 Jul 2020 00:00:00 GMT</pubDate>
+      <category>Article</category>
+      <description>Moving around Vim efficiently - movement keys, search techniques and a few plugins that boost your editing speed. (bespinian.io/blog)</description>
+    </item>
+    <item>
+      <title>Run a Crypto Trading Bot on Cloud Foundry</title>
+      <link>https://bespinian.io/en/blog/run-a-crypto-trading-bot-on-cloud-foundry</link>
+      <guid isPermaLink="true">https://bespinian.io/en/blog/run-a-crypto-trading-bot-on-cloud-foundry</guid>
+      <pubDate>Fri, 01 Dec 2017 00:00:00 GMT</pubDate>
+      <category>Article</category>
+      <description>Deploying Zenbot, an open-source cryptocurrency trading bot, to Cloud Foundry to automate trading strategies on platforms like GDAX. (bespinian.io/blog)</description>
+    </item>
+    <item>
+      <title>Run WordPress on Cloud Foundry</title>
+      <link>https://bespinian.io/en/blog/run-wordpress-on-cloud-foundry</link>
+      <guid isPermaLink="true">https://bespinian.io/en/blog/run-wordpress-on-cloud-foundry</guid>
+      <pubDate>Tue, 01 Aug 2017 00:00:00 GMT</pubDate>
+      <category>Article</category>
+      <description>Deploying WordPress on Cloud Foundry with externalized S3 file storage to handle media uploads in a cloud-native way. (bespinian.io/blog)</description>
+    </item>
+    <item>
+      <title>Run Docker Registry on Cloud Foundry</title>
+      <link>https://bespinian.io/en/blog/run-docker-registry-on-cloud-foundry</link>
+      <guid isPermaLink="true">https://bespinian.io/en/blog/run-docker-registry-on-cloud-foundry</guid>
+      <pubDate>Tue, 01 Aug 2017 00:00:00 GMT</pubDate>
+      <category>Article</category>
+      <description>A private Docker Registry on Cloud Foundry using S3 for storage and Redis for caching to securely manage your container images. (bespinian.io/blog)</description>
+    </item>
+    <item>
+      <title>Run Ghost on Cloud Foundry</title>
+      <link>https://bespinian.io/en/blog/run-ghost-on-cloud-foundry</link>
+      <guid isPermaLink="true">https://bespinian.io/en/blog/run-ghost-on-cloud-foundry</guid>
+      <pubDate>Sat, 01 Jul 2017 00:00:00 GMT</pubDate>
+      <category>Article</category>
+      <description>Deploying Ghost, a modern Node.js blogging platform, on Cloud Foundry with MariaDB and optional S3 storage for media files. (bespinian.io/blog)</description>
+    </item>
+    <item>
+      <title>Docker for Local Development</title>
+      <link>https://bespinian.io/en/blog/docker-for-local-development</link>
+      <guid isPermaLink="true">https://bespinian.io/en/blog/docker-for-local-development</guid>
+      <pubDate>Thu, 01 Jun 2017 00:00:00 GMT</pubDate>
+      <category>Article</category>
+      <description>Using Docker to spin up and tear down backend services for local development - keeping your machine clean and your workflows efficient. (bespinian.io/blog)</description>
+    </item>
+    <item>
+      <title>clong - A Fun Multiplayer Game</title>
+      <link>https://github.com/cloudlena/clong</link>
+      <guid isPermaLink="true">https://github.com/cloudlena/clong</guid>
+      <pubDate>Sat, 01 Apr 2017 00:00:00 GMT</pubDate>
+      <category>Open source</category>
+      <description>A fun multiplayer game: players swipe on their phones to launch balls at targets on a shared big screen, with a live scoreboard. (github.com/cloudlena/clong)</description>
+    </item>
+    <item>
+      <title>Manage Buckets on Cloud Foundry S3 Services</title>
+      <link>https://bespinian.io/en/blog/manage-buckets-on-cloud-foundry-s3-services</link>
+      <guid isPermaLink="true">https://bespinian.io/en/blog/manage-buckets-on-cloud-foundry-s3-services</guid>
+      <pubDate>Wed, 01 Mar 2017 00:00:00 GMT</pubDate>
+      <category>Article</category>
+      <description>Creating and managing S3 buckets on Cloud Foundry using s3cmd or the open-source S3 Manager application. (bespinian.io/blog)</description>
+    </item>
+    <item>
+      <title>Blue Green Deployment on Cloud Foundry</title>
+      <link>https://bespinian.io/en/blog/blue-green-deployment-on-cloud-foundry</link>
+      <guid isPermaLink="true">https://bespinian.io/en/blog/blue-green-deployment-on-cloud-foundry</guid>
+      <pubDate>Thu, 01 Dec 2016 00:00:00 GMT</pubDate>
+      <category>Article</category>
+      <description>Zero-downtime updates and safe rollbacks on Cloud Foundry using a simple shell script. (bespinian.io/blog)</description>
+    </item>
+    <item>
+      <title>s3manager - A Web GUI for Your S3 Buckets</title>
+      <link>https://github.com/cloudlena/s3manager</link>
+      <guid isPermaLink="true">https://github.com/cloudlena/s3manager</guid>
+      <pubDate>Thu, 01 Dec 2016 00:00:00 GMT</pubDate>
+      <category>Open source</category>
+      <description>A web GUI written in Go to manage S3 buckets from any provider - list, upload, download and delete objects. Runs as a tiny container, deploys anywhere. (github.com/cloudlena/s3manager)</description>
+    </item>
+    <item>
+      <title>Run Piwik on Cloud Foundry</title>
+      <link>https://bespinian.io/en/blog/run-piwik-on-cloud-foundry</link>
+      <guid isPermaLink="true">https://bespinian.io/en/blog/run-piwik-on-cloud-foundry</guid>
+      <pubDate>Tue, 01 Nov 2016 00:00:00 GMT</pubDate>
+      <category>Article</category>
+      <description>Deploying Piwik, an open-source analytics platform, on Cloud Foundry as a self-hosted alternative to Google Analytics. (bespinian.io/blog)</description>
+    </item>
+    <item>
+      <title>Configure Front End Apps With Environment Variables on Cloud Foundry</title>
+      <link>https://bespinian.io/en/blog/configure-front-end-apps-with-environment-variables-on-cloud-foundry</link>
+      <guid isPermaLink="true">https://bespinian.io/en/blog/configure-front-end-apps-with-environment-variables-on-cloud-foundry</guid>
+      <pubDate>Tue, 01 Nov 2016 00:00:00 GMT</pubDate>
+      <category>Article</category>
+      <description>Configuring static front-end apps on Cloud Foundry via environment variables exposed through an nginx HTTP endpoint. (bespinian.io/blog)</description>
+    </item>
+    <item>
+      <title>Cloud Foundry Route Services</title>
+      <link>https://bespinian.io/en/blog/cloud-foundry-route-services</link>
+      <guid isPermaLink="true">https://bespinian.io/en/blog/cloud-foundry-route-services</guid>
+      <pubDate>Sat, 01 Oct 2016 00:00:00 GMT</pubDate>
+      <category>Article</category>
+      <description>Using Route Services to add authentication, rate limiting or logging at the route level before requests reach your app. (bespinian.io/blog)</description>
+    </item>
+    <item>
+      <title>Observables With Angular and Feathers</title>
+      <link>https://bespinian.io/en/blog/observables-with-angular-and-feathers</link>
+      <guid isPermaLink="true">https://bespinian.io/en/blog/observables-with-angular-and-feathers</guid>
+      <pubDate>Tue, 01 Mar 2016 00:00:00 GMT</pubDate>
+      <category>Article</category>
+      <description>Angular services that consume Feathers WebSocket APIs using RxJS Observables for real-time, reactive data streams. (bespinian.io/blog)</description>
+    </item>
+    <item>
+      <title>Run a CI/CD Server on Cloud Foundry</title>
+      <link>https://bespinian.io/en/blog/run-a-cicd-server-on-cloud-foundry</link>
+      <guid isPermaLink="true">https://bespinian.io/en/blog/run-a-cicd-server-on-cloud-foundry</guid>
+      <pubDate>Mon, 01 Feb 2016 00:00:00 GMT</pubDate>
+      <category>Article</category>
+      <description>Deploying Strider, an open-source CI/CD server, on Cloud Foundry to test, build and deploy your apps on every git push. (bespinian.io/blog)</description>
+    </item>
+  </channel>
+</rss>
