@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lena Fuhrimann — Cloud engineer, founder of bespinian, and public speaker on cloud-native, DevOps, and Kubernetes topics.">
+  <link rel="canonical" href="https://cloudlena.ch">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <title>Lena Fuhrimann — Cloud Engineer &amp; Speaker</title>
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Lena Fuhrimann — Cloud Engineer &amp; Speaker">
+  <meta property="og:description" content="Lena Fuhrimann — Cloud engineer, founder of bespinian, and public speaker on cloud-native, DevOps, and Kubernetes topics.">
+  <meta property="og:url" content="https://cloudlena.ch">
+  <meta property="og:locale" content="en_US">
+  <meta property="profile:first_name" content="Lena">
+  <meta property="profile:last_name" content="Fuhrimann">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Lena Fuhrimann — Cloud Engineer &amp; Speaker">
+  <meta name="twitter:description" content="Lena Fuhrimann — Cloud engineer, founder of bespinian, and public speaker on cloud-native, DevOps, and Kubernetes topics.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Lena Fuhrimann",
+    "url": "https://cloudlena.ch",
+    "jobTitle": "Cloud Engineer & Public Speaker",
+    "worksFor": { "@type": "Organization", "name": "bespinian" },
+    "knowsAbout": ["Cloud Native", "DevOps", "Kubernetes", "Platform Engineering"],
+    "sameAs": ["https://github.com/cloudlena", "https://www.linkedin.com/in/lena-fuhrimann"]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:        #1a1b26;
+      --bg2:       #16161e;
+      --panel:     #1f2335;
+      --panel-2:   #24283b;
+      --border:    #292e42;
+      --border-2:  #3b4261;
+      --text:      #c0caf5;
+      --dim:       #a9b1d6;
+      --faint:     #565f89;
+      --accent:    #bb9af7;
+      --accent-2:  #9d7cd8;
+      --accent-soft: rgba(187,154,247,.14);
+      --green:     #9ece6a;
+      --mono: "Fira Code", ui-monospace, "SF Mono", Menlo, monospace;
+      --maxw: 940px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      background-attachment: fixed;
+      color: var(--text);
+      font-family: var(--mono);
+      font-size: 15px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    ::selection { background: var(--accent-soft); color: #fff; }
+
+    body::after {
+      content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 9;
+      background: repeating-linear-gradient(to bottom, rgba(255,255,255,.013) 0 1px, transparent 1px 3px);
+      opacity: .5;
+    }
+
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 28px; }
+
+    .pr { color: var(--green); }
+    .pr::after { content: " "; }
+    .dim { color: var(--dim); }
+    .faint { color: var(--faint); }
+    .acc { color: var(--accent); }
+
+    /* ---------- top bar ---------- */
+    .topbar {
+      position: sticky; top: 0; z-index: 20;
+      background: rgba(22,22,30,.85);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+    .topbar .inner {
+      max-width: var(--maxw); margin: 0 auto; padding: 11px 28px;
+      display: flex; align-items: center; gap: 14px;
+    }
+    .dots { display: flex; gap: 7px; }
+    .dots i { width: 11px; height: 11px; border-radius: 50%; display: block; }
+    .winttl { color: var(--faint); font-size: 13px; white-space: nowrap; }
+    .winttl b { color: var(--dim); font-weight: 500; }
+    .spacer { flex: 1; }
+    .avail {
+      display: inline-flex; align-items: center; gap: 7px; font-size: 12.5px; color: var(--dim); white-space: nowrap;
+    }
+    .avail .led { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 0 rgba(158,206,106,.5); animation: pulse 2.6s infinite; }
+    @keyframes pulse { 0%{ box-shadow:0 0 0 0 rgba(158,206,106,.45);} 70%{ box-shadow:0 0 0 7px rgba(158,206,106,0);} 100%{ box-shadow:0 0 0 0 rgba(158,206,106,0);} }
+
+    .btn {
+      font-family: var(--mono); font-weight: 700; font-size: 13.5px; cursor: pointer;
+      border: 1px solid var(--accent-2); color: #fff;
+      background: var(--accent-2);
+      padding: 9px 16px; border-radius: 7px; display: inline-flex; align-items: center; gap: 9px; white-space: nowrap;
+      box-shadow: 0 6px 18px -8px rgba(122,162,247,.7); transition: transform .12s ease, box-shadow .12s ease, filter .12s ease;
+    }
+    .btn:hover { transform: translateY(-1px); filter: brightness(1.07); box-shadow: 0 10px 24px -8px rgba(122,162,247,.9); }
+    .btn:active { transform: translateY(0); }
+    .btn.sm { padding: 7px 13px; font-size: 12.5px; }
+    .btn .bicon {
+      font-weight: 800; opacity: .9; display: inline-flex; align-items: center; justify-content: center;
+      width: 18px; height: 18px; border: 1.5px solid currentColor; border-radius: 4px; font-size: 11px; line-height: 1;
+    }
+
+    /* ---------- hero ---------- */
+    .hero { padding-top: 72px; padding-bottom: 36px; }
+    .hero .cmd { color: var(--dim); font-size: 14px; margin-bottom: 18px; }
+    .hero h1 {
+      font-size: clamp(40px, 7vw, 74px); line-height: .98; font-weight: 800;
+      letter-spacing: -.02em; margin: 0; color: var(--text);
+    }
+    .hero h1 .caret { color: var(--accent); font-weight: 400; animation: blink 1.15s steps(1) infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+    .hero .role { margin-top: 14px; font-size: clamp(16px,2.4vw,21px); color: var(--accent); font-weight: 500; }
+    .hero .loc  { color: var(--dim); font-size: 15px; margin-top: 4px; }
+    .hero .bio  { color: var(--dim); font-size: 16px; max-width: 580px; margin: 22px 0 0; line-height: 1.6; }
+    .booking { margin-top: 30px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+    .links { display: flex; gap: 9px; margin-top: 26px; flex-wrap: wrap; }
+    .links a {
+      font-size: 12.5px; color: var(--dim); border: 1px solid var(--border);
+      padding: 5px 12px; border-radius: 999px; transition: all .12s ease; background: rgba(255,255,255,.012);
+    }
+    .links a:hover { color: var(--accent); border-color: var(--accent); transform: translateY(-1px); }
+    .links a .g { color: var(--faint); margin-right: 7px; }
+
+    /* ---------- controls ---------- */
+    .controls {
+      position: sticky; top: 42px; z-index: 15;
+      background: rgba(22,22,30,.85); backdrop-filter: blur(10px);
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      margin-top: 22px;
+    }
+    .controls .inner { max-width: var(--maxw); margin: 0 auto; padding: 13px 28px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .controls .lead { color: var(--faint); font-size: 13px; white-space: nowrap; }
+    .tabs { display: flex; gap: 6px; flex-wrap: wrap; }
+    .tab {
+      font-family: var(--mono); font-size: 12.5px; cursor: pointer; color: var(--dim);
+      border: 1px solid var(--border); background: rgba(255,255,255,.015);
+      padding: 6px 12px; border-radius: 7px; display: inline-flex; align-items: center; gap: 7px;
+      transition: all .12s ease;
+    }
+    .tab:hover { border-color: var(--border-2); color: var(--text); }
+    .tab.on { color: #fff; border-color: var(--accent); background: var(--accent-soft); font-weight: 700; }
+    .tab .ct { color: var(--faint); font-size: 11px; }
+    .tab.on .ct { color: var(--accent); }
+    .grow { flex: 1; }
+    .grep {
+      display: flex; align-items: center; gap: 8px; min-width: 220px;
+      border: 1px solid var(--border); border-radius: 7px; background: var(--bg2);
+      padding: 7px 12px; transition: border-color .12s ease;
+    }
+    .grep:focus-within { border-color: var(--accent); }
+    .grep .pr { font-size: 13px; }
+    .grep input {
+      background: transparent; border: 0; outline: 0; color: var(--text);
+      font-family: var(--mono); font-size: 13px; width: 100%;
+    }
+    .grep input::placeholder { color: var(--faint); }
+    .grep .kbd {
+      font-size: 10.5px; color: var(--faint); border: 1px solid var(--border-2);
+      border-radius: 4px; padding: 1px 6px; white-space: nowrap;
+    }
+    .grep .clr { color: var(--faint); cursor: pointer; font-size: 14px; display: none; }
+    .grep .clr:hover { color: var(--accent); }
+    .grep.has-q .clr { display: inline; }
+    .grep.has-q .kbd { display: none; }
+
+    /* ---------- feed ---------- */
+    .feed { padding-top: 30px; padding-bottom: 10px; }
+    .resline { color: var(--faint); font-size: 12.5px; margin-bottom: 18px; }
+    .resline b { color: var(--dim); font-weight: 500; }
+    .list { display: flex; flex-direction: column; gap: 13px; }
+    .item {
+      position: relative; display: grid; grid-template-columns: 22px 168px 1fr; gap: 18px;
+      align-items: start; padding: 16px 18px 16px 14px;
+      border: 1px solid var(--border); border-radius: 12px;
+      background: var(--panel);
+      cursor: pointer; transition: border-color .16s ease, transform .16s ease, box-shadow .16s ease, background .16s ease;
+      opacity: 0; transform: translateY(14px);
+    }
+    .item.in { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { .item { opacity: 1 !important; transform: none !important; } }
+    .item:hover {
+      border-color: var(--accent); transform: translateY(-2px);
+      box-shadow: 0 16px 38px -20px rgba(122,162,247,.6);
+      background: var(--panel-2);
+    }
+    .item .marker { color: var(--faint); font-size: 13px; padding-top: 2px; transition: color .16s ease; }
+    .item:hover .marker { color: var(--accent); }
+    .poster {
+      position: relative; width: 168px; border-radius: 8px; overflow: hidden;
+      border: 1px solid var(--border-2); background: #16161e;
+      background-size: cover; background-position: center;
+      display: flex; align-items: center; justify-content: center; flex: none;
+    }
+    .poster.r169 { aspect-ratio: 16/9; }
+    .poster .glyph { font-size: 30px; color: var(--accent); opacity: .9; }
+    .poster .ven { position: absolute; left: 9px; bottom: 8px; right: 9px; font-size: 10px; color: var(--dim); line-height: 1.25; text-shadow: 0 1px 4px #000; }
+    .poster .grad { position: absolute; inset: 0; background: rgba(13,13,20,.36); }
+    .poster .shade { position: absolute; inset: 0; background: rgba(13,13,20,.36); opacity: 0; transition: opacity .16s ease; }
+    .item:hover .poster .shade { opacity: 1; }
+    .poster .play {
+      position: absolute; width: 42px; height: 42px; border-radius: 50%;
+      background: rgba(22,22,30,.78); border: 1px solid var(--accent);
+      display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px;
+      transition: transform .16s ease, background .16s ease; z-index: 2;
+    }
+    .item:hover .poster .play { transform: scale(1.12); background: var(--accent); }
+    .body { min-width: 0; }
+    .metarow { display: flex; align-items: center; gap: 10px; margin-bottom: 7px; flex-wrap: wrap; }
+    .badge {
+      font-size: 10px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--accent); border: 1px solid var(--accent); border-radius: 4px; padding: 2px 7px;
+    }
+    .metarow .date { color: var(--dim); font-size: 12.5px; }
+    .metarow .sep { color: var(--faint); }
+    .metarow .meta { color: var(--faint); font-size: 12.5px; }
+    .item h3 {
+      margin: 0; font-size: 18px; font-weight: 700; line-height: 1.3; color: var(--text);
+      transition: color .16s ease;
+    }
+    .item:hover h3 { color: #fff; }
+    .item h3 .arr { color: var(--accent); opacity: 0; margin-left: 6px; transition: opacity .16s ease; }
+    .item:hover h3 .arr { opacity: 1; }
+    .where { color: var(--dim); font-size: 13px; margin-top: 5px; }
+    .reveal {
+      display: grid; grid-template-rows: 0fr; transition: grid-template-rows .22s ease, opacity .2s ease, margin .22s ease;
+      opacity: 0; margin-top: 0;
+    }
+    .reveal > div { overflow: hidden; }
+    .item:hover .reveal, .item.open .reveal { grid-template-rows: 1fr; opacity: 1; margin-top: 11px; }
+    .reveal .desc { color: var(--dim); font-size: 13.5px; line-height: 1.6; max-width: 600px; }
+    .reveal .actions { margin-top: 12px; display: flex; gap: 9px; align-items: center; }
+
+    /* ---------- footer ---------- */
+    .footer { border-top: 1px solid var(--border); margin-top: 40px; padding-top: 30px; padding-bottom: 60px; }
+    .footer .row { display: flex; align-items: center; gap: 10px; color: var(--faint); font-size: 13px; flex-wrap: wrap; }
+    .footer .meta { margin-top: 10px; color: var(--faint); font-size: 12px; }
+    .empty { color: var(--faint); font-size: 14px; padding: 40px 4px; }
+
+    @media (max-width: 720px) {
+      .wrap { padding: 0 18px; }
+      .topbar .inner { padding: 10px 18px; gap: 10px; flex-wrap: nowrap; }
+      .dots { display: none; }
+      .avail { display: none; }
+      .winttl { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+      .controls { top: 42px; }
+      .controls .inner { padding: 11px 18px; gap: 10px; }
+      .controls .lead { display: none; }
+      .grow { display: none; }
+      .grep { min-width: 0; width: 100%; }
+      .item { grid-template-columns: 1fr; gap: 12px; padding: 14px; }
+      .item .marker { display: none; }
+      .poster, .poster.r11 { width: 100%; }
+      .reveal .desc { max-width: none; }
+      .hero { padding-top: 52px; padding-bottom: 32px; }
+      .hero .bio { font-size: 15px; }
+    }
+
+    @media (hover: none) {
+      .item:hover .reveal { grid-template-rows: 0fr; opacity: 0; margin-top: 0; }
+      .item.open .reveal { grid-template-rows: 1fr; opacity: 1; margin-top: 11px; }
+      .item:hover { transform: none; box-shadow: none; border-color: var(--border); background: var(--panel); }
+      .item.open { border-color: var(--accent); }
+      .item h3 .arr { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="inner">
+      <div class="dots">
+        <i style="background:#ff5f57"></i>
+        <i style="background:#febc2e"></i>
+        <i style="background:#28c840"></i>
+      </div>
+      <span class="winttl"><b>lena@cloud</b>: ~/feed</span>
+      <span class="spacer"></span>
+      <span class="avail"><span class="led"></span> available to speak</span>
+    </div>
+  </div>
+
+  <header class="hero wrap">
+    <div class="cmd"><span class="pr">$</span> whoami</div>
+    <h1>Lena Fuhrimann<span class="caret">_</span></h1>
+    <div class="role">Cloud Engineer &amp; Speaker</div>
+    <div class="loc">Bern, Switzerland · engineering since 2012</div>
+    <p class="bio">Founder of bespinian. I help platform teams ship faster on Kubernetes &amp; AWS — and I love sharing what I learn.</p>
+    <div class="booking">
+      <button class="btn" id="book-btn"><span class="bicon">@</span> Contact me</button>
+    </div>
+    <nav class="links">
+      <a href="https://github.com/cloudlena" target="_blank" rel="noopener noreferrer"><span class="g">gh</span>github</a>
+      <a href="https://www.linkedin.com/in/lena-fuhrimann/" target="_blank" rel="noopener noreferrer"><span class="g">in</span>linkedin</a>
+      <a href="https://bespinian.io" target="_blank" rel="noopener noreferrer"><span class="g">↗</span>bespinian</a>
+      <a href="mailto:cloudlena.ma2jp@simplelogin.com"><span class="g">@</span>email</a>
+    </nav>
+  </header>
+
+  <div class="controls">
+    <div class="inner">
+      <span class="lead"><span class="pr">$</span> feed --type</span>
+      <div class="tabs">
+        <button class="tab on" data-filter="all">all <span class="ct" id="ct-all"></span></button>
+        <button class="tab" data-filter="talk">talks <span class="ct" id="ct-talk"></span></button>
+        <button class="tab" data-filter="pod">pods <span class="ct" id="ct-pod"></span></button>
+        <button class="tab" data-filter="post">posts <span class="ct" id="ct-post"></span></button>
+        <button class="tab" data-filter="oss">oss <span class="ct" id="ct-oss"></span></button>
+      </div>
+      <span class="grow"></span>
+      <div class="grep" id="grep-wrap">
+        <span class="pr">$</span>
+        <input id="search" placeholder="grep — title, venue, type…" aria-label="Search feed">
+        <span class="clr" id="clr-btn" title="clear">✕</span>
+        <span class="kbd">/</span>
+      </div>
+    </div>
+  </div>
+
+  <main class="feed wrap">
+    <div class="resline" id="resline"></div>
+    <div class="list" id="list"></div>
+  </main>
+
+  <footer class="footer wrap">
+    <div class="row">
+      <span class="pr">$</span> <span>exit</span>
+      <span class="faint">·</span>
+      <span>© <span id="year"></span> Lena Fuhrimann</span>
+    </div>
+    <div class="meta">built in the terminal · all entries link out to the original source</div>
+  </footer>
+
+  <script>
+    const yt = id => "https://i.ytimg.com/vi/" + id + "/hqdefault.jpg";
+    const watch = id => "https://www.youtube.com/watch?v=" + id;
+
+    const TYPES = {
+      talk: { label: "talk", full: "Conference talk", glyph: "▶",  action: "Watch on YouTube" },
+      pod:  { label: "pod",  full: "Podcast guest",   glyph: "🎙", action: "Listen / watch" },
+      post: { label: "post", full: "Article",         glyph: "✎",  action: "Read the article" },
+      oss:  { label: "oss",  full: "Open source",     glyph: "❮❯", action: "View on GitHub" },
+    };
+
+    const FEED = [
+      { t: "talk", title: "Pragmatic AI Adoption Is Hard!", where: "DevOpsDays Zürich 2026 · Ignite", city: "Zürich", date: "2026-05",
+        meta: "ignite talk", url: watch("a4Rj04nmuO4"), thumb: yt("a4Rj04nmuO4"),
+        desc: "A 5-minute, 20-slide Ignite take on adopting AI where it actually adds value — without creating chaos or risk." },
+
+      { t: "pod", title: "Who Needs a Server?", where: "Adventures in DevOps", city: "", date: "2026-05",
+        meta: "podcast", url: watch("FD-8QWGV7Fs"), thumb: yt("FD-8QWGV7Fs"),
+        desc: "Clearing up the confusion around serverless — why it's a spectrum, not just FaaS, and why the real saving is engineering time, not the cloud bill." },
+
+      { t: "pod", title: "She Built a 100-Client Cloud Company in Switzerland - Here's How", where: "Podcast guest appearance", city: "", date: "2026-03",
+        meta: "podcast", url: watch("hldUjs4FPQQ"), thumb: yt("hldUjs4FPQQ"),
+        desc: "How bespinian grew to serve 100+ clients — the founding story, building a team, and lessons from running a cloud-native consultancy in Switzerland." },
+
+      { t: "talk", title: "Hosting LLMs on Kubernetes for Digital Sovereignty", where: "KCD Suisse Romande · Genève, CERN", city: "Genève", date: "2025-12",
+        meta: "talk", url: watch("LUtaXaMs1zA"), thumb: yt("LUtaXaMs1zA"),
+        desc: "From the December 2025 Kubernetes Community Days Suisse Romande at CERN — how to host LLMs on Kubernetes to keep data under your control." },
+
+      { t: "post", title: "Building Tough Applications", where: "bespinian.io/blog", city: "", date: "2025-12",
+        meta: "article", url: "https://bespinian.io/en/blog/tough-applications", thumb: null,
+        desc: "Building strong cloud applications around four ideas — Tolerance, Fortitude, Resilience and Adaptability." },
+
+      { t: "post", title: "Running LLMs on Kubernetes", where: "bespinian.io/blog", city: "", date: "2025-11",
+        meta: "article", url: "https://bespinian.io/en/blog/llms-on-kubernetes", thumb: null,
+        desc: "Deploying and managing large language models on Kubernetes — Ollama for simple setups, the vLLM Production Stack for high-traffic production." },
+
+      { t: "post", title: "Level Up Your Serverless Game", where: "bespinian.io/blog", city: "", date: "2025-09",
+        meta: "article", url: "https://bespinian.io/en/blog/level-up-your-serverless-game", thumb: null,
+        desc: "Avoiding common serverless pitfalls — logging, tracing, cold starts, security and deployment strategies." },
+
+      { t: "talk", title: "NixOS: How My Laptop Became Declarative", where: "Nine Internet Solutions · TechTalkThursday #25", city: "Zürich", date: "2025-09",
+        meta: "talk", url: watch("6qLR_8a4tkw"), thumb: yt("6qLR_8a4tkw"),
+        desc: "What NixOS is, how it works, and the genuinely nice things you can do once your whole machine is declarative and reproducible." },
+
+      { t: "talk", title: "Level Up Your Serverless Game", where: "DevOpsDays Zürich 2025", city: "Zürich", date: "2025-04",
+        meta: "talk", url: watch("kSzeBRlY7_I"), thumb: yt("kSzeBRlY7_I"),
+        desc: "Playing through the ten levels of writing and deploying serverless apps — the challenges teams hit, and the best practices that get you past them." },
+
+      { t: "talk", title: "Streamlined Troubleshooting in Kubernetes", where: "Conference talk", city: "", date: "2023-06",
+        meta: "talk", url: watch("sk6j7_VFhSc"), thumb: yt("sk6j7_VFhSc"),
+        desc: "A practical workflow for debugging workloads in Kubernetes without losing your mind — or your weekend." },
+
+      { t: "oss", title: "nixfiles — personal Nix configuration", where: "github.com/cloudlena/nixfiles", city: "", date: "2023-05",
+        meta: "Nix", url: "https://github.com/cloudlena/nixfiles", thumb: null,
+        desc: "My declarative, reproducible machine setup in Nix — the config behind the 'how my laptop became declarative' talk." },
+
+      { t: "oss", title: "clong — creator", where: "github.com/cloudlena/clong", city: "", date: "2017-04",
+        meta: "Go · WebSocket", url: "https://github.com/cloudlena/clong", thumb: null,
+        desc: "A fun multiplayer game: players swipe on their phones to launch balls at targets on a shared big screen, with a live scoreboard." },
+
+      { t: "post", title: "API Contract Definitions", where: "bespinian.io/blog", city: "", date: "2022-10",
+        meta: "article", url: "https://bespinian.io/en/blog/api-contract-definitions", thumb: null,
+        desc: "Technologies for defining service contracts — OpenAPI, GraphQL and gRPC — and keeping specification and implementation in sync." },
+
+      { t: "post", title: "GitOps", where: "bespinian.io/blog", city: "", date: "2022-05",
+        meta: "article · with Mathis Kretz", url: "https://bespinian.io/en/blog/gitops", thumb: null,
+        desc: "Combining Git and Infrastructure as Code to implement GitOps for both apps and infra — Argo CD for Kubernetes, Terraform for infrastructure." },
+
+      { t: "post", title: "Infrastructure as Code", where: "bespinian.io/blog", city: "", date: "2021-12",
+        meta: "article · with Mathis Kretz", url: "https://bespinian.io/en/blog/infrastructure-as-code", thumb: null,
+        desc: "IaC principles and declarative infrastructure with Terraform, Packer and CloudFormation — versioning, testing and automation." },
+
+      { t: "post", title: "Git — The Important Parts", where: "bespinian.io/blog", city: "", date: "2021-10",
+        meta: "article · with Mathis Kretz", url: "https://bespinian.io/en/blog/git-the-important-parts", thumb: null,
+        desc: "Git best practices for teams — commit messages, Gitflow vs GitHub Flow, pull requests and hooks to enforce conventions." },
+
+      { t: "post", title: "Installing Arch Linux on UEFI With Full Disk Encryption", where: "bespinian.io/blog", city: "", date: "2021-03",
+        meta: "article", url: "https://bespinian.io/en/blog/installing-arch-linux-on-uefi-with-full-disk-encryption", thumb: null,
+        desc: "A concise step-by-step guide to installing Arch Linux on UEFI systems with LUKS full-disk encryption." },
+
+      { t: "post", title: "Efficient Navigation in Vim", where: "bespinian.io/blog", city: "", date: "2020-07",
+        meta: "article", url: "https://bespinian.io/en/blog/efficient-navigation-in-vim", thumb: null,
+        desc: "Moving around Vim efficiently — movement keys, search techniques and a few plugins that boost your editing speed." },
+
+      { t: "post", title: "Run a Crypto Trading Bot on Cloud Foundry", where: "bespinian.io/blog", city: "", date: "2017-12",
+        meta: "article", url: "https://bespinian.io/en/blog/run-a-crypto-trading-bot-on-cloud-foundry", thumb: null,
+        desc: "Deploying Zenbot, an open-source cryptocurrency trading bot, to Cloud Foundry to automate trading strategies on platforms like GDAX." },
+
+      { t: "post", title: "Run WordPress on Cloud Foundry", where: "bespinian.io/blog", city: "", date: "2017-08",
+        meta: "article", url: "https://bespinian.io/en/blog/run-wordpress-on-cloud-foundry", thumb: null,
+        desc: "Deploying WordPress on Cloud Foundry with externalized S3 file storage to handle media uploads in a cloud-native way." },
+
+      { t: "post", title: "Run Docker Registry on Cloud Foundry", where: "bespinian.io/blog", city: "", date: "2017-08",
+        meta: "article", url: "https://bespinian.io/en/blog/run-docker-registry-on-cloud-foundry", thumb: null,
+        desc: "A private Docker Registry on Cloud Foundry using S3 for storage and Redis for caching to securely manage your container images." },
+
+      { t: "post", title: "Run Ghost on Cloud Foundry", where: "bespinian.io/blog", city: "", date: "2017-07",
+        meta: "article", url: "https://bespinian.io/en/blog/run-ghost-on-cloud-foundry", thumb: null,
+        desc: "Deploying Ghost, a modern Node.js blogging platform, on Cloud Foundry with MariaDB and optional S3 storage for media files." },
+
+      { t: "post", title: "Docker for Local Development", where: "bespinian.io/blog", city: "", date: "2017-06",
+        meta: "article", url: "https://bespinian.io/en/blog/docker-for-local-development", thumb: null,
+        desc: "Using Docker to spin up and tear down backend services for local development — keeping your machine clean and your workflows efficient." },
+
+      { t: "post", title: "Manage Buckets on Cloud Foundry S3 Services", where: "bespinian.io/blog", city: "", date: "2017-03",
+        meta: "article", url: "https://bespinian.io/en/blog/manage-buckets-on-cloud-foundry-s3-services", thumb: null,
+        desc: "Creating and managing S3 buckets on Cloud Foundry using s3cmd or the open-source S3 Manager application." },
+
+      { t: "post", title: "Blue Green Deployment on Cloud Foundry", where: "bespinian.io/blog", city: "", date: "2016-12",
+        meta: "article", url: "https://bespinian.io/en/blog/blue-green-deployment-on-cloud-foundry", thumb: null,
+        desc: "Zero-downtime updates and safe rollbacks on Cloud Foundry using a simple shell script." },
+
+      { t: "oss", title: "s3manager — creator & maintainer", where: "github.com/cloudlena/s3manager", city: "", date: "2016-12",
+        meta: "1k ★ · Go", url: "https://github.com/cloudlena/s3manager", thumb: null,
+        desc: "A web GUI written in Go to manage S3 buckets from any provider — list, upload, download and delete objects. Runs as a tiny container, deploys anywhere." },
+
+      { t: "post", title: "Run Piwik on Cloud Foundry", where: "bespinian.io/blog", city: "", date: "2016-11",
+        meta: "article", url: "https://bespinian.io/en/blog/run-piwik-on-cloud-foundry", thumb: null,
+        desc: "Deploying Piwik, an open-source analytics platform, on Cloud Foundry as a self-hosted alternative to Google Analytics." },
+
+      { t: "post", title: "Configure Front End Apps With Environment Variables on Cloud Foundry", where: "bespinian.io/blog", city: "", date: "2016-11",
+        meta: "article", url: "https://bespinian.io/en/blog/configure-front-end-apps-with-environment-variables-on-cloud-foundry", thumb: null,
+        desc: "Configuring static front-end apps on Cloud Foundry via environment variables exposed through an nginx HTTP endpoint." },
+
+      { t: "post", title: "Cloud Foundry Route Services", where: "bespinian.io/blog", city: "", date: "2016-10",
+        meta: "article", url: "https://bespinian.io/en/blog/cloud-foundry-route-services", thumb: null,
+        desc: "Using Route Services to add authentication, rate limiting or logging at the route level before requests reach your app." },
+
+      { t: "post", title: "Observables With Angular and Feathers", where: "bespinian.io/blog", city: "", date: "2016-03",
+        meta: "article", url: "https://bespinian.io/en/blog/observables-with-angular-and-feathers", thumb: null,
+        desc: "Angular services that consume Feathers WebSocket APIs using RxJS Observables for real-time, reactive data streams." },
+
+      { t: "post", title: "Run a CI/CD Server on Cloud Foundry", where: "bespinian.io/blog", city: "", date: "2016-02",
+        meta: "article", url: "https://bespinian.io/en/blog/run-a-cicd-server-on-cloud-foundry", thumb: null,
+        desc: "Deploying Strider, an open-source CI/CD server, on Cloud Foundry to test, build and deploy your apps on every git push." },
+    ];
+
+    // ---- counts ----
+    const COUNTS = { all: FEED.length, talk: 0, pod: 0, post: 0, oss: 0 };
+    FEED.forEach(x => COUNTS[x.t]++);
+    ["all", "talk", "pod", "post", "oss"].forEach(k => {
+      const el = document.getElementById("ct-" + k);
+      if (el) el.textContent = COUNTS[k];
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // ---- state ----
+    let filter = "all", query = "";
+
+    function esc(s) {
+      return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+    }
+
+    function fmtDate(d) {
+      const [, m] = d.split("-");
+      return ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][+m - 1] + " " + d.split("-")[0];
+    }
+
+    function posterHTML(it) {
+      const T = TYPES[it.t];
+      const playable = it.t === "talk" || it.t === "pod";
+      const play = playable ? `<span class="play">${it.t === "pod" ? "♪" : "▶"}</span>` : "";
+      if (it.thumb) {
+        return `<div class="poster r169" style="background-image:url(${esc(it.thumb)})" aria-hidden="true"><div class="shade"></div>${play}</div>`;
+      }
+      const ven = it.where ? `<span class="ven">${esc(it.where)}${it.city ? " · " + esc(it.city) : ""}</span>` : "";
+      return `<div class="poster r169" aria-hidden="true"><div class="grad"></div><span class="glyph">${T.glyph}</span>${ven}${play}</div>`;
+    }
+
+    function itemHTML(it, idx) {
+      const T = TYPES[it.t];
+      const delay = Math.min(idx, 6) * 28;
+      return `<article class="item" style="transition-delay:${delay}ms">
+        <div class="marker">${String(idx + 1).padStart(2, "0")}</div>
+        ${posterHTML(it)}
+        <div class="body">
+          <div class="metarow">
+            <span class="badge">${T.label}</span>
+            <span class="date">${fmtDate(it.date)}</span>
+            <span class="sep">·</span>
+            <span class="meta">${esc(it.meta)}</span>
+          </div>
+          <h3><a href="${esc(it.url)}" target="_blank" rel="noopener noreferrer">${esc(it.title)}</a><span class="arr">↗</span></h3>
+          <div class="where">@ ${esc(it.where)}${it.city ? " · " + esc(it.city) : ""}</div>
+          <div class="reveal"><div>
+            <p class="desc">${esc(it.desc)}</p>
+            <div class="actions"><a class="btn sm" href="${esc(it.url)}" target="_blank" rel="noopener noreferrer">${T.glyph}&nbsp; ${esc(T.action)} ↗</a></div>
+          </div></div>
+        </div>
+      </article>`;
+    }
+
+    function render() {
+      const q = query.trim().toLowerCase();
+      const results = FEED.filter(it => {
+        if (filter !== "all" && it.t !== filter) return false;
+        if (!q) return true;
+        return (it.title + " " + it.where + " " + it.city + " " + TYPES[it.t].label + " " + TYPES[it.t].full + " " + it.desc).toLowerCase().includes(q);
+      });
+
+      // resline
+      let r = `<span class="pr">›</span> <b>${results.length}</b> ${results.length === 1 ? "entry" : "entries"}`;
+      if (filter !== "all") r += ` · type=<b>${filter}</b>`;
+      if (query) r += ` · grep=<b>"${esc(query)}"</b>`;
+      r += " · sorted by date desc";
+      document.getElementById("resline").innerHTML = r;
+
+      // list
+      const list = document.getElementById("list");
+      if (results.length === 0) {
+        list.innerHTML = `<div class="empty"><span class="pr">$</span> no matches for "<span class="acc">${esc(query)}</span>". <a href="#" class="acc" id="reset-lnk">reset →</a></div>`;
+        document.getElementById("reset-lnk").addEventListener("click", e => { e.preventDefault(); reset(); });
+        return;
+      }
+
+      list.innerHTML = results.map(itemHTML).join("");
+
+      const io = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+      }, { threshold: 0.12 });
+      list.querySelectorAll(".item").forEach(el => io.observe(el));
+    }
+
+    function setFilter(f) {
+      filter = f;
+      document.querySelectorAll(".tab").forEach(b => b.classList.toggle("on", b.dataset.filter === f));
+      render();
+    }
+
+    function reset() {
+      query = "";
+      filter = "all";
+      document.getElementById("search").value = "";
+      document.getElementById("grep-wrap").classList.remove("has-q");
+      setFilter("all");
+    }
+
+    // ---- wire up ----
+    document.querySelectorAll(".tab").forEach(b => b.addEventListener("click", () => setFilter(b.dataset.filter)));
+
+    const searchEl = document.getElementById("search");
+    searchEl.addEventListener("input", e => {
+      query = e.target.value;
+      document.getElementById("grep-wrap").classList.toggle("has-q", !!query);
+      render();
+    });
+
+    document.getElementById("clr-btn").addEventListener("click", () => {
+      query = "";
+      searchEl.value = "";
+      document.getElementById("grep-wrap").classList.remove("has-q");
+      render();
+    });
+
+    window.addEventListener("keydown", e => {
+      if (e.key === "/" && document.activeElement !== searchEl) { e.preventDefault(); searchEl.focus(); }
+      else if (e.key === "Escape" && document.activeElement === searchEl) { query = ""; searchEl.value = ""; document.getElementById("grep-wrap").classList.remove("has-q"); searchEl.blur(); render(); }
+    });
+
+    document.getElementById("list").addEventListener("click", e => {
+      const item = e.target.closest(".item");
+      if (!item || e.target.closest("a")) return;
+      item.classList.toggle("open");
+    });
+
+    document.getElementById("book-btn").addEventListener("click", () => {
+      window.location.href = "mailto:cloudlena.ma2jp@simplelogin.com?subject=Speaking%20invitation";
+    });
+
+    render();
+  </script>
+</body>
+</html>
