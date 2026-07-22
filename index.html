@@ -2,6 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
@@ -503,8 +506,10 @@
         display: flex;
         flex-direction: column;
         gap: 13px;
+        counter-reset: item-counter;
       }
       .item {
+        counter-increment: item-counter;
         position: relative;
         display: grid;
         grid-template-columns: 22px 168px 1fr;
@@ -520,6 +525,8 @@
           transform 0.16s ease,
           box-shadow 0.16s ease,
           background 0.16s ease;
+      }
+      .js .item {
         opacity: 0;
         transform: translateY(14px);
       }
@@ -544,6 +551,9 @@
         font-size: 13px;
         padding-top: 2px;
         transition: color 0.16s ease;
+      }
+      .item .marker::before {
+        content: counter(item-counter, decimal-leading-zero);
       }
       .item:hover .marker {
         color: var(--accent);
@@ -850,9 +860,11 @@
       <div class="booking">
         <a
           class="btn"
-          href="mailto:cloudlena.ma2jp@simplelogin.com?subject=Speaking%20invitation"
+          href="https://www.linkedin.com/messaging/compose/?recipient=lena-fuhrimann"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          <span class="bicon" aria-hidden="true">@</span> Contact me
+          <span class="bicon" aria-hidden="true">in</span> Contact me
         </a>
       </div>
       <nav class="links">
@@ -886,19 +898,19 @@
         <span class="lead"><span class="pr">$</span> feed --type</span>
         <div class="tabs">
           <button class="tab on" data-filter="all" aria-pressed="true">
-            all <span class="ct" id="ct-all"></span>
+            all <span class="ct" id="ct-all">53</span>
           </button>
           <button class="tab" data-filter="talk" aria-pressed="false">
-            talks <span class="ct" id="ct-talk"></span>
+            talks <span class="ct" id="ct-talk">25</span>
           </button>
-          <button class="tab" data-filter="pod" aria-pressed="false">
-            pods <span class="ct" id="ct-pod"></span>
+          <button class="tab" data-filter="podcast" aria-pressed="false">
+            podcasts <span class="ct" id="ct-podcast">2</span>
           </button>
           <button class="tab" data-filter="post" aria-pressed="false">
-            posts <span class="ct" id="ct-post"></span>
+            posts <span class="ct" id="ct-post">23</span>
           </button>
           <button class="tab" data-filter="oss" aria-pressed="false">
-            oss <span class="ct" id="ct-oss"></span>
+            oss <span class="ct" id="ct-oss">3</span>
           </button>
         </div>
         <span class="grow"></span>
@@ -906,7 +918,7 @@
           <span class="pr">$</span>
           <input
             id="search"
-            type="search"
+            type="text"
             placeholder="grep - title, venue, type…"
             aria-label="Search feed"
           />
@@ -925,8 +937,976 @@
     </div>
 
     <main class="feed wrap">
-      <div class="resline" id="resline"></div>
-      <div class="list" id="list"></div>
+      <div class="resline" id="resline">
+        <span class="pr">›</span> <b>52</b> entries · sorted by date desc
+      </div>
+      <div class="list" id="list">
+        <article class="item" data-type="talk" aria-expanded="false">
+          <div class="marker" aria-hidden="true"></div>
+          <div class="poster r169" aria-hidden="true">
+            <img src="images/yt-GXBMPaINcR4.webp" alt="" loading="lazy" />
+            <div class="shade"></div>
+            <span class="play">▶</span>
+          </div>
+          <div class="body">
+            <div class="metarow">
+              <span class="badge">talk</span>
+              <span class="date">Sep 2026</span>
+              <span class="sep">·</span>
+              <span class="meta">tech talk</span>
+            </div>
+            <h2><a href="https://www.youtube.com/watch?v=GXBMPaINcR4" target="_blank" rel="noopener noreferrer">A Practical Guide to Fast and Private LLMs</a><span class="arr" aria-hidden="true">↗</span></h2>
+            <div class="where">@ Nine TechTalk #29 · Zürich</div>
+            <div class="reveal" aria-hidden="true"><div>
+              <p class="desc">Running LLMs fast and keeping your data private often feel like competing goals, especially once you move away from the big cloud APIs. A practical guide to deploying LLMs that are both performant and privacy-respecting - the tools, trade-offs, and architecture decisions that actually make a difference.</p>
+              <div class="actions"><a class="btn sm" href="https://www.youtube.com/watch?v=GXBMPaINcR4" target="_blank" rel="noopener noreferrer" tabindex="-1">▶&nbsp; Watch on YouTube ↗</a></div>
+            </div></div>
+          </div>
+        </article>
+        <article class="item" data-type="talk" aria-expanded="false">
+          <div class="marker" aria-hidden="true"></div>
+          <div class="poster r169" aria-hidden="true">
+            <img src="images/yt-PlD-uIW3M3o.webp" alt="" loading="lazy" />
+            <div class="shade"></div>
+            <span class="play">▶</span>
+          </div>
+          <div class="body">
+            <div class="metarow">
+              <span class="badge">talk</span>
+              <span class="date">Jul 2026</span>
+              <span class="sep">·</span>
+              <span class="meta">tech talk</span>
+            </div>
+            <h2><a href="https://www.youtube.com/watch?v=PlD-uIW3M3o" target="_blank" rel="noopener noreferrer">A Practical Guide to Fast and Private LLMs</a><span class="arr" aria-hidden="true">↗</span></h2>
+            <div class="where">@ Karakun Tech Talk · Basel</div>
+            <div class="reveal" aria-hidden="true"><div>
+              <p class="desc">A practical walkthrough of running LLMs locally and on-prem - covering model selection, inference performance, and keeping sensitive data out of third-party hands. Given as an internal Tech Talk at Karakun.</p>
+              <div class="actions"><a class="btn sm" href="https://www.youtube.com/watch?v=PlD-uIW3M3o" target="_blank" rel="noopener noreferrer" tabindex="-1">▶&nbsp; Watch on YouTube ↗</a></div>
+            </div></div>
+          </div>
+        </article>
+        <article class="item" data-type="talk" aria-expanded="false" style="transition-delay:0ms">
+          <div class="marker" aria-hidden="true"></div>
+          <div class="poster r169" aria-hidden="true"><img src="images/ssf-2026.webp" alt="" loading="lazy"><div class="shade"></div></div>
+          <div class="body">
+            <div class="metarow">
+              <span class="badge">talk</span>
+              <span class="date">Jun 2026</span>
+              <span class="sep">·</span>
+              <span class="meta">conference talk</span>
+            </div>
+            <h2><a href="https://www.swiss-software-festival.ch/archive/swiss-software-festival-2026/program/tech-track-3-artificial-intelligence.html" target="_blank" rel="noopener noreferrer">Run Your Own LLM for Profit and Sovereignty</a><span class="arr" aria-hidden="true">↗</span></h2>
+            <div class="where">@ Swiss Software Festival 2026 · Basel</div>
+            <div class="reveal" aria-hidden="true"><div>
+              <p class="desc">Why running your own LLM makes sense - both as a business decision and as a matter of data sovereignty. A practical look at self-hosted models, the tradeoffs versus managed APIs, and how to get started without a data center.</p>
+              <div class="actions"><a class="btn sm" href="https://www.swiss-software-festival.ch/archive/swiss-software-festival-2026/program/tech-track-3-artificial-intelligence.html" target="_blank" rel="noopener noreferrer" tabindex="-1">View talk ↗</a></div>
+            </div></div>
+          </div>
+        </article>
+        <article class="item" data-type="talk" aria-expanded="false" style="transition-delay:28ms">
+          <div class="marker" aria-hidden="true"></div>
+          <div class="poster r169" aria-hidden="true"><img src="images/yt-MQDw05sokZk.webp" alt="" loading="lazy"><div class="shade"></div><span class="play">▶</span></div>
+          <div class="body">
+            <div class="metarow">
+              <span class="badge">talk</span>
+              <span class="date">Jun 2026</span>
+              <span class="sep">·</span>
+              <span class="meta">panel</span>
+            </div>
+            <h2><a href="https://www.youtube.com/watch?v=MQDw05sokZk" target="_blank" rel="noopener noreferrer">Panel Discussion: Digital Sovereignty Perspectives from the Ecosystem</a><span class="arr" aria-hidden="true">↗</span></h2>
+            <div class="where">@ Cloud Native Zürich 2026 · Zürich</div>
+            <div class="reveal" aria-hidden="true"><div>
+              <p class="desc">A panel on digital sovereignty at Cloud Native Zürich 2026 - exploring what it means for organizations to own their infrastructure, data, and AI stack in an era of hyperscaler dependency.</p>
+              <div class="actions"><a class="btn sm" href="https://www.youtube.com/watch?v=MQDw05sokZk" target="_blank" rel="noopener noreferrer" tabindex="-1">▶&nbsp; Watch on YouTube ↗</a></div>
+            </div></div>
+          </div>
+        </article>
+        <article class="item" data-type="talk" aria-expanded="false" style="transition-delay:56ms">
+          <div class="marker" aria-hidden="true"></div>
+          <div class="poster r169" aria-hidden="true"><img src="images/osaic-2026.webp" alt="" loading="lazy"><div class="shade"></div></div>
+          <div class="body">
+            <div class="metarow">
+              <span class="badge">talk</span>
+              <span class="date">May 2026</span>
+              <span class="sep">·</span>
+              <span class="meta">conference talk</span>
+            </div>
+            <h2><a href="https://www.ch-open.ch/open-source-ai-conference-2026/" target="_blank" rel="noopener noreferrer">A Practical Guide to Fast and Private LLMs</a><span class="arr" aria-hidden="true">↗</span></h2>
+            <div class="where">@ Open Source AI Conference 2026 · Bern</div>
+            <div class="reveal" aria-hidden="true"><div>
+              <p class="desc">A practical walkthrough of running LLMs locally and on-prem - covering model selection, inference performance, and keeping sensitive data out of third-party hands.</p>
+              <div class="actions"><a class="btn sm" href="https://www.ch-open.ch/open-source-ai-conference-2026/" target="_blank" rel="noopener noreferrer" tabindex="-1">View talk ↗</a></div>
+            </div></div>
+          </div>
+        </article>
+        <article class="item" data-type="post" aria-expanded="false" style="transition-delay:84ms">
+          <div class="marker" aria-hidden="true"></div>
+          <div class="poster r169" aria-hidden="true"><img src="images/netzwoche-2026.webp" alt="" loading="lazy"><div class="shade"></div></div>
+          <div class="body">
+            <div class="metarow">
+              <span class="badge">post</span>
+              <span class="date">May 2026</span>
+              <span class="sep">·</span>
+              <span class="meta">article</span>
+            </div>
+            <h2><a href="https://www.netzwoche.ch/news/2026-05-22/so-kommt-fast-jeder-zu-einer-eigenen-ki" target="_blank" rel="noopener noreferrer">How Almost Anyone Can Get Their Own AI</a><span class="arr" aria-hidden="true">↗</span></h2>
+            <div class="where">@ Netzwoche · Bern</div>
+            <div class="reveal" aria-hidden="true"><div>
+              <p class="desc">Netzwoche covers the second Open Source AI Conference in Bern - featuring speakers on open Swiss language models, AI ethics, and practical tools for running your own LLM without depending on big tech.</p>
+              <div class="actions"><a class="btn sm" href="https://www.netzwoche.ch/news/2026-05-22/so-kommt-fast-jeder-zu-einer-eigenen-ki" target="_blank" rel="noopener noreferrer" tabindex="-1">Read article ↗</a></div>
+            </div></div>
+          </div>
+        </article>
+        <article class="item" data-type="talk" aria-expanded="false" style="transition-delay:112ms">
+          <div class="marker" aria-hidden="true"></div>
+          <div class="poster r169" aria-hidden="true"><img src="images/yt-a4Rj04nmuO4.webp" alt="" loading="lazy"><div class="shade"></div><span class="play">▶</span></div>
+          <div class="body">
+            <div class="metarow">
+              <span class="badge">talk</span>
+              <span class="date">May 2026</span>
+              <span class="sep">·</span>
+              <span class="meta">ignite talk</span>
+            </div>
+            <h2><a href="https://www.youtube.com/watch?v=a4Rj04nmuO4" target="_blank" rel="noopener noreferrer">Pragmatic AI Adoption Is Hard!</a><span class="arr" aria-hidden="true">↗</span></h2>
+            <div class="where">@ DevOpsDays Zürich 2026 · Ignite · Zürich</div>
+            <div class="reveal" aria-hidden="true"><div>
+              <p class="desc">A 5-minute, 20-slide Ignite take on adopting AI where it actually adds value - without creating chaos or risk.</p>
+              <div class="actions"><a class="btn sm" href="https://www.youtube.com/watch?v=a4Rj04nmuO4" target="_blank" rel="noopener noreferrer" tabindex="-1">▶&nbsp; Watch on YouTube ↗</a></div>
+            </div></div>
+          </div>
+        </article>
+        <article class="item" data-type="podcast" aria-expanded="false" style="transition-delay:140ms">
+          <div class="marker" aria-hidden="true"></div>
+          <div class="poster r169" aria-hidden="true"><img src="images/yt-FD-8QWGV7Fs.webp" alt="" loading="lazy"><div class="shade"></div><span class="play">♪</span></div>
+          <div class="body">
+            <div class="metarow">
+              <span class="badge">podcast</span>
+              <span class="date">May 2026</span>
+              <span class="sep">·</span>
+              <span class="meta">guest appearance</span>
+            </div>
+            <h2><a href="https://www.youtube.com/watch?v=FD-8QWGV7Fs" target="_blank" rel="noopener noreferrer">Who Needs a Server?</a><span class="arr" aria-hidden="true">↗</span></h2>
+            <div class="where">@ Adventures in DevOps</div>
+            <div class="reveal" aria-hidden="true"><div>
+              <p class="desc">Clearing up the confusion around serverless - why it's a spectrum, not just FaaS, and why the real saving is engineering time, not the cloud bill.</p>
+              <div class="actions"><a class="btn sm" href="https://www.youtube.com/watch?v=FD-8QWGV7Fs" target="_blank" rel="noopener noreferrer" tabindex="-1">Listen / watch ↗</a></div>
+            </div></div>
+          </div>
+        </article>
+        <article class="item" data-type="podcast" aria-expanded="false" style="transition-delay:168ms">
+          <div class="marker" aria-hidden="true"></div>
+          <div class="poster r169" aria-hidden="true"><img src="images/yt-hldUjs4FPQQ.webp" alt="" loading="lazy"><div class="shade"></div><span class="play">♪</span></div>
+          <div class="body">
+            <div class="metarow">
+              <span class="badge">podcast</span>
+              <span class="date">Mar 2026</span>
+              <span class="sep">·</span>
+              <span class="meta">guest appearance</span>
+            </div>
+            <h2><a href="https://www.youtube.com/watch?v=hldUjs4FPQQ" target="_blank" rel="noopener noreferrer">She Built a 100-Client Cloud Company in Switzerland</a><span class="arr" aria-hidden="true">↗</span></h2>
+            <div class="where">@ Let's Talk Podcast</div>
+            <div class="reveal" aria-hidden="true"><div>
+              <p class="desc">How bespinian grew to serve 100+ clients - the founding story, building a team, and lessons from running a cloud-native consultancy in Switzerland.</p>
+              <div class="actions"><a class="btn sm" href="https://www.youtube.com/watch?v=hldUjs4FPQQ" target="_blank" rel="noopener noreferrer" tabindex="-1">Listen / watch ↗</a></div>
+            </div></div>
+          </div>
+        </article>
+        <article class="item" data-type="talk" aria-expanded="false" style="transition-delay:168ms">
+          <div class="marker" aria-hidden="true"></div>
+          <div class="poster r169" aria-hidden="true"><img src="images/yt-LUtaXaMs1zA.webp" alt="" loading="lazy"><div class="shade"></div><span class="play">▶</span></div>
+          <div class="body">
+            <div class="metarow">
+              <span class="badge">talk</span>
+              <span class="date">Dec 2025</span>
+              <span class="sep">·</span>
+              <span class="meta">conference talk</span>
+            </div>
+            <h2><a href="https://www.youtube.com/watch?v=LUtaXaMs1zA" target="_blank" rel="noopener noreferrer">Hosting LLMs on Kubernetes for Digital Sovereignty</a><span class="arr" aria-hidden="true">↗</span></h2>
+            <div class="where">@ KCD Suisse Romande · Genève, CERN · Genève</div>
+            <div class="reveal" aria-hidden="true"><div>
+              <p class="desc">From the December 2025 Kubernetes Community Days Suisse Romande at CERN - how to host LLMs on Kubernetes to keep data under your control.</p>
+              <div class="actions"><a class="btn sm" href="https://www.youtube.com/watch?v=LUtaXaMs1zA" target="_blank" rel="noopener noreferrer" tabindex="-1">▶&nbsp; Watch on YouTube ↗</a></div>
+            </div></div>
+          </div>
+        </article>
+        <article class="item" data-type="talk" aria-expanded="false" style="transition-delay:168ms">
+          <div class="marker" aria-hidden="true"></div>
+          <div class="poster r169" aria-hidden="true"><img src="images/yt-IidP7UgWPc8.webp" alt="" loading="lazy"><div class="shade"></div><span class="play">▶</span></div>
+          <div class="body">
+            <div class="metarow">
+              <span class="badge">talk</span>
+              <span class="date">Dec 2025</span>
+              <span class="sep">·</span>
+              <span class="meta">panel</span>
+            </div>
+            <h2><a href="https://www.youtube.com/watch?v=IidP7UgWPc8" target="_blank" rel="noopener noreferrer">Panel: Kubernetes for AI or AI for Kubernetes</a><span class="arr" aria-hidden="true">↗</span></h2>
+            <div class="where">@ KCD Suisse Romande · Genève, CERN · Genève</div>
+            <div class="reveal" aria-hidden="true"><div>
+              <p class="desc">Panel discussion at Kubernetes Community Days Suisse Romande - exploring whether Kubernetes is the right platform for AI workloads, and how AI might change the way we operate Kubernetes.</p>
+              <div class="actions"><a class="btn sm" href="https://www.youtube.com/watch?v=IidP7UgWPc8" target="_blank" rel="noopener noreferrer" tabindex="-1">▶&nbsp; Watch on YouTube ↗</a></div>
+            </div></div>
+          </div>
+        </article>
+        <article class="item" data-type="talk" aria-expanded="false" style="transition-delay:168ms">
+          <div class="marker" aria-hidden="true"></div>
+          <div class="poster r169" aria-hidden="true"><img src="images/ost-2025.webp" alt="" loading="lazy"><div class="shade"></div></div>
+          <div class="body">
+            <div class="metarow">
+              <span class="badge">talk</span>
+              <span class="date">Dec 2025</span>
+              <span class="sep">·</span>
+              <span class="meta">guest lecture</span>
+            </div>
+            <h2><a href="https://www.linkedin.com/posts/marc-fritsche_nicht-jedes-level-in-der-cloud-ist-einfach-activity-7401518295410995200-JAQ9" target="_blank" rel="noopener noreferrer">Level Up Your Serverless Game</a><span class="arr" aria-hidden="true">↗</span></h2>
+            <div class="where">@ OST – Ostschweizer Fachhochschule · St. Gallen</div>
+            <div class="reveal" aria-hidden="true"><div>
+              <p class="desc">Guest lecture on cloud-native migration challenges and serverless best practices for the Cloud Development module at OST.</p>
+              <div class="actions"><a class="btn sm" href="https://www.linkedin.com/posts/marc-fritsche_nicht-jedes-level-in-der-cloud-ist-einfach-activity-7401518295410995200-JAQ9" target="_blank" rel="noopener noreferrer" tabindex="-1">View talk ↗</a></div>
+            </div></div>
+          </div>
+        </article>
+        <article class="item" data-type="post" aria-expanded="false" style="transition-delay:168ms">
+          <div class="marker" aria-hidden="true"></div>
+          <div class="poster r169" aria-hidden="true"><img src="images/blog-tough-applications.webp" alt="" loading="lazy"><div class="shade"></div></div>
+          <div class="body">
+            <div class="metarow">
+              <span class="badge">post</span>
+              <span class="date">Dec 2025</span>
+              <span class="sep">·</span>
+              <span class="meta">article</span>
+            </div>
+            <h2><a href="https://bespinian.io/en/blog/tough-applications" target="_blank" rel="noopener noreferrer">Building Tough Applications</a><span class="arr" aria-hidden="true">↗</span></h2>
+            <div class="where">@ bespinian.io/blog</div>
+            <div class="reveal" aria-hidden="true"><div>
+              <p class="desc">Building strong cloud applications around four ideas - Tolerance, Fortitude, Resilience and Adaptability.</p>
+              <div class="actions"><a class="btn sm" href="https://bespinian.io/en/blog/tough-applications" target="_blank" rel="noopener noreferrer" tabindex="-1">Read article ↗</a></div>
+            </div></div>
+          </div>
+        </article>
+        <article class="item" data-type="talk" aria-expanded="false" style="transition-delay:168ms">
+          <div class="marker" aria-hidden="true"></div>
+          <div class="poster r169" aria-hidden="true"><img src="images/dmb-2025.webp" alt="" loading="lazy"><div class="shade"></div></div>
+          <div class="body">
+            <div class="metarow">
+              <span class="badge">talk</span>
+              <span class="date">Nov 2025</span>
+              <span class="sep">·</span>
+              <span class="meta">meetup talk</span>
+            </div>
+            <h2><a href="https://www.meetup.com/devops-bern/events/310420966" target="_blank" rel="noopener noreferrer">Pragmatic AI Adoption</a><span class="arr" aria-hidden="true">↗</span></h2>
+            <div class="where">@ DevOps Meetup Bern · Bern</div>
+            <div class="reveal" aria-hidden="true"><div>
+              <p class="desc">Full house at bespinian HQ for DevOps Meetup Bern - a talk on where AI adoption actually adds value in engineering teams, without the hype.</p>
+              <div class="actions"><a class="btn sm" href="https://www.meetup.com/devops-bern/events/310420966" target="_blank" rel="noopener noreferrer" tabindex="-1">View talk ↗</a></div>
+            </div></div>
+          </div>
+        </article>
+        <article class="item" data-type="post" aria-expanded="false" style="transition-delay:168ms">
+          <div class="marker" aria-hidden="true"></div>
+          <div class="poster r169" aria-hidden="true"><img src="images/blog-llms-on-kubernetes.webp" alt="" loading="lazy"><div class="shade"></div></div>
+          <div class="body">
+            <div class="metarow">
+              <span class="badge">post</span>
+              <span class="date">Nov 2025</span>
+              <span class="sep">·</span>
+              <span class="meta">article</span>
+            </div>
+            <h2><a href="https://bespinian.io/en/blog/llms-on-kubernetes" target="_blank" rel="noopener noreferrer">Running LLMs on Kubernetes</a><span class="arr" aria-hidden="true">↗</span></h2>
+            <div class="where">@ bespinian.io/blog</div>
+            <div class="reveal" aria-hidden="true"><div>
+              <p class="desc">Deploying and managing large language models on Kubernetes - Ollama for simple setups, the vLLM Production Stack for high-traffic production.</p>
+              <div class="actions"><a class="btn sm" href="https://bespinian.io/en/blog/llms-on-kubernetes" target="_blank" rel="noopener noreferrer" tabindex="-1">Read article ↗</a></div>
+            </div></div>
+          </div>
+        </article>
+        <article class="item" data-type="post" aria-expanded="false" style="transition-delay:168ms">
+          <div class="marker" aria-hidden="true"></div>
+          <div class="poster r169" aria-hidden="true"><img src="images/blog-serverless-game.webp" alt="" loading="lazy"><div class="shade"></div></div>
+          <div class="body">
+            <div class="metarow">
+              <span class="badge">post</span>
+              <span class="date">Sep 2025</span>
+              <span class="sep">·</span>
+              <span class="meta">article</span>
+            </div>
+            <h2><a href="https://bespinian.io/en/blog/level-up-your-serverless-game" target="_blank" rel="noopener noreferrer">Level Up Your Serverless Game</a><span class="arr" aria-hidden="true">↗</span></h2>
+            <div class="where">@ bespinian.io/blog</div>
+            <div class="reveal" aria-hidden="true"><div>
+              <p class="desc">Avoiding common serverless pitfalls - logging, tracing, cold starts, security and deployment strategies.</p>
+              <div class="actions"><a class="btn sm" href="https://bespinian.io/en/blog/level-up-your-serverless-game" target="_blank" rel="noopener noreferrer" tabindex="-1">Read article ↗</a></div>
+            </div></div>
+          </div>
+        </article>
+        <article class="item" data-type="talk" aria-expanded="false" style="transition-delay:168ms">
+          <div class="marker" aria-hidden="true"></div>
+          <div class="poster r169" aria-hidden="true"><img src="images/yt-6qLR_8a4tkw.webp" alt="" loading="lazy"><div class="shade"></div><span class="play">▶</span></div>
+          <div class="body">
+            <div class="metarow">
+              <span class="badge">talk</span>
+              <span class="date">Sep 2025</span>
+              <span class="sep">·</span>
+              <span class="meta">meetup talk</span>
+            </div>
+            <h2><a href="https://www.youtube.com/watch?v=6qLR_8a4tkw" target="_blank" rel="noopener noreferrer">NixOS: How My Laptop Became Declarative</a><span class="arr" aria-hidden="true">↗</span></h2>
+            <div class="where">@ Nine Internet Solutions · TechTalkThursday #25 · Zürich</div>
+            <div class="reveal" aria-hidden="true"><div>
+              <p class="desc">What NixOS is, how it works, and the genuinely nice things you can do once your whole machine is declarative and reproducible.</p>
+              <div class="actions"><a class="btn sm" href="https://www.youtube.com/watch?v=6qLR_8a4tkw" target="_blank" rel="noopener noreferrer" tabindex="-1">▶&nbsp; Watch on YouTube ↗</a></div>
+            </div></div>
+          </div>
+        </article>
+        <article class="item" data-type="talk" aria-expanded="false" style="transition-delay:168ms">
+          <div class="marker" aria-hidden="true"></div>
+          <div class="poster r169" aria-hidden="true"><img src="images/ssf-2025.webp" alt="" loading="lazy"><div class="shade"></div></div>
+          <div class="body">
+            <div class="metarow">
+              <span class="badge">talk</span>
+              <span class="date">Jun 2025</span>
+              <span class="sep">·</span>
+              <span class="meta">conference talk</span>
+            </div>
+            <h2><a href="https://www.swiss-software-festival.ch/archive/swiss-software-festival-2025/program/tech-track2-cloud-native.html" target="_blank" rel="noopener noreferrer">My Learnings from Ten Years of Cloud-Native and Serverless</a><span class="arr" aria-hidden="true">↗</span></h2>
+            <div class="where">@ Swiss Software Festival 2025 · Basel</div>
+            <div class="reveal" aria-hidden="true"><div>
+              <p class="desc">A decade of building and running cloud-native and serverless systems - the patterns that held up, the mistakes worth avoiding, and what the industry got right and wrong along the way.</p>
+              <div class="actions"><a class="btn sm" href="https://www.swiss-software-festival.ch/archive/swiss-software-festival-2025/program/tech-track2-cloud-native.html" target="_blank" rel="noopener noreferrer" tabindex="-1">View talk ↗</a></div>
+            </div></div>
+          </div>
+        </article>
+        <article class="item" data-type="talk" aria-expanded="false" style="transition-delay:168ms">
+          <div class="marker" aria-hidden="true"></div>
+          <div class="poster r169" aria-hidden="true"><img src="images/yt-kSzeBRlY7_I.webp" alt="" loading="lazy"><div class="shade"></div><span class="play">▶</span></div>
+          <div class="body">
+            <div class="metarow">
+              <span class="badge">talk</span>
+              <span class="date">Apr 2025</span>
+              <span class="sep">·</span>
+              <span class="meta">conference talk</span>
+            </div>
+            <h2><a href="https://www.youtube.com/watch?v=kSzeBRlY7_I" target="_blank" rel="noopener noreferrer">Level Up Your Serverless Game</a><span class="arr" aria-hidden="true">↗</span></h2>
+            <div class="where">@ DevOpsDays Zürich 2025 · Zürich</div>
+            <div class="reveal" aria-hidden="true"><div>
+              <p class="desc">Playing through the ten levels of writing and deploying serverless apps - the challenges teams hit, and the best practices that get you past them.</p>
+              <div class="actions"><a class="btn sm" href="https://www.youtube.com/watch?v=kSzeBRlY7_I" target="_blank" rel="noopener noreferrer" tabindex="-1">▶&nbsp; Watch on YouTube ↗</a></div>
+            </div></div>
+          </div>
+        </article>
+        <article class="item" data-type="talk" aria-expanded="false" style="transition-delay:168ms">
+          <div class="marker" aria-hidden="true"></div>
+          <div class="poster r169" aria-hidden="true"><img src="images/scsd-2025.webp" alt="" loading="lazy"><div class="shade"></div></div>
+          <div class="body">
+            <div class="metarow">
+              <span class="badge">talk</span>
+              <span class="date">Feb 2025</span>
+              <span class="sep">·</span>
+              <span class="meta">conference talk</span>
+            </div>
+            <h2><a href="https://www.linkedin.com/posts/lena-fuhrimann_cloudnativecitizen-cloudnativesecurity-devsecops-activity-7298246282878312449-f48x" target="_blank" rel="noopener noreferrer">Cloud Native Security &amp; DevSecOps</a><span class="arr" aria-hidden="true">↗</span></h2>
+            <div class="where">@ Swiss Cyber Security Days · Bern</div>
+            <div class="reveal" aria-hidden="true"><div>
+              <p class="desc">Live drawing instead of slides - juggling a microphone and drawing pen at the same time at my first Swiss Cyber Security Days.</p>
+              <div class="actions"><a class="btn sm" href="https://www.linkedin.com/posts/lena-fuhrimann_cloudnativecitizen-cloudnativesecurity-devsecops-activity-7298246282878312449-f48x" target="_blank" rel="noopener noreferrer" tabindex="-1">View talk ↗</a></div>
+            </div></div>
+          </div>
+        </article>
+        <article class="item" data-type="talk" aria-expanded="false" style="transition-delay:168ms">
+          <div class="marker" aria-hidden="true"></div>
+          <div class="poster r169" aria-hidden="true"><img src="images/yt-Hf0eBEEL0Lk.webp" alt="" loading="lazy"><div class="shade"></div><span class="play">▶</span></div>
+          <div class="body">
+            <div class="metarow">
+              <span class="badge">talk</span>
+              <span class="date">Nov 2024</span>
+              <span class="sep">·</span>
+              <span class="meta">meetup talk</span>
+            </div>
+            <h2><a href="https://www.youtube.com/watch?v=Hf0eBEEL0Lk&amp;t=2057" target="_blank" rel="noopener noreferrer">Is Serverless a Blatant Cost Trap?</a><span class="arr" aria-hidden="true">↗</span></h2>
+            <div class="where">@ Haunted DevOps Meetup · Ergon Informatik · Zürich</div>
+            <div class="reveal" aria-hidden="true"><div>
+              <p class="desc">Busting serverless cost myths with real-world examples - how proactive cost monitoring, ARM architectures, and tools like AWS Lambda Power Tuning keep serverless from becoming a cost trap.</p>
+              <div class="actions"><a class="btn sm" href="https://www.youtube.com/watch?v=Hf0eBEEL0Lk&amp;t=2057" target="_blank" rel="noopener noreferrer" tabindex="-1">▶&nbsp; Watch on YouTube ↗</a></div>
+            </div></div>
+          </div>
+        </article>
+        <article class="item" data-type="talk" aria-expanded="false" style="transition-delay:168ms">
+          <div class="marker" aria-hidden="true"></div>
+          <div class="poster r169" aria-hidden="true"><img src="images/cloud-native-berlin-2024.webp" alt="" loading="lazy"><div class="shade"></div></div>
+          <div class="body">
+            <div class="metarow">
+              <span class="badge">talk</span>
+              <span class="date">Oct 2024</span>
+              <span class="sep">·</span>
+              <span class="meta">conference talk</span>
+            </div>
+            <h2><a href="https://www.linkedin.com/posts/lena-fuhrimann_cloudnativecitizen-berlin-aws-activity-7254398428917448705-s54n" target="_blank" rel="noopener noreferrer">How AWS Lambda &amp; Fargate Work Under the Hood</a><span class="arr" aria-hidden="true">↗</span></h2>
+            <div class="where">@ Serverless Architecture Conference · Berlin</div>
+            <div class="reveal" aria-hidden="true"><div>
+              <p class="desc">A deep dive into how AWS Lambda and Fargate work under the hood, including a live demo of Firecracker - the microVM technology powering them.</p>
+              <div class="actions"><a class="btn sm" href="https://www.linkedin.com/posts/lena-fuhrimann_cloudnativecitizen-berlin-aws-activity-7254398428917448705-s54n" target="_blank" rel="noopener noreferrer" tabindex="-1">View talk ↗</a></div>
+            </div></div>
+          </div>
+        </article>
+        <article class="item" data-type="talk" aria-expanded="false" style="transition-delay:168ms">
+          <div class="marker" aria-hidden="true"></div>
+          <div class="poster r169" aria-hidden="true"><img src="images/rust-meetup-2024.webp" alt="" loading="lazy"><div class="shade"></div></div>
+          <div class="body">
+            <div class="metarow">
+              <span class="badge">talk</span>
+              <span class="date">Oct 2024</span>
+              <span class="sep">·</span>
+              <span class="meta">meetup talk</span>
+            </div>
+            <h2><a href="https://www.linkedin.com/posts/bespinian_cloudnativecitizen-rustlang-serverless-ugcPost-7253075642190057472-hHMy" target="_blank" rel="noopener noreferrer">Serverless on Rust: What the Hack is Firecracker?</a><span class="arr" aria-hidden="true">↗</span></h2>
+            <div class="where">@ Rust Meetup · bespinian · Zürich</div>
+            <div class="reveal" aria-hidden="true"><div>
+              <p class="desc">How Firecracker launches microVMs in under 100ms - and what that means for serverless Rust on AWS Lambda.</p>
+              <div class="actions"><a class="btn sm" href="https://www.linkedin.com/posts/bespinian_cloudnativecitizen-rustlang-serverless-ugcPost-7253075642190057472-hHMy" target="_blank" rel="noopener noreferrer" tabindex="-1">View talk ↗</a></div>
+            </div></div>
+          </div>
+        </article>
+        <article class="item" data-type="talk" aria-expanded="false" style="transition-delay:168ms">
+          <div class="marker" aria-hidden="true"></div>
+          <div class="poster r169" aria-hidden="true"><img src="images/devops-basel-2024.webp" alt="" loading="lazy"><div class="shade"></div></div>
+          <div class="body">
+            <div class="metarow">
+              <span class="badge">talk</span>
+              <span class="date">Oct 2024</span>
+              <span class="sep">·</span>
+              <span class="meta">meetup talk</span>
+            </div>
+            <h2><a href="https://www.meetup.com/devops-basel/events/303214101/" target="_blank" rel="noopener noreferrer">Serverless Powertools</a><span class="arr" aria-hidden="true">↗</span></h2>
+            <div class="where">@ DevOps Basel Meetup · Basel</div>
+            <div class="reveal" aria-hidden="true"><div>
+              <p class="desc">Efficient large-scale serverless deployment strategies using AWS Lambda Powertools at the relaunched DevOps Basel community meetup.</p>
+              <div class="actions"><a class="btn sm" href="https://www.meetup.com/devops-basel/events/303214101/" target="_blank" rel="noopener noreferrer" tabindex="-1">View talk ↗</a></div>
+            </div></div>
+          </div>
+        </article>
+        <article class="item" data-type="talk" aria-expanded="false" style="transition-delay:168ms">
+          <div class="marker" aria-hidden="true"></div>
+          <div class="poster r169" aria-hidden="true"><img src="images/barnerjs-2024.webp" alt="" loading="lazy"><div class="shade"></div></div>
+          <div class="body">
+            <div class="metarow">
+              <span class="badge">talk</span>
+              <span class="date">Sep 2024</span>
+              <span class="sep">·</span>
+              <span class="meta">meetup talk</span>
+            </div>
+            <h2><a href="https://www.linkedin.com/posts/barnerjs-talks_eslint-meetup-javascript-ugcPost-7237385346924105728-jjdE" target="_blank" rel="noopener noreferrer">Best Practices for Operating Serverless Applications in TypeScript</a><span class="arr" aria-hidden="true">↗</span></h2>
+            <div class="where">@ BärnerJS · Bern</div>
+            <div class="reveal" aria-hidden="true"><div>
+              <p class="desc">Best practices for building and operating serverless applications in TypeScript, with open-source workshop resources.</p>
+              <div class="actions"><a class="btn sm" href="https://www.linkedin.com/posts/barnerjs-talks_eslint-meetup-javascript-ugcPost-7237385346924105728-jjdE" target="_blank" rel="noopener noreferrer" tabindex="-1">View talk ↗</a></div>
+            </div></div>
+          </div>
+        </article>
+        <article class="item" data-type="talk" aria-expanded="false" style="transition-delay:168ms">
+          <div class="marker" aria-hidden="true"></div>
+          <div class="poster r169" aria-hidden="true"><img src="images/cloudnatives-zurich-2023.webp" alt="" loading="lazy"><div class="shade"></div></div>
+          <div class="body">
+            <div class="metarow">
+              <span class="badge">talk</span>
+              <span class="date">Nov 2023</span>
+              <span class="sep">·</span>
+              <span class="meta">meetup talk</span>
+            </div>
+            <h2><a href="https://www.linkedin.com/posts/bespinian_cloudnativecitizen-activity-7327624309642780672-zfdf" target="_blank" rel="noopener noreferrer">Serverless Optimization on AWS</a><span class="arr" aria-hidden="true">↗</span></h2>
+            <div class="where">@ Cloud Natives Zurich · AWS · Zürich</div>
+            <div class="reveal" aria-hidden="true"><div>
+              <p class="desc">Building resilient and reliable serverless applications on AWS - covering optimization strategies for performance and cost at the Cloud Natives Zurich meetup.</p>
+              <div class="actions"><a class="btn sm" href="https://www.linkedin.com/posts/bespinian_cloudnativecitizen-activity-7327624309642780672-zfdf" target="_blank" rel="noopener noreferrer" tabindex="-1">View talk ↗</a></div>
+            </div></div>
+          </div>
+        </article>
+        <article class="item" data-type="talk" aria-expanded="false" style="transition-delay:168ms">
+          <div class="marker" aria-hidden="true"></div>
+          <div class="poster r169" aria-hidden="true"><img src="images/slacon-2023.webp" alt="" loading="lazy"><div class="shade"></div></div>
+          <div class="body">
+            <div class="metarow">
+              <span class="badge">talk</span>
+              <span class="date">Oct 2023</span>
+              <span class="sep">·</span>
+              <span class="meta">talk + workshop</span>
+            </div>
+            <h2><a href="https://www.linkedin.com/posts/bespinian_slacon-cloudnativecitizen-activity-7119975681777618945-ToaV" target="_blank" rel="noopener noreferrer">Is Serverless a Blatant Cost Trap?</a><span class="arr" aria-hidden="true">↗</span></h2>
+            <div class="where">@ SLACon · Berlin</div>
+            <div class="reveal" aria-hidden="true"><div>
+              <p class="desc">Two contributions at SLACon Berlin: a talk busting serverless cost myths and an advanced serverless workshop.</p>
+              <div class="actions"><a class="btn sm" href="https://www.linkedin.com/posts/bespinian_slacon-cloudnativecitizen-activity-7119975681777618945-ToaV" target="_blank" rel="noopener noreferrer" tabindex="-1">View talk ↗</a></div>
+            </div></div>
+          </div>
+        </article>
+        <article class="item" data-type="talk" aria-expanded="false" style="transition-delay:168ms">
+          <div class="marker" aria-hidden="true"></div>
+          <div class="poster r169" aria-hidden="true"><img src="images/yt-sk6j7_VFhSc.webp" alt="" loading="lazy"><div class="shade"></div><span class="play">▶</span></div>
+          <div class="body">
+            <div class="metarow">
+              <span class="badge">talk</span>
+              <span class="date">Jun 2023</span>
+              <span class="sep">·</span>
+              <span class="meta">conference talk</span>
+            </div>
+            <h2><a href="https://www.youtube.com/watch?v=sk6j7_VFhSc" target="_blank" rel="noopener noreferrer">Streamlined Troubleshooting in Kubernetes</a><span class="arr" aria-hidden="true">↗</span></h2>
+            <div class="where">@ Cloud Native Zürich · Zürich</div>
+            <div class="reveal" aria-hidden="true"><div>
+              <p class="desc">A practical workflow for debugging workloads in Kubernetes without losing your mind - or your weekend.</p>
+              <div class="actions"><a class="btn sm" href="https://www.youtube.com/watch?v=sk6j7_VFhSc" target="_blank" rel="noopener noreferrer" tabindex="-1">▶&nbsp; Watch on YouTube ↗</a></div>
+            </div></div>
+          </div>
+        </article>
+        <article class="item" data-type="oss" aria-expanded="false" style="transition-delay:168ms">
+          <div class="marker" aria-hidden="true"></div>
+          <div class="poster r169" aria-hidden="true"><img src="images/oss-nixfiles.webp" alt="" loading="lazy"><div class="shade"></div></div>
+          <div class="body">
+            <div class="metarow">
+              <span class="badge">oss</span>
+              <span class="date">May 2023</span>
+              <span class="sep">·</span>
+              <span class="meta">Nix</span>
+            </div>
+            <h2><a href="https://github.com/cloudlena/nixfiles" target="_blank" rel="noopener noreferrer">nixfiles - Personal Nix Configuration</a><span class="arr" aria-hidden="true">↗</span></h2>
+            <div class="where">@ github.com/cloudlena/nixfiles</div>
+            <div class="reveal" aria-hidden="true"><div>
+              <p class="desc">My declarative, reproducible machine setup in Nix - the config behind the 'how my laptop became declarative' talk.</p>
+              <div class="actions"><a class="btn sm" href="https://github.com/cloudlena/nixfiles" target="_blank" rel="noopener noreferrer" tabindex="-1">View on GitHub ↗</a></div>
+            </div></div>
+          </div>
+        </article>
+        <article class="item" data-type="talk" aria-expanded="false" style="transition-delay:168ms">
+          <div class="marker" aria-hidden="true"></div>
+          <div class="poster r169" aria-hidden="true"><img src="images/golang-bern-2022.webp" alt="" loading="lazy"><div class="shade"></div></div>
+          <div class="body">
+            <div class="metarow">
+              <span class="badge">talk</span>
+              <span class="date">Nov 2022</span>
+              <span class="sep">·</span>
+              <span class="meta">meetup talk</span>
+            </div>
+            <h2><a href="https://www.linkedin.com/feed/update/urn:li:activity:7003057535792390144" target="_blank" rel="noopener noreferrer">Glorious Terminal UIs with charm.sh</a><span class="arr" aria-hidden="true">↗</span></h2>
+            <div class="where">@ Golang Bern · Puzzle ITC · Bern</div>
+            <div class="reveal" aria-hidden="true"><div>
+              <p class="desc">Building beautiful terminal UIs in Go using the charm.sh library suite.</p>
+              <div class="actions"><a class="btn sm" href="https://www.linkedin.com/feed/update/urn:li:activity:7003057535792390144" target="_blank" rel="noopener noreferrer" tabindex="-1">View talk ↗</a></div>
+            </div></div>
+          </div>
+        </article>
+        <article class="item" data-type="talk" aria-expanded="false" style="transition-delay:168ms">
+          <div class="marker" aria-hidden="true"></div>
+          <div class="poster r169" aria-hidden="true"><img src="images/slacon-2022.webp" alt="" loading="lazy"><div class="shade"></div></div>
+          <div class="body">
+            <div class="metarow">
+              <span class="badge">talk</span>
+              <span class="date">Oct 2022</span>
+              <span class="sep">·</span>
+              <span class="meta">conference talk</span>
+            </div>
+            <h2><a href="https://www.linkedin.com/posts/lena-fuhrimann_serverless-activity-6987723173920133120-1A6_" target="_blank" rel="noopener noreferrer">Level Up Your Serverless Game</a><span class="arr" aria-hidden="true">↗</span></h2>
+            <div class="where">@ Serverless Architecture Conference · Berlin</div>
+            <div class="reveal" aria-hidden="true"><div>
+              <p class="desc">Playing through the ten levels of writing and deploying serverless apps - the challenges teams hit, and the best practices that get you past them.</p>
+              <div class="actions"><a class="btn sm" href="https://www.linkedin.com/posts/lena-fuhrimann_serverless-activity-6987723173920133120-1A6_" target="_blank" rel="noopener noreferrer" tabindex="-1">View talk ↗</a></div>
+            </div></div>
+          </div>
+        </article>
+        <article class="item" data-type="post" aria-expanded="false" style="transition-delay:168ms">
+          <div class="marker" aria-hidden="true"></div>
+          <div class="poster r169" aria-hidden="true"><img src="images/blog-api-contracts.webp" alt="" loading="lazy"><div class="shade"></div></div>
+          <div class="body">
+            <div class="metarow">
+              <span class="badge">post</span>
+              <span class="date">Oct 2022</span>
+              <span class="sep">·</span>
+              <span class="meta">article</span>
+            </div>
+            <h2><a href="https://bespinian.io/en/blog/api-contract-definitions" target="_blank" rel="noopener noreferrer">API Contract Definitions</a><span class="arr" aria-hidden="true">↗</span></h2>
+            <div class="where">@ bespinian.io/blog</div>
+            <div class="reveal" aria-hidden="true"><div>
+              <p class="desc">Technologies for defining service contracts - OpenAPI, GraphQL and gRPC - and keeping specification and implementation in sync.</p>
+              <div class="actions"><a class="btn sm" href="https://bespinian.io/en/blog/api-contract-definitions" target="_blank" rel="noopener noreferrer" tabindex="-1">Read article ↗</a></div>
+            </div></div>
+          </div>
+        </article>
+        <article class="item" data-type="post" aria-expanded="false" style="transition-delay:168ms">
+          <div class="marker" aria-hidden="true"></div>
+          <div class="poster r169" aria-hidden="true"><img src="images/blog-gitops.webp" alt="" loading="lazy"><div class="shade"></div></div>
+          <div class="body">
+            <div class="metarow">
+              <span class="badge">post</span>
+              <span class="date">May 2022</span>
+              <span class="sep">·</span>
+              <span class="meta">article · with Mathis Kretz</span>
+            </div>
+            <h2><a href="https://bespinian.io/en/blog/gitops" target="_blank" rel="noopener noreferrer">GitOps</a><span class="arr" aria-hidden="true">↗</span></h2>
+            <div class="where">@ bespinian.io/blog</div>
+            <div class="reveal" aria-hidden="true"><div>
+              <p class="desc">Combining Git and Infrastructure as Code to implement GitOps for both apps and infra - Argo CD for Kubernetes, Terraform for infrastructure.</p>
+              <div class="actions"><a class="btn sm" href="https://bespinian.io/en/blog/gitops" target="_blank" rel="noopener noreferrer" tabindex="-1">Read article ↗</a></div>
+            </div></div>
+          </div>
+        </article>
+        <article class="item" data-type="post" aria-expanded="false" style="transition-delay:168ms">
+          <div class="marker" aria-hidden="true"></div>
+          <div class="poster r169" aria-hidden="true"><img src="images/be-like-grace-2021.webp" alt="" loading="lazy"><div class="shade"></div></div>
+          <div class="body">
+            <div class="metarow">
+              <span class="badge">post</span>
+              <span class="date">Dec 2021</span>
+              <span class="sep">·</span>
+              <span class="meta">interview</span>
+            </div>
+            <h2><a href="https://belikegrace.ch/be-like-lena/" target="_blank" rel="noopener noreferrer">Be Like… Lena</a><span class="arr" aria-hidden="true">↗</span></h2>
+            <div class="where">@ belikegrace.ch</div>
+            <div class="reveal" aria-hidden="true"><div>
+              <p class="desc">A profile and interview about my path into cloud software architecture, co-founding bespinian, and the intersection of technical expertise and creativity.</p>
+              <div class="actions"><a class="btn sm" href="https://belikegrace.ch/be-like-lena/" target="_blank" rel="noopener noreferrer" tabindex="-1">Read article ↗</a></div>
+            </div></div>
+          </div>
+        </article>
+        <article class="item" data-type="post" aria-expanded="false" style="transition-delay:168ms">
+          <div class="marker" aria-hidden="true"></div>
+          <div class="poster r169" aria-hidden="true"><img src="images/blog-infrastructure-as-code.webp" alt="" loading="lazy"><div class="shade"></div></div>
+          <div class="body">
+            <div class="metarow">
+              <span class="badge">post</span>
+              <span class="date">Dec 2021</span>
+              <span class="sep">·</span>
+              <span class="meta">article · with Mathis Kretz</span>
+            </div>
+            <h2><a href="https://bespinian.io/en/blog/infrastructure-as-code" target="_blank" rel="noopener noreferrer">Infrastructure as Code</a><span class="arr" aria-hidden="true">↗</span></h2>
+            <div class="where">@ bespinian.io/blog</div>
+            <div class="reveal" aria-hidden="true"><div>
+              <p class="desc">IaC principles and declarative infrastructure with Terraform, Packer and CloudFormation - versioning, testing and automation.</p>
+              <div class="actions"><a class="btn sm" href="https://bespinian.io/en/blog/infrastructure-as-code" target="_blank" rel="noopener noreferrer" tabindex="-1">Read article ↗</a></div>
+            </div></div>
+          </div>
+        </article>
+        <article class="item" data-type="post" aria-expanded="false" style="transition-delay:168ms">
+          <div class="marker" aria-hidden="true"></div>
+          <div class="poster r169" aria-hidden="true"><img src="images/blog-git.webp" alt="" loading="lazy"><div class="shade"></div></div>
+          <div class="body">
+            <div class="metarow">
+              <span class="badge">post</span>
+              <span class="date">Oct 2021</span>
+              <span class="sep">·</span>
+              <span class="meta">article · with Mathis Kretz</span>
+            </div>
+            <h2><a href="https://bespinian.io/en/blog/git-the-important-parts" target="_blank" rel="noopener noreferrer">Git - The Important Parts</a><span class="arr" aria-hidden="true">↗</span></h2>
+            <div class="where">@ bespinian.io/blog</div>
+            <div class="reveal" aria-hidden="true"><div>
+              <p class="desc">Git best practices for teams - commit messages, Gitflow vs GitHub Flow, pull requests and hooks to enforce conventions.</p>
+              <div class="actions"><a class="btn sm" href="https://bespinian.io/en/blog/git-the-important-parts" target="_blank" rel="noopener noreferrer" tabindex="-1">Read article ↗</a></div>
+            </div></div>
+          </div>
+        </article>
+        <article class="item" data-type="talk" aria-expanded="false" style="transition-delay:168ms">
+          <div class="marker" aria-hidden="true"></div>
+          <div class="poster r169" aria-hidden="true"><img src="images/serverless-workshop-2021.webp" alt="" loading="lazy"><div class="shade"></div></div>
+          <div class="body">
+            <div class="metarow">
+              <span class="badge">talk</span>
+              <span class="date">Sep 2021</span>
+              <span class="sep">·</span>
+              <span class="meta">workshop · with Gabriel Koch &amp; Mathis Kretz</span>
+            </div>
+            <h2><a href="https://www.linkedin.com/posts/lena-fuhrimann_our-serverless-workshop-with-lena-fuhrimann-activity-6846787142279036928-vjxG" target="_blank" rel="noopener noreferrer">Serverless Workshop</a><span class="arr" aria-hidden="true">↗</span></h2>
+            <div class="where">@ Swiss Cloud Native Day · Bern</div>
+            <div class="reveal" aria-hidden="true"><div>
+              <p class="desc">Hands-on serverless workshop at Swiss Cloud Native Day, co-facilitated with Gabriel Koch and Mathis Kretz.</p>
+              <div class="actions"><a class="btn sm" href="https://www.linkedin.com/posts/lena-fuhrimann_our-serverless-workshop-with-lena-fuhrimann-activity-6846787142279036928-vjxG" target="_blank" rel="noopener noreferrer" tabindex="-1">View talk ↗</a></div>
+            </div></div>
+          </div>
+        </article>
+        <article class="item" data-type="post" aria-expanded="false" style="transition-delay:168ms">
+          <div class="marker" aria-hidden="true"></div>
+          <div class="poster r169" aria-hidden="true"><img src="images/blog-arch-linux.webp" alt="" loading="lazy"><div class="shade"></div></div>
+          <div class="body">
+            <div class="metarow">
+              <span class="badge">post</span>
+              <span class="date">Mar 2021</span>
+              <span class="sep">·</span>
+              <span class="meta">article</span>
+            </div>
+            <h2><a href="https://bespinian.io/en/blog/installing-arch-linux-on-uefi-with-full-disk-encryption" target="_blank" rel="noopener noreferrer">Installing Arch Linux on UEFI With Full Disk Encryption</a><span class="arr" aria-hidden="true">↗</span></h2>
+            <div class="where">@ bespinian.io/blog</div>
+            <div class="reveal" aria-hidden="true"><div>
+              <p class="desc">A concise step-by-step guide to installing Arch Linux on UEFI systems with LUKS full-disk encryption.</p>
+              <div class="actions"><a class="btn sm" href="https://bespinian.io/en/blog/installing-arch-linux-on-uefi-with-full-disk-encryption" target="_blank" rel="noopener noreferrer" tabindex="-1">Read article ↗</a></div>
+            </div></div>
+          </div>
+        </article>
+        <article class="item" data-type="post" aria-expanded="false" style="transition-delay:168ms">
+          <div class="marker" aria-hidden="true"></div>
+          <div class="poster r169" aria-hidden="true"><img src="images/blog-vim.webp" alt="" loading="lazy"><div class="shade"></div></div>
+          <div class="body">
+            <div class="metarow">
+              <span class="badge">post</span>
+              <span class="date">Jul 2020</span>
+              <span class="sep">·</span>
+              <span class="meta">article</span>
+            </div>
+            <h2><a href="https://bespinian.io/en/blog/efficient-navigation-in-vim" target="_blank" rel="noopener noreferrer">Efficient Navigation in Vim</a><span class="arr" aria-hidden="true">↗</span></h2>
+            <div class="where">@ bespinian.io/blog</div>
+            <div class="reveal" aria-hidden="true"><div>
+              <p class="desc">Moving around Vim efficiently - movement keys, search techniques and a few plugins that boost your editing speed.</p>
+              <div class="actions"><a class="btn sm" href="https://bespinian.io/en/blog/efficient-navigation-in-vim" target="_blank" rel="noopener noreferrer" tabindex="-1">Read article ↗</a></div>
+            </div></div>
+          </div>
+        </article>
+        <article class="item" data-type="post" aria-expanded="false" style="transition-delay:168ms">
+          <div class="marker" aria-hidden="true"></div>
+          <div class="poster r169" aria-hidden="true"><img src="images/blog-crypto-bot.webp" alt="" loading="lazy"><div class="shade"></div></div>
+          <div class="body">
+            <div class="metarow">
+              <span class="badge">post</span>
+              <span class="date">Dec 2017</span>
+              <span class="sep">·</span>
+              <span class="meta">article</span>
+            </div>
+            <h2><a href="https://bespinian.io/en/blog/run-a-crypto-trading-bot-on-cloud-foundry" target="_blank" rel="noopener noreferrer">Run a Crypto Trading Bot on Cloud Foundry</a><span class="arr" aria-hidden="true">↗</span></h2>
+            <div class="where">@ bespinian.io/blog</div>
+            <div class="reveal" aria-hidden="true"><div>
+              <p class="desc">Deploying Zenbot, an open-source cryptocurrency trading bot, to Cloud Foundry to automate trading strategies on platforms like GDAX.</p>
+              <div class="actions"><a class="btn sm" href="https://bespinian.io/en/blog/run-a-crypto-trading-bot-on-cloud-foundry" target="_blank" rel="noopener noreferrer" tabindex="-1">Read article ↗</a></div>
+            </div></div>
+          </div>
+        </article>
+        <article class="item" data-type="post" aria-expanded="false" style="transition-delay:168ms">
+          <div class="marker" aria-hidden="true"></div>
+          <div class="poster r169" aria-hidden="true"><img src="images/blog-wordpress.webp" alt="" loading="lazy"><div class="shade"></div></div>
+          <div class="body">
+            <div class="metarow">
+              <span class="badge">post</span>
+              <span class="date">Aug 2017</span>
+              <span class="sep">·</span>
+              <span class="meta">article</span>
+            </div>
+            <h2><a href="https://bespinian.io/en/blog/run-wordpress-on-cloud-foundry" target="_blank" rel="noopener noreferrer">Run WordPress on Cloud Foundry</a><span class="arr" aria-hidden="true">↗</span></h2>
+            <div class="where">@ bespinian.io/blog</div>
+            <div class="reveal" aria-hidden="true"><div>
+              <p class="desc">Deploying WordPress on Cloud Foundry with externalized S3 file storage to handle media uploads in a cloud-native way.</p>
+              <div class="actions"><a class="btn sm" href="https://bespinian.io/en/blog/run-wordpress-on-cloud-foundry" target="_blank" rel="noopener noreferrer" tabindex="-1">Read article ↗</a></div>
+            </div></div>
+          </div>
+        </article>
+        <article class="item" data-type="post" aria-expanded="false" style="transition-delay:168ms">
+          <div class="marker" aria-hidden="true"></div>
+          <div class="poster r169" aria-hidden="true"><img src="images/blog-docker-registry.webp" alt="" loading="lazy"><div class="shade"></div></div>
+          <div class="body">
+            <div class="metarow">
+              <span class="badge">post</span>
+              <span class="date">Aug 2017</span>
+              <span class="sep">·</span>
+              <span class="meta">article</span>
+            </div>
+            <h2><a href="https://bespinian.io/en/blog/run-docker-registry-on-cloud-foundry" target="_blank" rel="noopener noreferrer">Run Docker Registry on Cloud Foundry</a><span class="arr" aria-hidden="true">↗</span></h2>
+            <div class="where">@ bespinian.io/blog</div>
+            <div class="reveal" aria-hidden="true"><div>
+              <p class="desc">A private Docker Registry on Cloud Foundry using S3 for storage and Redis for caching to securely manage your container images.</p>
+              <div class="actions"><a class="btn sm" href="https://bespinian.io/en/blog/run-docker-registry-on-cloud-foundry" target="_blank" rel="noopener noreferrer" tabindex="-1">Read article ↗</a></div>
+            </div></div>
+          </div>
+        </article>
+        <article class="item" data-type="post" aria-expanded="false" style="transition-delay:168ms">
+          <div class="marker" aria-hidden="true"></div>
+          <div class="poster r169" aria-hidden="true"><img src="images/blog-ghost.webp" alt="" loading="lazy"><div class="shade"></div></div>
+          <div class="body">
+            <div class="metarow">
+              <span class="badge">post</span>
+              <span class="date">Jul 2017</span>
+              <span class="sep">·</span>
+              <span class="meta">article</span>
+            </div>
+            <h2><a href="https://bespinian.io/en/blog/run-ghost-on-cloud-foundry" target="_blank" rel="noopener noreferrer">Run Ghost on Cloud Foundry</a><span class="arr" aria-hidden="true">↗</span></h2>
+            <div class="where">@ bespinian.io/blog</div>
+            <div class="reveal" aria-hidden="true"><div>
+              <p class="desc">Deploying Ghost, a modern Node.js blogging platform, on Cloud Foundry with MariaDB and optional S3 storage for media files.</p>
+              <div class="actions"><a class="btn sm" href="https://bespinian.io/en/blog/run-ghost-on-cloud-foundry" target="_blank" rel="noopener noreferrer" tabindex="-1">Read article ↗</a></div>
+            </div></div>
+          </div>
+        </article>
+        <article class="item" data-type="post" aria-expanded="false" style="transition-delay:168ms">
+          <div class="marker" aria-hidden="true"></div>
+          <div class="poster r169" aria-hidden="true"><img src="images/blog-docker-dev.webp" alt="" loading="lazy"><div class="shade"></div></div>
+          <div class="body">
+            <div class="metarow">
+              <span class="badge">post</span>
+              <span class="date">Jun 2017</span>
+              <span class="sep">·</span>
+              <span class="meta">article</span>
+            </div>
+            <h2><a href="https://bespinian.io/en/blog/docker-for-local-development" target="_blank" rel="noopener noreferrer">Docker for Local Development</a><span class="arr" aria-hidden="true">↗</span></h2>
+            <div class="where">@ bespinian.io/blog</div>
+            <div class="reveal" aria-hidden="true"><div>
+              <p class="desc">Using Docker to spin up and tear down backend services for local development - keeping your machine clean and your workflows efficient.</p>
+              <div class="actions"><a class="btn sm" href="https://bespinian.io/en/blog/docker-for-local-development" target="_blank" rel="noopener noreferrer" tabindex="-1">Read article ↗</a></div>
+            </div></div>
+          </div>
+        </article>
+        <article class="item" data-type="oss" aria-expanded="false" style="transition-delay:168ms">
+          <div class="marker" aria-hidden="true"></div>
+          <div class="poster r169" aria-hidden="true"><img src="images/oss-clong.webp" alt="" loading="lazy"><div class="shade"></div></div>
+          <div class="body">
+            <div class="metarow">
+              <span class="badge">oss</span>
+              <span class="date">Apr 2017</span>
+              <span class="sep">·</span>
+              <span class="meta">Go · WebSocket</span>
+            </div>
+            <h2><a href="https://github.com/cloudlena/clong" target="_blank" rel="noopener noreferrer">clong - A Fun Multiplayer Game</a><span class="arr" aria-hidden="true">↗</span></h2>
+            <div class="where">@ github.com/cloudlena/clong</div>
+            <div class="reveal" aria-hidden="true"><div>
+              <p class="desc">A fun multiplayer game: players swipe on their phones to launch balls at targets on a shared big screen, with a live scoreboard.</p>
+              <div class="actions"><a class="btn sm" href="https://github.com/cloudlena/clong" target="_blank" rel="noopener noreferrer" tabindex="-1">View on GitHub ↗</a></div>
+            </div></div>
+          </div>
+        </article>
+        <article class="item" data-type="post" aria-expanded="false" style="transition-delay:168ms">
+          <div class="marker" aria-hidden="true"></div>
+          <div class="poster r169" aria-hidden="true"><img src="images/blog-s3-buckets.webp" alt="" loading="lazy"><div class="shade"></div></div>
+          <div class="body">
+            <div class="metarow">
+              <span class="badge">post</span>
+              <span class="date">Mar 2017</span>
+              <span class="sep">·</span>
+              <span class="meta">article</span>
+            </div>
+            <h2><a href="https://bespinian.io/en/blog/manage-buckets-on-cloud-foundry-s3-services" target="_blank" rel="noopener noreferrer">Manage Buckets on Cloud Foundry S3 Services</a><span class="arr" aria-hidden="true">↗</span></h2>
+            <div class="where">@ bespinian.io/blog</div>
+            <div class="reveal" aria-hidden="true"><div>
+              <p class="desc">Creating and managing S3 buckets on Cloud Foundry using s3cmd or the open-source S3 Manager application.</p>
+              <div class="actions"><a class="btn sm" href="https://bespinian.io/en/blog/manage-buckets-on-cloud-foundry-s3-services" target="_blank" rel="noopener noreferrer" tabindex="-1">Read article ↗</a></div>
+            </div></div>
+          </div>
+        </article>
+        <article class="item" data-type="post" aria-expanded="false" style="transition-delay:168ms">
+          <div class="marker" aria-hidden="true"></div>
+          <div class="poster r169" aria-hidden="true"><img src="images/blog-blue-green.webp" alt="" loading="lazy"><div class="shade"></div></div>
+          <div class="body">
+            <div class="metarow">
+              <span class="badge">post</span>
+              <span class="date">Dec 2016</span>
+              <span class="sep">·</span>
+              <span class="meta">article</span>
+            </div>
+            <h2><a href="https://bespinian.io/en/blog/blue-green-deployment-on-cloud-foundry" target="_blank" rel="noopener noreferrer">Blue Green Deployment on Cloud Foundry</a><span class="arr" aria-hidden="true">↗</span></h2>
+            <div class="where">@ bespinian.io/blog</div>
+            <div class="reveal" aria-hidden="true"><div>
+              <p class="desc">Zero-downtime updates and safe rollbacks on Cloud Foundry using a simple shell script.</p>
+              <div class="actions"><a class="btn sm" href="https://bespinian.io/en/blog/blue-green-deployment-on-cloud-foundry" target="_blank" rel="noopener noreferrer" tabindex="-1">Read article ↗</a></div>
+            </div></div>
+          </div>
+        </article>
+        <article class="item" data-type="oss" aria-expanded="false" style="transition-delay:168ms">
+          <div class="marker" aria-hidden="true"></div>
+          <div class="poster r169" aria-hidden="true"><img src="images/oss-s3manager.webp" alt="" loading="lazy"><div class="shade"></div></div>
+          <div class="body">
+            <div class="metarow">
+              <span class="badge">oss</span>
+              <span class="date">Dec 2016</span>
+              <span class="sep">·</span>
+              <span class="meta">1k ★ · Go</span>
+            </div>
+            <h2><a href="https://github.com/cloudlena/s3manager" target="_blank" rel="noopener noreferrer">s3manager - A Web GUI for Your S3 Buckets</a><span class="arr" aria-hidden="true">↗</span></h2>
+            <div class="where">@ github.com/cloudlena/s3manager</div>
+            <div class="reveal" aria-hidden="true"><div>
+              <p class="desc">A web GUI written in Go to manage S3 buckets from any provider - list, upload, download and delete objects. Runs as a tiny container, deploys anywhere.</p>
+              <div class="actions"><a class="btn sm" href="https://github.com/cloudlena/s3manager" target="_blank" rel="noopener noreferrer" tabindex="-1">View on GitHub ↗</a></div>
+            </div></div>
+          </div>
+        </article>
+        <article class="item" data-type="post" aria-expanded="false" style="transition-delay:168ms">
+          <div class="marker" aria-hidden="true"></div>
+          <div class="poster r169" aria-hidden="true"><img src="images/blog-piwik.webp" alt="" loading="lazy"><div class="shade"></div></div>
+          <div class="body">
+            <div class="metarow">
+              <span class="badge">post</span>
+              <span class="date">Nov 2016</span>
+              <span class="sep">·</span>
+              <span class="meta">article</span>
+            </div>
+            <h2><a href="https://bespinian.io/en/blog/run-piwik-on-cloud-foundry" target="_blank" rel="noopener noreferrer">Run Piwik on Cloud Foundry</a><span class="arr" aria-hidden="true">↗</span></h2>
+            <div class="where">@ bespinian.io/blog</div>
+            <div class="reveal" aria-hidden="true"><div>
+              <p class="desc">Deploying Piwik, an open-source analytics platform, on Cloud Foundry as a self-hosted alternative to Google Analytics.</p>
+              <div class="actions"><a class="btn sm" href="https://bespinian.io/en/blog/run-piwik-on-cloud-foundry" target="_blank" rel="noopener noreferrer" tabindex="-1">Read article ↗</a></div>
+            </div></div>
+          </div>
+        </article>
+        <article class="item" data-type="post" aria-expanded="false" style="transition-delay:168ms">
+          <div class="marker" aria-hidden="true"></div>
+          <div class="poster r169" aria-hidden="true"><img src="images/blog-frontend-env.webp" alt="" loading="lazy"><div class="shade"></div></div>
+          <div class="body">
+            <div class="metarow">
+              <span class="badge">post</span>
+              <span class="date">Nov 2016</span>
+              <span class="sep">·</span>
+              <span class="meta">article</span>
+            </div>
+            <h2><a href="https://bespinian.io/en/blog/configure-front-end-apps-with-environment-variables-on-cloud-foundry" target="_blank" rel="noopener noreferrer">Configure Front End Apps With Environment Variables on Cloud Foundry</a><span class="arr" aria-hidden="true">↗</span></h2>
+            <div class="where">@ bespinian.io/blog</div>
+            <div class="reveal" aria-hidden="true"><div>
+              <p class="desc">Configuring static front-end apps on Cloud Foundry via environment variables exposed through an nginx HTTP endpoint.</p>
+              <div class="actions"><a class="btn sm" href="https://bespinian.io/en/blog/configure-front-end-apps-with-environment-variables-on-cloud-foundry" target="_blank" rel="noopener noreferrer" tabindex="-1">Read article ↗</a></div>
+            </div></div>
+          </div>
+        </article>
+        <article class="item" data-type="post" aria-expanded="false" style="transition-delay:168ms">
+          <div class="marker" aria-hidden="true"></div>
+          <div class="poster r169" aria-hidden="true"><img src="images/blog-route-services.webp" alt="" loading="lazy"><div class="shade"></div></div>
+          <div class="body">
+            <div class="metarow">
+              <span class="badge">post</span>
+              <span class="date">Oct 2016</span>
+              <span class="sep">·</span>
+              <span class="meta">article</span>
+            </div>
+            <h2><a href="https://bespinian.io/en/blog/cloud-foundry-route-services" target="_blank" rel="noopener noreferrer">Cloud Foundry Route Services</a><span class="arr" aria-hidden="true">↗</span></h2>
+            <div class="where">@ bespinian.io/blog</div>
+            <div class="reveal" aria-hidden="true"><div>
+              <p class="desc">Using Route Services to add authentication, rate limiting or logging at the route level before requests reach your app.</p>
+              <div class="actions"><a class="btn sm" href="https://bespinian.io/en/blog/cloud-foundry-route-services" target="_blank" rel="noopener noreferrer" tabindex="-1">Read article ↗</a></div>
+            </div></div>
+          </div>
+        </article>
+        <article class="item" data-type="post" aria-expanded="false" style="transition-delay:168ms">
+          <div class="marker" aria-hidden="true"></div>
+          <div class="poster r169" aria-hidden="true"><img src="images/blog-observables.webp" alt="" loading="lazy"><div class="shade"></div></div>
+          <div class="body">
+            <div class="metarow">
+              <span class="badge">post</span>
+              <span class="date">Mar 2016</span>
+              <span class="sep">·</span>
+              <span class="meta">article</span>
+            </div>
+            <h2><a href="https://bespinian.io/en/blog/observables-with-angular-and-feathers" target="_blank" rel="noopener noreferrer">Observables With Angular and Feathers</a><span class="arr" aria-hidden="true">↗</span></h2>
+            <div class="where">@ bespinian.io/blog</div>
+            <div class="reveal" aria-hidden="true"><div>
+              <p class="desc">Angular services that consume Feathers WebSocket APIs using RxJS Observables for real-time, reactive data streams.</p>
+              <div class="actions"><a class="btn sm" href="https://bespinian.io/en/blog/observables-with-angular-and-feathers" target="_blank" rel="noopener noreferrer" tabindex="-1">Read article ↗</a></div>
+            </div></div>
+          </div>
+        </article>
+        <article class="item" data-type="post" aria-expanded="false" style="transition-delay:168ms">
+          <div class="marker" aria-hidden="true"></div>
+          <div class="poster r169" aria-hidden="true"><img src="images/blog-cicd.webp" alt="" loading="lazy"><div class="shade"></div></div>
+          <div class="body">
+            <div class="metarow">
+              <span class="badge">post</span>
+              <span class="date">Feb 2016</span>
+              <span class="sep">·</span>
+              <span class="meta">article</span>
+            </div>
+            <h2><a href="https://bespinian.io/en/blog/run-a-cicd-server-on-cloud-foundry" target="_blank" rel="noopener noreferrer">Run a CI/CD Server on Cloud Foundry</a><span class="arr" aria-hidden="true">↗</span></h2>
+            <div class="where">@ bespinian.io/blog</div>
+            <div class="reveal" aria-hidden="true"><div>
+              <p class="desc">Deploying Strider, an open-source CI/CD server, on Cloud Foundry to test, build and deploy your apps on every git push.</p>
+              <div class="actions"><a class="btn sm" href="https://bespinian.io/en/blog/run-a-cicd-server-on-cloud-foundry" target="_blank" rel="noopener noreferrer" tabindex="-1">Read article ↗</a></div>
+            </div></div>
+          </div>
+        </article>
+      </div>
+      <div class="empty" id="empty" hidden>
+        <span class="pr">$</span> no matches for "<span class="acc" id="empty-q"></span>". <a href="#" class="acc" id="reset-lnk">reset →</a>
+      </div>
     </main>
 
     <footer class="footer wrap">
@@ -941,665 +1921,15 @@
     </footer>
 
     <script>
-      const watch = (id) => "https://www.youtube.com/watch?v=" + id;
-
-      const TYPES = {
-        talk: {
-          label: "talk",
-          full: "Conference talk",
-          glyph: "▶",
-          action: "Watch on YouTube",
-          link: "View talk",
-        },
-        pod: {
-          label: "pod",
-          full: "Podcast guest",
-          glyph: "🎙",
-          action: "Listen / watch",
-          link: "View episode",
-        },
-        post: {
-          label: "post",
-          full: "Article",
-          glyph: "✎",
-          action: "Read the article",
-          link: "Read article",
-        },
-        oss: {
-          label: "oss",
-          full: "Open source",
-          glyph: "❮❯",
-          action: "View on GitHub",
-          link: "View on GitHub",
-        },
-      };
-
-      const FEED = [
-        {
-          t: "talk",
-          title: "Run Your Own LLM for Profit and Sovereignty",
-          where: "Swiss Software Festival 2026",
-          city: "Basel",
-          date: "2026-06",
-          meta: "conference talk",
-          url: "https://www.swiss-software-festival.ch/archive/swiss-software-festival-2026/program/tech-track-3-artificial-intelligence.html",
-          thumb: "images/ssf-2026.webp",
-          desc: "Why running your own LLM makes sense - both as a business decision and as a matter of data sovereignty. A practical look at self-hosted models, the tradeoffs versus managed APIs, and how to get started without a data center.",
-        },
-        {
-          t: "talk",
-          title:
-            "Panel Discussion: Digital Sovereignty Perspectives from the Ecosystem",
-          where: "Cloud Native Zürich 2026",
-          city: "Zürich",
-          date: "2026-06",
-          meta: "panel",
-          url: watch("MQDw05sokZk"),
-          thumb: "images/yt-MQDw05sokZk.webp",
-          desc: "A panel on digital sovereignty at Cloud Native Zürich 2026 - exploring what it means for organizations to own their infrastructure, data, and AI stack in an era of hyperscaler dependency.",
-        },
-        {
-          t: "talk",
-          title: "A Practical Guide to Fast and Private LLMs",
-          where: "Open Source AI Conference 2026",
-          city: "Bern",
-          date: "2026-05",
-          meta: "conference talk",
-          url: "https://www.ch-open.ch/open-source-ai-conference-2026/",
-          thumb: "images/osaic-2026.webp",
-          desc: "A practical walkthrough of running LLMs locally and on-prem - covering model selection, inference performance, and keeping sensitive data out of third-party hands.",
-        },
-
-        {
-          t: "post",
-          title: "How Almost Anyone Can Get Their Own AI",
-          where: "Netzwoche",
-          city: "Bern",
-          date: "2026-05",
-          meta: "article",
-          url: "https://www.netzwoche.ch/news/2026-05-22/so-kommt-fast-jeder-zu-einer-eigenen-ki",
-          thumb: "images/netzwoche-2026.webp",
-          desc: "Netzwoche covers the second Open Source AI Conference in Bern - featuring speakers on open Swiss language models, AI ethics, and practical tools for running your own LLM without depending on big tech.",
-        },
-
-        {
-          t: "talk",
-          title: "Pragmatic AI Adoption Is Hard!",
-          where: "DevOpsDays Zürich 2026 · Ignite",
-          city: "Zürich",
-          date: "2026-05",
-          meta: "ignite talk",
-          url: watch("a4Rj04nmuO4"),
-          thumb: "images/yt-a4Rj04nmuO4.webp",
-          desc: "A 5-minute, 20-slide Ignite take on adopting AI where it actually adds value - without creating chaos or risk.",
-        },
-
-        {
-          t: "pod",
-          title: "Who Needs a Server?",
-          where: "Adventures in DevOps",
-          city: "",
-          date: "2026-05",
-          meta: "podcast",
-          url: watch("FD-8QWGV7Fs"),
-          thumb: "images/yt-FD-8QWGV7Fs.webp",
-          desc: "Clearing up the confusion around serverless - why it's a spectrum, not just FaaS, and why the real saving is engineering time, not the cloud bill.",
-        },
-
-        {
-          t: "pod",
-          title: "She Built a 100-Client Cloud Company in Switzerland",
-          where: "Let's Talk Podcast",
-          city: "",
-          date: "2026-03",
-          meta: "podcast",
-          url: watch("hldUjs4FPQQ"),
-          thumb: "images/yt-hldUjs4FPQQ.webp",
-          desc: "How bespinian grew to serve 100+ clients - the founding story, building a team, and lessons from running a cloud-native consultancy in Switzerland.",
-        },
-
-        {
-          t: "talk",
-          title: "Hosting LLMs on Kubernetes for Digital Sovereignty",
-          where: "KCD Suisse Romande · Genève, CERN",
-          city: "Genève",
-          date: "2025-12",
-          meta: "conference talk",
-          url: watch("LUtaXaMs1zA"),
-          thumb: "images/yt-LUtaXaMs1zA.webp",
-          desc: "From the December 2025 Kubernetes Community Days Suisse Romande at CERN - how to host LLMs on Kubernetes to keep data under your control.",
-        },
-
-        {
-          t: "talk",
-          title: "Panel: Kubernetes for AI or AI for Kubernetes",
-          where: "KCD Suisse Romande · Genève, CERN",
-          city: "Genève",
-          date: "2025-12",
-          meta: "panel",
-          url: watch("IidP7UgWPc8"),
-          thumb: "images/yt-IidP7UgWPc8.webp",
-          desc: "Panel discussion at Kubernetes Community Days Suisse Romande - exploring whether Kubernetes is the right platform for AI workloads, and how AI might change the way we operate Kubernetes.",
-        },
-
-        {
-          t: "talk",
-          title: "Level Up Your Serverless Game",
-          where: "OST – Ostschweizer Fachhochschule",
-          city: "St. Gallen",
-          date: "2025-12",
-          meta: "guest lecture",
-          url: "https://www.linkedin.com/posts/marc-fritsche_nicht-jedes-level-in-der-cloud-ist-einfach-activity-7401518295410995200-JAQ9",
-          thumb: "images/ost-2025.webp",
-          desc: "Guest lecture on cloud-native migration challenges and serverless best practices for the Cloud Development module at OST.",
-        },
-
-        {
-          t: "post",
-          title: "Building Tough Applications",
-          where: "bespinian.io/blog",
-          city: "",
-          date: "2025-12",
-          meta: "article",
-          url: "https://bespinian.io/en/blog/tough-applications",
-          thumb: "images/blog-tough-applications.webp",
-          desc: "Building strong cloud applications around four ideas - Tolerance, Fortitude, Resilience and Adaptability.",
-        },
-
-        {
-          t: "talk",
-          title: "Pragmatic AI Adoption",
-          where: "DevOps Meetup Bern",
-          city: "Bern",
-          date: "2025-11",
-          meta: "meetup talk",
-          url: "https://www.meetup.com/devops-bern/events/310420966",
-          thumb: "images/dmb-2025.webp",
-          desc: "Full house at bespinian HQ for DevOps Meetup Bern - a talk on where AI adoption actually adds value in engineering teams, without the hype.",
-        },
-
-        {
-          t: "post",
-          title: "Running LLMs on Kubernetes",
-          where: "bespinian.io/blog",
-          city: "",
-          date: "2025-11",
-          meta: "article",
-          url: "https://bespinian.io/en/blog/llms-on-kubernetes",
-          thumb: "images/blog-llms-on-kubernetes.webp",
-          desc: "Deploying and managing large language models on Kubernetes - Ollama for simple setups, the vLLM Production Stack for high-traffic production.",
-        },
-
-        {
-          t: "post",
-          title: "Level Up Your Serverless Game",
-          where: "bespinian.io/blog",
-          city: "",
-          date: "2025-09",
-          meta: "article",
-          url: "https://bespinian.io/en/blog/level-up-your-serverless-game",
-          thumb: "images/blog-serverless-game.webp",
-          desc: "Avoiding common serverless pitfalls - logging, tracing, cold starts, security and deployment strategies.",
-        },
-
-        {
-          t: "talk",
-          title: "NixOS: How My Laptop Became Declarative",
-          where: "Nine Internet Solutions · TechTalkThursday #25",
-          city: "Zürich",
-          date: "2025-09",
-          meta: "meetup talk",
-          url: watch("6qLR_8a4tkw"),
-          thumb: "images/yt-6qLR_8a4tkw.webp",
-          desc: "What NixOS is, how it works, and the genuinely nice things you can do once your whole machine is declarative and reproducible.",
-        },
-
-        {
-          t: "talk",
-          title: "My Learnings from Ten Years of Cloud-Native and Serverless",
-          where: "Swiss Software Festival 2025",
-          city: "Basel",
-          date: "2025-06",
-          meta: "conference talk",
-          url: "https://www.swiss-software-festival.ch/archive/swiss-software-festival-2025/program/tech-track2-cloud-native.html",
-          thumb: "images/ssf-2025.webp",
-          desc: "A decade of building and running cloud-native and serverless systems - the patterns that held up, the mistakes worth avoiding, and what the industry got right and wrong along the way.",
-        },
-
-        {
-          t: "talk",
-          title: "Level Up Your Serverless Game",
-          where: "DevOpsDays Zürich 2025",
-          city: "Zürich",
-          date: "2025-04",
-          meta: "conference talk",
-          url: watch("kSzeBRlY7_I"),
-          thumb: "images/yt-kSzeBRlY7_I.webp",
-          desc: "Playing through the ten levels of writing and deploying serverless apps - the challenges teams hit, and the best practices that get you past them.",
-        },
-
-        {
-          t: "talk",
-          title: "Cloud Native Security & DevSecOps",
-          where: "Swiss Cyber Security Days",
-          city: "Bern",
-          date: "2025-02",
-          meta: "conference talk",
-          url: "https://www.linkedin.com/posts/lena-fuhrimann_cloudnativecitizen-cloudnativesecurity-devsecops-activity-7298246282878312449-f48x",
-          thumb: "images/scsd-2025.webp",
-          desc: "Live drawing instead of slides - juggling a microphone and drawing pen at the same time at my first Swiss Cyber Security Days.",
-        },
-
-        {
-          t: "talk",
-          title: "Is Serverless a Blatant Cost Trap?",
-          where: "Haunted DevOps Meetup · Ergon Informatik",
-          city: "Zürich",
-          date: "2024-11",
-          meta: "meetup talk",
-          url: "https://www.youtube.com/watch?v=Hf0eBEEL0Lk&t=2057",
-          thumb: "images/yt-Hf0eBEEL0Lk.webp",
-          desc: "Busting serverless cost myths with real-world examples - how proactive cost monitoring, ARM architectures, and tools like AWS Lambda Power Tuning keep serverless from becoming a cost trap.",
-        },
-
-        {
-          t: "talk",
-          title: "How AWS Lambda & Fargate Work Under the Hood",
-          where: "Serverless Architecture Conference",
-          city: "Berlin",
-          date: "2024-10",
-          meta: "conference talk",
-          url: "https://www.linkedin.com/posts/lena-fuhrimann_cloudnativecitizen-berlin-aws-activity-7254398428917448705-s54n",
-          thumb: "images/cloud-native-berlin-2024.webp",
-          desc: "A deep dive into how AWS Lambda and Fargate work under the hood, including a live demo of Firecracker - the microVM technology powering them.",
-        },
-
-        {
-          t: "talk",
-          title: "Serverless on Rust: What the Hack is Firecracker?",
-          where: "Rust Meetup · bespinian",
-          city: "Zürich",
-          date: "2024-10",
-          meta: "meetup talk",
-          url: "https://www.linkedin.com/posts/bespinian_cloudnativecitizen-rustlang-serverless-ugcPost-7253075642190057472-hHMy",
-          thumb: "images/rust-meetup-2024.webp",
-          desc: "How Firecracker launches microVMs in under 100ms - and what that means for serverless Rust on AWS Lambda.",
-        },
-
-        {
-          t: "talk",
-          title: "Serverless Powertools",
-          where: "DevOps Basel Meetup",
-          city: "Basel",
-          date: "2024-10",
-          meta: "meetup talk",
-          url: "https://www.meetup.com/devops-basel/events/303214101/",
-          thumb: "images/devops-basel-2024.webp",
-          desc: "Efficient large-scale serverless deployment strategies using AWS Lambda Powertools at the relaunched DevOps Basel community meetup.",
-        },
-
-        {
-          t: "talk",
-          title:
-            "Best Practices for Operating Serverless Applications in TypeScript",
-          where: "BärnerJS",
-          city: "Bern",
-          date: "2024-09",
-          meta: "meetup talk",
-          url: "https://www.linkedin.com/posts/barnerjs-talks_eslint-meetup-javascript-ugcPost-7237385346924105728-jjdE",
-          thumb: "images/barnerjs-2024.webp",
-          desc: "Best practices for building and operating serverless applications in TypeScript, with open-source workshop resources.",
-        },
-
-        {
-          t: "talk",
-          title: "Serverless Optimization on AWS",
-          where: "Cloud Natives Zurich · AWS",
-          city: "Zürich",
-          date: "2023-11",
-          meta: "meetup talk",
-          url: "https://www.linkedin.com/posts/bespinian_cloudnativecitizen-activity-7327624309642780672-zfdf",
-          thumb: "images/cloudnatives-zurich-2023.webp",
-          desc: "Building resilient and reliable serverless applications on AWS - covering optimization strategies for performance and cost at the Cloud Natives Zurich meetup.",
-        },
-
-        {
-          t: "talk",
-          title: "Is Serverless a Blatant Cost Trap?",
-          where: "SLACon",
-          city: "Berlin",
-          date: "2023-10",
-          meta: "talk + workshop",
-          url: "https://www.linkedin.com/posts/bespinian_slacon-cloudnativecitizen-activity-7119975681777618945-ToaV",
-          thumb: "images/slacon-2023.webp",
-          desc: "Two contributions at SLACon Berlin: a talk busting serverless cost myths and an advanced serverless workshop.",
-        },
-
-        {
-          t: "talk",
-          title: "Streamlined Troubleshooting in Kubernetes",
-          where: "Cloud Native Zürich",
-          city: "Zürich",
-          date: "2023-06",
-          meta: "conference talk",
-          url: watch("sk6j7_VFhSc"),
-          thumb: "images/yt-sk6j7_VFhSc.webp",
-          desc: "A practical workflow for debugging workloads in Kubernetes without losing your mind - or your weekend.",
-        },
-
-        {
-          t: "oss",
-          title: "nixfiles - Personal Nix Configuration",
-          where: "github.com/cloudlena/nixfiles",
-          city: "",
-          date: "2023-05",
-          meta: "Nix",
-          url: "https://github.com/cloudlena/nixfiles",
-          thumb: "images/oss-nixfiles.webp",
-          desc: "My declarative, reproducible machine setup in Nix - the config behind the 'how my laptop became declarative' talk.",
-        },
-
-        {
-          t: "talk",
-          title: "Glorious Terminal UIs with charm.sh",
-          where: "Golang Bern · Puzzle ITC",
-          city: "Bern",
-          date: "2022-11",
-          meta: "meetup talk",
-          url: "https://www.linkedin.com/feed/update/urn:li:activity:7003057535792390144",
-          thumb: "images/golang-bern-2022.webp",
-          desc: "Building beautiful terminal UIs in Go using the charm.sh library suite.",
-        },
-
-        {
-          t: "talk",
-          title: "Level Up Your Serverless Game",
-          where: "Serverless Architecture Conference",
-          city: "Berlin",
-          date: "2022-10",
-          meta: "conference talk",
-          url: "https://www.linkedin.com/posts/lena-fuhrimann_serverless-activity-6987723173920133120-1A6_",
-          thumb: "images/slacon-2022.webp",
-          desc: "Playing through the ten levels of writing and deploying serverless apps - the challenges teams hit, and the best practices that get you past them.",
-        },
-
-        {
-          t: "post",
-          title: "API Contract Definitions",
-          where: "bespinian.io/blog",
-          city: "",
-          date: "2022-10",
-          meta: "article",
-          url: "https://bespinian.io/en/blog/api-contract-definitions",
-          thumb: "images/blog-api-contracts.webp",
-          desc: "Technologies for defining service contracts - OpenAPI, GraphQL and gRPC - and keeping specification and implementation in sync.",
-        },
-
-        {
-          t: "post",
-          title: "GitOps",
-          where: "bespinian.io/blog",
-          city: "",
-          date: "2022-05",
-          meta: "article · with Mathis Kretz",
-          url: "https://bespinian.io/en/blog/gitops",
-          thumb: "images/blog-gitops.webp",
-          desc: "Combining Git and Infrastructure as Code to implement GitOps for both apps and infra - Argo CD for Kubernetes, Terraform for infrastructure.",
-        },
-
-        {
-          t: "post",
-          title: "Be Like… Lena",
-          where: "belikegrace.ch",
-          city: "",
-          date: "2021-12",
-          meta: "interview",
-          url: "https://belikegrace.ch/be-like-lena/",
-          thumb: "images/be-like-grace-2021.webp",
-          desc: "A profile and interview about my path into cloud software architecture, co-founding bespinian, and the intersection of technical expertise and creativity.",
-        },
-
-        {
-          t: "post",
-          title: "Infrastructure as Code",
-          where: "bespinian.io/blog",
-          city: "",
-          date: "2021-12",
-          meta: "article · with Mathis Kretz",
-          url: "https://bespinian.io/en/blog/infrastructure-as-code",
-          thumb: "images/blog-infrastructure-as-code.webp",
-          desc: "IaC principles and declarative infrastructure with Terraform, Packer and CloudFormation - versioning, testing and automation.",
-        },
-
-        {
-          t: "post",
-          title: "Git - The Important Parts",
-          where: "bespinian.io/blog",
-          city: "",
-          date: "2021-10",
-          meta: "article · with Mathis Kretz",
-          url: "https://bespinian.io/en/blog/git-the-important-parts",
-          thumb: "images/blog-git.webp",
-          desc: "Git best practices for teams - commit messages, Gitflow vs GitHub Flow, pull requests and hooks to enforce conventions.",
-        },
-
-        {
-          t: "talk",
-          title: "Serverless Workshop",
-          where: "Swiss Cloud Native Day",
-          city: "Bern",
-          date: "2021-09",
-          meta: "workshop · with Gabriel Koch & Mathis Kretz",
-          url: "https://www.linkedin.com/posts/lena-fuhrimann_our-serverless-workshop-with-lena-fuhrimann-activity-6846787142279036928-vjxG",
-          thumb: "images/serverless-workshop-2021.webp",
-          desc: "Hands-on serverless workshop at Swiss Cloud Native Day, co-facilitated with Gabriel Koch and Mathis Kretz.",
-        },
-
-        {
-          t: "post",
-          title: "Installing Arch Linux on UEFI With Full Disk Encryption",
-          where: "bespinian.io/blog",
-          city: "",
-          date: "2021-03",
-          meta: "article",
-          url: "https://bespinian.io/en/blog/installing-arch-linux-on-uefi-with-full-disk-encryption",
-          thumb: "images/blog-arch-linux.webp",
-          desc: "A concise step-by-step guide to installing Arch Linux on UEFI systems with LUKS full-disk encryption.",
-        },
-
-        {
-          t: "post",
-          title: "Efficient Navigation in Vim",
-          where: "bespinian.io/blog",
-          city: "",
-          date: "2020-07",
-          meta: "article",
-          url: "https://bespinian.io/en/blog/efficient-navigation-in-vim",
-          thumb: "images/blog-vim.webp",
-          desc: "Moving around Vim efficiently - movement keys, search techniques and a few plugins that boost your editing speed.",
-        },
-
-        {
-          t: "post",
-          title: "Run a Crypto Trading Bot on Cloud Foundry",
-          where: "bespinian.io/blog",
-          city: "",
-          date: "2017-12",
-          meta: "article",
-          url: "https://bespinian.io/en/blog/run-a-crypto-trading-bot-on-cloud-foundry",
-          thumb: "images/blog-crypto-bot.webp",
-          desc: "Deploying Zenbot, an open-source cryptocurrency trading bot, to Cloud Foundry to automate trading strategies on platforms like GDAX.",
-        },
-
-        {
-          t: "post",
-          title: "Run WordPress on Cloud Foundry",
-          where: "bespinian.io/blog",
-          city: "",
-          date: "2017-08",
-          meta: "article",
-          url: "https://bespinian.io/en/blog/run-wordpress-on-cloud-foundry",
-          thumb: "images/blog-wordpress.webp",
-          desc: "Deploying WordPress on Cloud Foundry with externalized S3 file storage to handle media uploads in a cloud-native way.",
-        },
-
-        {
-          t: "post",
-          title: "Run Docker Registry on Cloud Foundry",
-          where: "bespinian.io/blog",
-          city: "",
-          date: "2017-08",
-          meta: "article",
-          url: "https://bespinian.io/en/blog/run-docker-registry-on-cloud-foundry",
-          thumb: "images/blog-docker-registry.webp",
-          desc: "A private Docker Registry on Cloud Foundry using S3 for storage and Redis for caching to securely manage your container images.",
-        },
-
-        {
-          t: "post",
-          title: "Run Ghost on Cloud Foundry",
-          where: "bespinian.io/blog",
-          city: "",
-          date: "2017-07",
-          meta: "article",
-          url: "https://bespinian.io/en/blog/run-ghost-on-cloud-foundry",
-          thumb: "images/blog-ghost.webp",
-          desc: "Deploying Ghost, a modern Node.js blogging platform, on Cloud Foundry with MariaDB and optional S3 storage for media files.",
-        },
-
-        {
-          t: "post",
-          title: "Docker for Local Development",
-          where: "bespinian.io/blog",
-          city: "",
-          date: "2017-06",
-          meta: "article",
-          url: "https://bespinian.io/en/blog/docker-for-local-development",
-          thumb: "images/blog-docker-dev.webp",
-          desc: "Using Docker to spin up and tear down backend services for local development - keeping your machine clean and your workflows efficient.",
-        },
-
-        {
-          t: "oss",
-          title: "clong - A Fun Multiplayer Game",
-          where: "github.com/cloudlena/clong",
-          city: "",
-          date: "2017-04",
-          meta: "Go · WebSocket",
-          url: "https://github.com/cloudlena/clong",
-          thumb: "images/oss-clong.webp",
-          desc: "A fun multiplayer game: players swipe on their phones to launch balls at targets on a shared big screen, with a live scoreboard.",
-        },
-
-        {
-          t: "post",
-          title: "Manage Buckets on Cloud Foundry S3 Services",
-          where: "bespinian.io/blog",
-          city: "",
-          date: "2017-03",
-          meta: "article",
-          url: "https://bespinian.io/en/blog/manage-buckets-on-cloud-foundry-s3-services",
-          thumb: "images/blog-s3-buckets.webp",
-          desc: "Creating and managing S3 buckets on Cloud Foundry using s3cmd or the open-source S3 Manager application.",
-        },
-
-        {
-          t: "post",
-          title: "Blue Green Deployment on Cloud Foundry",
-          where: "bespinian.io/blog",
-          city: "",
-          date: "2016-12",
-          meta: "article",
-          url: "https://bespinian.io/en/blog/blue-green-deployment-on-cloud-foundry",
-          thumb: "images/blog-blue-green.webp",
-          desc: "Zero-downtime updates and safe rollbacks on Cloud Foundry using a simple shell script.",
-        },
-
-        {
-          t: "oss",
-          title: "s3manager - A Web GUI for Your S3 Buckets",
-          where: "github.com/cloudlena/s3manager",
-          city: "",
-          date: "2016-12",
-          meta: "1k ★ · Go",
-          url: "https://github.com/cloudlena/s3manager",
-          thumb: "images/oss-s3manager.webp",
-          desc: "A web GUI written in Go to manage S3 buckets from any provider - list, upload, download and delete objects. Runs as a tiny container, deploys anywhere.",
-        },
-
-        {
-          t: "post",
-          title: "Run Piwik on Cloud Foundry",
-          where: "bespinian.io/blog",
-          city: "",
-          date: "2016-11",
-          meta: "article",
-          url: "https://bespinian.io/en/blog/run-piwik-on-cloud-foundry",
-          thumb: "images/blog-piwik.webp",
-          desc: "Deploying Piwik, an open-source analytics platform, on Cloud Foundry as a self-hosted alternative to Google Analytics.",
-        },
-
-        {
-          t: "post",
-          title:
-            "Configure Front End Apps With Environment Variables on Cloud Foundry",
-          where: "bespinian.io/blog",
-          city: "",
-          date: "2016-11",
-          meta: "article",
-          url: "https://bespinian.io/en/blog/configure-front-end-apps-with-environment-variables-on-cloud-foundry",
-          thumb: "images/blog-frontend-env.webp",
-          desc: "Configuring static front-end apps on Cloud Foundry via environment variables exposed through an nginx HTTP endpoint.",
-        },
-
-        {
-          t: "post",
-          title: "Cloud Foundry Route Services",
-          where: "bespinian.io/blog",
-          city: "",
-          date: "2016-10",
-          meta: "article",
-          url: "https://bespinian.io/en/blog/cloud-foundry-route-services",
-          thumb: "images/blog-route-services.webp",
-          desc: "Using Route Services to add authentication, rate limiting or logging at the route level before requests reach your app.",
-        },
-
-        {
-          t: "post",
-          title: "Observables With Angular and Feathers",
-          where: "bespinian.io/blog",
-          city: "",
-          date: "2016-03",
-          meta: "article",
-          url: "https://bespinian.io/en/blog/observables-with-angular-and-feathers",
-          thumb: "images/blog-observables.webp",
-          desc: "Angular services that consume Feathers WebSocket APIs using RxJS Observables for real-time, reactive data streams.",
-        },
-
-        {
-          t: "post",
-          title: "Run a CI/CD Server on Cloud Foundry",
-          where: "bespinian.io/blog",
-          city: "",
-          date: "2016-02",
-          meta: "article",
-          url: "https://bespinian.io/en/blog/run-a-cicd-server-on-cloud-foundry",
-          thumb: "images/blog-cicd.webp",
-          desc: "Deploying Strider, an open-source CI/CD server, on Cloud Foundry to test, build and deploy your apps on every git push.",
-        },
-      ];
-
-      // ---- counts ----
-      const COUNTS = { all: FEED.length, talk: 0, pod: 0, post: 0, oss: 0 };
-      FEED.forEach((x) => COUNTS[x.t]++);
-      ["all", "talk", "pod", "post", "oss"].forEach((k) => {
-        const el = document.getElementById("ct-" + k);
-        if (el) el.textContent = COUNTS[k];
-      });
-
       document.getElementById("year").textContent = new Date().getFullYear();
 
-      // ---- state ----
+      const items = Array.from(document.querySelectorAll("#list .item"));
+      const emptyState = document.getElementById("empty");
+      const emptyQ = document.getElementById("empty-q");
+      const resline = document.getElementById("resline");
+      const searchEl = document.getElementById("search");
+      const grepWrap = document.getElementById("grep-wrap");
+
       let filter = "all",
         query = "";
 
@@ -1614,6 +1944,7 @@
         },
         { threshold: 0.12 },
       );
+      items.forEach((el) => io.observe(el));
 
       function esc(s) {
         return String(s)
@@ -1623,115 +1954,25 @@
           .replace(/"/g, "&quot;");
       }
 
-      function fmtDate(d) {
-        const [y, m] = d.split("-");
-        return (
-          [
-            "Jan",
-            "Feb",
-            "Mar",
-            "Apr",
-            "May",
-            "Jun",
-            "Jul",
-            "Aug",
-            "Sep",
-            "Oct",
-            "Nov",
-            "Dec",
-          ][+m - 1] +
-          " " +
-          y
-        );
-      }
-
-      function posterHTML(it) {
-        const T = TYPES[it.t];
-        const playable =
-          (it.t === "talk" || it.t === "pod") && it.url.includes("youtube.com");
-        const play = playable
-          ? `<span class="play">${it.t === "pod" ? "♪" : "▶"}</span>`
-          : "";
-        if (it.thumb) {
-          return `<div class="poster r169" aria-hidden="true"><img src="${esc(it.thumb)}" alt="" loading="lazy"><div class="shade"></div>${play}</div>`;
-        }
-        const ven = it.where
-          ? `<span class="ven">${esc(it.where)}${it.city ? " · " + esc(it.city) : ""}</span>`
-          : "";
-        return `<div class="poster r169" aria-hidden="true"><div class="grad"></div><span class="glyph">${T.glyph}</span>${ven}${play}</div>`;
-      }
-
-      function itemHTML(it, idx) {
-        const T = TYPES[it.t];
-        const delay = Math.min(idx, 6) * 28;
-        return `<article class="item" aria-expanded="false" style="transition-delay:${delay}ms">
-        <div class="marker" aria-hidden="true">${String(idx + 1).padStart(2, "0")}</div>
-        ${posterHTML(it)}
-        <div class="body">
-          <div class="metarow">
-            <span class="badge">${T.label}</span>
-            <span class="date">${fmtDate(it.date)}</span>
-            <span class="sep">·</span>
-            <span class="meta">${esc(it.meta)}</span>
-          </div>
-          <h2><a href="${esc(it.url)}" target="_blank" rel="noopener noreferrer">${esc(it.title)}</a><span class="arr" aria-hidden="true">↗</span></h2>
-          <div class="where">@ ${esc(it.where)}${it.city ? " · " + esc(it.city) : ""}</div>
-          <div class="reveal" aria-hidden="true"><div>
-            <p class="desc">${esc(it.desc)}</p>
-            <div class="actions"><a class="btn sm" href="${esc(it.url)}" target="_blank" rel="noopener noreferrer" tabindex="-1">${it.url.includes("youtube.com") ? (it.t === "talk" ? T.glyph + "&nbsp; " : "") + esc(T.action) : esc(T.link)} ↗</a></div>
-          </div></div>
-        </div>
-      </article>`;
-      }
-
-      function render() {
+      function applyFilters() {
         const q = query.trim().toLowerCase();
-        const results = FEED.filter((it) => {
-          if (filter !== "all" && it.t !== filter) return false;
-          if (!q) return true;
-          return (
-            it.title +
-            " " +
-            it.where +
-            " " +
-            it.city +
-            " " +
-            it.date +
-            " " +
-            it.meta +
-            " " +
-            TYPES[it.t].label +
-            " " +
-            TYPES[it.t].full +
-            " " +
-            it.desc
-          )
-            .toLowerCase()
-            .includes(q);
+        let shown = 0;
+        items.forEach((item) => {
+          const matches =
+            (filter === "all" || item.dataset.type === filter) &&
+            (!q || item.textContent.toLowerCase().includes(q));
+          item.style.display = matches ? "" : "none";
+          if (matches) shown++;
         });
 
-        // resline
-        let r = `<span class="pr">›</span> <b>${results.length}</b> ${results.length === 1 ? "entry" : "entries"}`;
+        let r = `<span class="pr">›</span> <b>${shown}</b> ${shown === 1 ? "entry" : "entries"}`;
         if (filter !== "all") r += ` · type=<b>${filter}</b>`;
         if (query) r += ` · grep=<b>"${esc(query)}"</b>`;
         r += " · sorted by date desc";
-        document.getElementById("resline").innerHTML = r;
+        resline.innerHTML = r;
 
-        // list
-        const list = document.getElementById("list");
-        if (results.length === 0) {
-          list.innerHTML = `<div class="empty"><span class="pr">$</span> no matches for "<span class="acc">${esc(query)}</span>". <a href="#" class="acc" id="reset-lnk">reset →</a></div>`;
-          document
-            .getElementById("reset-lnk")
-            .addEventListener("click", (e) => {
-              e.preventDefault();
-              reset();
-            });
-          return;
-        }
-
-        list.innerHTML = results.map(itemHTML).join("");
-        list.querySelectorAll(".item").forEach((el) => io.observe(el));
+        emptyState.hidden = shown !== 0;
+        if (shown === 0) emptyQ.textContent = query;
       }
 
       function setFilter(f) {
@@ -1741,14 +1982,14 @@
           b.classList.toggle("on", active);
           b.setAttribute("aria-pressed", active ? "true" : "false");
         });
-        render();
+        applyFilters();
       }
 
       function reset() {
         query = "";
         filter = "all";
-        document.getElementById("search").value = "";
-        document.getElementById("grep-wrap").classList.remove("has-q");
+        searchEl.value = "";
+        grepWrap.classList.remove("has-q");
         setFilter("all");
       }
 
@@ -1759,18 +2000,22 @@
           b.addEventListener("click", () => setFilter(b.dataset.filter)),
         );
 
-      const searchEl = document.getElementById("search");
       searchEl.addEventListener("input", (e) => {
         query = e.target.value;
-        document.getElementById("grep-wrap").classList.toggle("has-q", !!query);
-        render();
+        grepWrap.classList.toggle("has-q", !!query);
+        applyFilters();
       });
 
       document.getElementById("clr-btn").addEventListener("click", () => {
         query = "";
         searchEl.value = "";
-        document.getElementById("grep-wrap").classList.remove("has-q");
-        render();
+        grepWrap.classList.remove("has-q");
+        applyFilters();
+      });
+
+      document.getElementById("reset-lnk").addEventListener("click", (e) => {
+        e.preventDefault();
+        reset();
       });
 
       window.addEventListener("keydown", (e) => {
@@ -1780,9 +2025,9 @@
         } else if (e.key === "Escape" && document.activeElement === searchEl) {
           query = "";
           searchEl.value = "";
-          document.getElementById("grep-wrap").classList.remove("has-q");
+          grepWrap.classList.remove("has-q");
           searchEl.blur();
-          render();
+          applyFilters();
         }
       });
 
@@ -1847,8 +2092,6 @@
         )
           setRevealA11y(item, false);
       });
-
-      render();
     </script>
   </body>
 </html>

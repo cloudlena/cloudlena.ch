@@ -6,7 +6,23 @@
     <atom:link href="https://cloudlena.ch/feed.xml" rel="self" type="application/rss+xml" />
     <description>Conference talks, podcast appearances, articles and open source from Lena Fuhrimann - cloud engineer, founder of bespinian, and public speaker on cloud-native, DevOps and Kubernetes topics.</description>
     <language>en</language>
-    <lastBuildDate>Mon, 01 Jun 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 01 Sep 2026 00:00:00 GMT</lastBuildDate>
+    <item>
+      <title>A Practical Guide to Fast and Private LLMs</title>
+      <link>https://www.youtube.com/watch?v=GXBMPaINcR4</link>
+      <guid isPermaLink="true">https://www.youtube.com/watch?v=GXBMPaINcR4</guid>
+      <pubDate>Tue, 01 Sep 2026 00:00:00 GMT</pubDate>
+      <category>Conference talk</category>
+      <description>Running LLMs fast and keeping your data private often feel like competing goals, especially once you move away from the big cloud APIs. A practical guide to deploying LLMs that are both performant and privacy-respecting - the tools, trade-offs, and architecture decisions that actually make a difference. (Nine TechTalk #29 · Zürich)</description>
+    </item>
+    <item>
+      <title>A Practical Guide to Fast and Private LLMs</title>
+      <link>https://www.youtube.com/watch?v=PlD-uIW3M3o</link>
+      <guid isPermaLink="true">https://www.youtube.com/watch?v=PlD-uIW3M3o</guid>
+      <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Conference talk</category>
+      <description>A practical walkthrough of running LLMs locally and on-prem - covering model selection, inference performance, and keeping sensitive data out of third-party hands. Given as an internal Tech Talk at Karakun. (Karakun Tech Talk · Basel)</description>
+    </item>
     <item>
       <title>Run Your Own LLM for Profit and Sovereignty</title>
       <link>https://www.swiss-software-festival.ch/archive/swiss-software-festival-2026/program/tech-track-3-artificial-intelligence.html</link>
