@@ -63,7 +63,7 @@ Template (fill in the placeholders, drop the poster `<span class="play">` if the
 - `THUMB`: a locally downloaded thumbnail in `images/` (e.g. `yt-<videoId>` for YouTube). If there's no thumbnail, drop the `<img>`/`<div class="shade">` and instead put `<div class="grad"></div><span class="glyph">GLYPH</span><span class="ven">WHERE · CITY</span>` inside `.poster` — glyphs: `▶` talk, `🎙` podcast, `✎` post, `❮❯` oss.
 - `ACTION`: for `youtube.com` URLs use "▶&nbsp; Watch on YouTube" (talk) or "Listen / watch" (podcast); otherwise "View talk" (talk), "View episode" (podcast), "Read article" (post), "View on GitHub" (oss).
 - The `.marker` div stays empty — its number is generated automatically by a CSS counter, so entries never need renumbering.
-- The tab counts (`<span class="ct" id="ct-all">`, `id="ct-talk"`, etc. in the controls bar) are static numbers, not computed by JS — bump the `all` count and the relevant type's count by 1 when adding an entry.
+- The tab counts (`<span class="ct" id="ct-all">`, `id="ct-talk"`, etc. in the controls bar) are static numbers, not computed by JS — bump the `all` count and the relevant type's count by 1 when adding an entry. Also bump the `<b>N</b> entries` count in the results line (`id="resline"`) below the controls — it's the no-JS fallback; JS recomputes it on load.
 - Escape `&`, `<`, `>`, `"` in any field that lands in an attribute or text (e.g. `&` → `&amp;`).
 
 Whenever an entry is added, also add a matching `<item>` to `feed.xml` (see below) so the RSS feed stays in sync.

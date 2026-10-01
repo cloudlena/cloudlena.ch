@@ -6,7 +6,15 @@
     <atom:link href="https://cloudlena.ch/feed.xml" rel="self" type="application/rss+xml" />
     <description>Conference talks, podcast appearances, articles and open source from Lena Fuhrimann - cloud engineer, founder of bespinian, and public speaker on cloud-native, DevOps and Kubernetes topics.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 01 Sep 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 01 Oct 2026 00:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Local AI and Digital Sovereignty</title>
+      <link>https://www.linkedin.com/posts/cudos-ag_jetzt-f%C3%BCr-unser-seminar-im-rahmen-der-activity-7501242196403077120-29mL</link>
+      <guid isPermaLink="true">https://www.linkedin.com/posts/cudos-ag_jetzt-f%C3%BCr-unser-seminar-im-rahmen-der-activity-7501242196403077120-29mL</guid>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
+      <category>Conference talk</category>
+      <description>Using AI without handing your data to the big cloud providers. A practical walkthrough of running LLMs locally and on-prem - covering model selection, inference performance, and keeping sensitive data out of third-party hands - and how far digital sovereignty can realistically go. (Cudos Seminar, Swiss {ai} Weeks · Fahrweid)</description>
+    </item>
     <item>
       <title>Home Assistant: Open Source Home Automation</title>
       <link>https://www.chaostreffbern.ch/home-assistant-vortrag-2026.html</link>
