@@ -24,6 +24,14 @@
       <description>Using AI without handing your data to the big cloud providers. A practical walkthrough of running LLMs locally and on-prem - covering model selection, inference performance, and keeping sensitive data out of third-party hands - and how far digital sovereignty can realistically go. (Cudos Seminar, Swiss {ai} Weeks · Fahrweid)</description>
     </item>
     <item>
+      <title>Keera Gateway - One Endpoint for Every Model in the Company</title>
+      <link>https://github.com/bespinian/keera-gateway</link>
+      <guid isPermaLink="true">https://github.com/bespinian/keera-gateway</guid>
+      <pubDate>Tue, 01 Sep 2026 00:00:00 GMT</pubDate>
+      <category>Open source</category>
+      <description>A single Go binary in front of every model you self-host or license. It speaks the OpenAI and Anthropic APIs, so tools like Claude Code and Codex work unchanged, and enforces guardrails, budgets and per-key model access. It also filters secrets and personal data out of prompts and writes every request to an audit log - in your own infrastructure or a Swiss data centre. (github.com/bespinian/keera-gateway)</description>
+    </item>
+    <item>
       <title>Home Assistant: Open Source Home Automation</title>
       <link>https://www.chaostreffbern.ch/home-assistant-vortrag-2026.html</link>
       <guid isPermaLink="true">https://www.chaostreffbern.ch/home-assistant-vortrag-2026.html</guid>
