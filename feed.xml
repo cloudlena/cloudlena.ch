@@ -16,6 +16,14 @@
       <description>An interview on how cloud native changes team culture and collaboration, not just technology, and why the human side often decides whether the shift lasts. Also: why data sovereignty is a spectrum rather than a yes-or-no question, and how to choose AI models per use case by weighing performance, data control and cost. (Xelon Blog)</description>
     </item>
     <item>
+      <title>Keera Chat - A Chat App for the People Behind a Keera Gateway</title>
+      <link>https://github.com/bespinian/keera-chat</link>
+      <guid isPermaLink="true">https://github.com/bespinian/keera-chat</guid>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
+      <category>Open source</category>
+      <description>A browser chat like ChatGPT or Claude that signs people in through Keera Gateway and sends every message with their own key, so it meets the same guardrails, budgets, filters and audit log as any other request. It only offers the models a person may use, and keeps conversations in their browser instead of on a server. (github.com/bespinian/keera-chat)</description>
+    </item>
+    <item>
       <title>Local AI and Digital Sovereignty</title>
       <link>https://www.linkedin.com/posts/cudos-ag_jetzt-f%C3%BCr-unser-seminar-im-rahmen-der-activity-7501242196403077120-29mL</link>
       <guid isPermaLink="true">https://www.linkedin.com/posts/cudos-ag_jetzt-f%C3%BCr-unser-seminar-im-rahmen-der-activity-7501242196403077120-29mL</guid>
