@@ -6,7 +6,15 @@
     <atom:link href="https://cloudlena.ch/feed.xml" rel="self" type="application/rss+xml" />
     <description>Conference talks, podcast appearances, articles and open source from Lena Fuhrimann - cloud engineer, founder of bespinian, and public speaker on cloud-native, DevOps and Kubernetes topics.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 01 Oct 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 01 Nov 2026 00:00:00 GMT</lastBuildDate>
+    <item>
+      <title>28M Tokens per Minute: Is Go the Right Tool?</title>
+      <link>https://www.meetup.com/berner-go-meetup/events/316607124</link>
+      <guid isPermaLink="true">https://www.meetup.com/berner-go-meetup/events/316607124</guid>
+      <pubDate>Sun, 01 Nov 2026 00:00:00 GMT</pubDate>
+      <category>Conference talk</category>
+      <description>We built a cloud-native AI gateway in Go. It handles many concurrent requests and can currently process 28 million tokens per minute per instance. A look at the issues we had, the problems we solved, the frustrations we encountered, and how Go helped with all of them. (Bärner Go Meetup · PostFinance · Bern)</description>
+    </item>
     <item>
       <title>Cloud Native Pioneer: &quot;Sovereignty Is a Spectrum&quot;</title>
       <link>https://www.xelon.ch/en/blog/cloud-native-souver%C3%A4nit%C3%A4t</link>
