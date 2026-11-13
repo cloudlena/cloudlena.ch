@@ -8,6 +8,14 @@
     <language>en</language>
     <lastBuildDate>Sun, 01 Nov 2026 00:00:00 GMT</lastBuildDate>
     <item>
+      <title>My Way to Lead: There Is No Single Path to Leadership</title>
+      <link>https://womenleadership.unibe.ch/program/index_eng.html</link>
+      <guid isPermaLink="true">https://womenleadership.unibe.ch/program/index_eng.html</guid>
+      <pubDate>Sun, 01 Nov 2026 00:00:00 GMT</pubDate>
+      <category>Conference talk</category>
+      <description>A panel discussion on the many different routes into leadership - sharing personal journeys and showing that there is no single path to becoming a leader. (Women &amp; Leadership Conference, University of Bern · Bern)</description>
+    </item>
+    <item>
       <title>28M Tokens per Minute: Is Go the Right Tool?</title>
       <link>https://www.meetup.com/berner-go-meetup/events/316607124</link>
       <guid isPermaLink="true">https://www.meetup.com/berner-go-meetup/events/316607124</guid>
@@ -241,8 +249,8 @@
     </item>
     <item>
       <title>Serverless Powertools</title>
-      <link>https://www.meetup.com/devops-basel/events/303214101/</link>
-      <guid isPermaLink="true">https://www.meetup.com/devops-basel/events/303214101/</guid>
+      <link>https://www.meetup.com/ed9c3cdc-877c-4ecf-af98-0aef85c62379/events/303214101/</link>
+      <guid isPermaLink="true">https://www.meetup.com/ed9c3cdc-877c-4ecf-af98-0aef85c62379/events/303214101/</guid>
       <pubDate>Tue, 01 Oct 2024 00:00:00 GMT</pubDate>
       <category>Conference talk</category>
       <description>Efficient large-scale serverless deployment strategies using AWS Lambda Powertools at the relaunched DevOps Basel community meetup. (DevOps Basel Meetup · Basel)</description>
